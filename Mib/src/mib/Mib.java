@@ -30,5 +30,3 @@ public class Mib {
         }
     }
 } 
-
-public void getNamn()
