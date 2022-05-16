@@ -28,5 +28,6 @@ public class Mib {
             Logger.getLogger(Mib.class.getName()).log(Level.SEVERE, null, ex);
             
         }
+    new Startsida().setVisible(true);
     }
 } 
