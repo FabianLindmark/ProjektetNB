@@ -26,31 +26,83 @@ public class AlienInlogg extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblAlienInloggning = new javax.swing.JLabel();
+        AlienID = new javax.swing.JLabel();
+        Lösenord = new javax.swing.JLabel();
+        AngettAlienID = new javax.swing.JTextField();
+        AngettAlienLösenord = new javax.swing.JTextField();
+        btnAlienLoggaIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        lblAlienInloggning.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblAlienInloggning.setText("Alien Inloggning");
+
+        AlienID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        AlienID.setText("AlienID:");
+
+        Lösenord.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        Lösenord.setText("Lösenord:");
+
+        AngettAlienID.setColumns(6);
+
+        AngettAlienLösenord.setColumns(6);
+
+        btnAlienLoggaIn.setText("Logga in");
+        btnAlienLoggaIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlienLoggaInActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(172, 172, 172)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Lösenord)
+                            .addComponent(AlienID))
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AngettAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblAlienInloggning)
+                            .addComponent(AngettAlienLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(btnAlienLoggaIn)))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblAlienInloggning)
+                        .addGap(65, 65, 65)
+                        .addComponent(AlienID))
+                    .addComponent(AngettAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Lösenord)
+                    .addComponent(AngettAlienLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(btnAlienLoggaIn)
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAlienLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlienLoggaInActionPerformed
+        // TODO add your handling code here:
+        // koda till nästa sida, 
+        new AlienInformation().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnAlienLoggaInActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +140,11 @@ public class AlienInlogg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel AlienID;
+    private javax.swing.JTextField AngettAlienID;
+    private javax.swing.JTextField AngettAlienLösenord;
+    private javax.swing.JLabel Lösenord;
+    private javax.swing.JButton btnAlienLoggaIn;
+    private javax.swing.JLabel lblAlienInloggning;
     // End of variables declaration//GEN-END:variables
 }

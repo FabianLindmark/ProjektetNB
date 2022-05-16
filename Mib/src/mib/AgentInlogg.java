@@ -26,21 +26,95 @@ public class AgentInlogg extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        AgentID = new javax.swing.JLabel();
+        AgentLösenord = new javax.swing.JLabel();
+        AngivetAgentID = new javax.swing.JTextField();
+        AngivetLösenord = new javax.swing.JTextField();
+        btnAgentLoggaIn = new javax.swing.JButton();
+        lblAgentInlogg = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        AgentID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        AgentID.setText("AgentID:");
+
+        AgentLösenord.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        AgentLösenord.setText("Lösenord:");
+
+        AngivetAgentID.setColumns(6);
+
+        AngivetLösenord.setColumns(6);
+
+        btnAgentLoggaIn.setText("Logga in");
+        btnAgentLoggaIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgentLoggaInActionPerformed(evt);
+            }
+        });
+
+        lblAgentInlogg.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblAgentInlogg.setText("Agent Inloggning");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AgentID)
+                            .addComponent(AgentLösenord))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AngivetAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AngivetLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(lblAgentInlogg))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addComponent(btnAgentLoggaIn)))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblAgentInlogg)
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AgentID)
+                    .addComponent(AngivetAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AgentLösenord)
+                    .addComponent(AngivetLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(btnAgentLoggaIn)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgentLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgentLoggaInActionPerformed
+     private InfDB idb;
+        
+        try{
+          idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
+          boolean AgentLoggaIn = false;
+          String AngivetAgentID = 
+          String fraga1 = "Select Losenord from Agent where Agent_ID"+
+          
+          String 
+         }
+        
+      if (AngivetLösenord.equals(evt))
+// TODO add your handling code here:
+       new AgentInformation().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnAgentLoggaInActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +152,11 @@ public class AgentInlogg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AgentID;
+    private javax.swing.JLabel AgentLösenord;
+    private javax.swing.JTextField AngivetAgentID;
+    private javax.swing.JTextField AngivetLösenord;
+    private javax.swing.JButton btnAgentLoggaIn;
+    private javax.swing.JLabel lblAgentInlogg;
     // End of variables declaration//GEN-END:variables
 }
