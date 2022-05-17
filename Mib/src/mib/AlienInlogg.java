@@ -112,7 +112,7 @@ public class AlienInlogg extends javax.swing.JFrame {
           boolean btnAlienLoggaIn = false;
           String anid = tfAngivetAlienID.getText();
           String losen =tfAngivetAlienLosenord.getText();
-          String fraga2 = "Select Losenord from Agent where Alien_ID" + anid;
+          String fraga2 = "Select Losenord from Agent where Alien_ID=" + anid;
           String svar2 = idb.fetchSingle(fraga2);
           String resultat1 = svar2;
         

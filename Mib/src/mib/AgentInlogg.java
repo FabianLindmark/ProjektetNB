@@ -113,9 +113,10 @@ public class AgentInlogg extends javax.swing.JFrame {
             boolean admin = false;
             String aid = tfAngivetAgentID.getText();
             String losen = tfAngivetLosenord.getText();
-            String fraga1 = "Select Losenord from Agent where Agent_ID" + aid;
+            String fraga1 = "Select Losenord from Agent where Agent_ID=" + aid;
             String svar1 = idb.fetchSingle(fraga1);
             String resultat1 = svar1;
+          
 
             if (resultat1.equals(svar1)) {
                 btnAgentLoggaIn = true;
@@ -134,8 +135,10 @@ public class AgentInlogg extends javax.swing.JFrame {
             
             else {
                 System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
-            }
-        } catch (InfException ettUndantag) {
+            }   
+        } 
+        
+        catch (InfException ettUndantag) {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
         }
