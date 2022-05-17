@@ -110,6 +110,7 @@ public class AgentInlogg extends javax.swing.JFrame {
         try {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             boolean btnAgentLoggaIn = false;
+            boolean admin = false;
             String aid = tfAngivetAgentID.getText();
             String losen = tfAngivetLosenord.getText();
             String fraga1 = "Select Losenord from Agent where Agent_ID" + aid;
@@ -118,11 +119,20 @@ public class AgentInlogg extends javax.swing.JFrame {
 
             if (resultat1.equals(svar1)) {
                 btnAgentLoggaIn = true;
+                admin = false;
                 System.out.println("Inloggad");
                 new AgentInformation().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnAgentLoggaInActionPerformed
      
-      else {
+            else if(resultat1.equals(svar1)) {
+            btnAgentLoggaIn = true;
+            admin = true; 
+            System.out.println("Inloggad");
+            new AdminInformation().setVisible(rootPaneCheckingEnabled);
+            }
+            
+            
+            else {
                 System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
             }
         } catch (InfException ettUndantag) {
