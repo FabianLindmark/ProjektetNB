@@ -26,25 +26,25 @@ public class Startsida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ValAvInlogg = new javax.swing.JLabel();
-        LoggaInAgent = new javax.swing.JButton();
-        LoggaInAlien = new javax.swing.JButton();
+        jlValAvInlogg = new javax.swing.JLabel();
+        tfLoggaInAgent = new javax.swing.JButton();
+        tfLoggaInAlien = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ValAvInlogg.setText("Logga in som:");
+        jlValAvInlogg.setText("Logga in som:");
 
-        LoggaInAgent.setText("Agent");
-        LoggaInAgent.addActionListener(new java.awt.event.ActionListener() {
+        tfLoggaInAgent.setText("Agent");
+        tfLoggaInAgent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoggaInAgentActionPerformed(evt);
+                tfLoggaInAgentActionPerformed(evt);
             }
         });
 
-        LoggaInAlien.setText("Alien");
-        LoggaInAlien.addActionListener(new java.awt.event.ActionListener() {
+        tfLoggaInAlien.setText("Alien");
+        tfLoggaInAlien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoggaInAlienActionPerformed(evt);
+                tfLoggaInAlienActionPerformed(evt);
             }
         });
 
@@ -54,37 +54,37 @@ public class Startsida extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(160, 160, 160)
-                .addComponent(ValAvInlogg)
+                .addComponent(jlValAvInlogg)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addComponent(LoggaInAgent)
+                .addComponent(tfLoggaInAgent)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                .addComponent(LoggaInAlien)
+                .addComponent(tfLoggaInAlien)
                 .addGap(77, 77, 77))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
-                .addComponent(ValAvInlogg)
+                .addComponent(jlValAvInlogg)
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LoggaInAgent)
-                    .addComponent(LoggaInAlien))
+                    .addComponent(tfLoggaInAgent)
+                    .addComponent(tfLoggaInAlien))
                 .addContainerGap(155, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LoggaInAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInAgentActionPerformed
+    private void tfLoggaInAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLoggaInAgentActionPerformed
         new AgentInlogg().setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_LoggaInAgentActionPerformed
+    }//GEN-LAST:event_tfLoggaInAgentActionPerformed
 
-    private void LoggaInAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoggaInAlienActionPerformed
+    private void tfLoggaInAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLoggaInAlienActionPerformed
         new AlienInlogg().setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_LoggaInAlienActionPerformed
+    }//GEN-LAST:event_tfLoggaInAlienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,8 +122,8 @@ public class Startsida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton LoggaInAgent;
-    private javax.swing.JButton LoggaInAlien;
-    private javax.swing.JLabel ValAvInlogg;
+    private javax.swing.JLabel jlValAvInlogg;
+    private javax.swing.JButton tfLoggaInAgent;
+    private javax.swing.JButton tfLoggaInAlien;
     // End of variables declaration//GEN-END:variables
 }

@@ -25,14 +25,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
-              <Component id="ValAvInlogg" min="-2" max="-2" attributes="0"/>
+              <Component id="jlValAvInlogg" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-              <Component id="LoggaInAgent" min="-2" max="-2" attributes="0"/>
+              <Component id="tfLoggaInAgent" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="116" max="32767" attributes="0"/>
-              <Component id="LoggaInAlien" min="-2" max="-2" attributes="0"/>
+              <Component id="tfLoggaInAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -41,11 +41,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-              <Component id="ValAvInlogg" min="-2" max="-2" attributes="0"/>
+              <Component id="jlValAvInlogg" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="LoggaInAgent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="LoggaInAlien" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfLoggaInAgent" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfLoggaInAlien" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="155" max="32767" attributes="0"/>
           </Group>
@@ -53,25 +53,25 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="ValAvInlogg">
+    <Component class="javax.swing.JLabel" name="jlValAvInlogg">
       <Properties>
         <Property name="text" type="java.lang.String" value="Logga in som:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="LoggaInAgent">
+    <Component class="javax.swing.JButton" name="tfLoggaInAgent">
       <Properties>
         <Property name="text" type="java.lang.String" value="Agent"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoggaInAgentActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfLoggaInAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="LoggaInAlien">
+    <Component class="javax.swing.JButton" name="tfLoggaInAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alien"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoggaInAlienActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfLoggaInAlienActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
