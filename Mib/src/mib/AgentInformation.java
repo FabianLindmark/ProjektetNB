@@ -26,21 +26,107 @@ public class AgentInformation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlValkommen = new javax.swing.JLabel();
+        btnAgAndraLosen = new javax.swing.JButton();
+        btnAgRegistrera = new javax.swing.JButton();
+        btnAgListor = new javax.swing.JButton();
+        btnAgSok = new javax.swing.JButton();
+        btnAgAndraInfo = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlValkommen.setText("Välkommen!");
+
+        btnAgAndraLosen.setText("Ändra Lösenord");
+        btnAgAndraLosen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgAndraLosenActionPerformed(evt);
+            }
+        });
+
+        btnAgRegistrera.setText("Registrera");
+        btnAgRegistrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgRegistreraActionPerformed(evt);
+            }
+        });
+
+        btnAgListor.setText("Listor");
+        btnAgListor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgListorActionPerformed(evt);
+            }
+        });
+
+        btnAgSok.setText("Sök");
+        btnAgSok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgSokActionPerformed(evt);
+            }
+        });
+
+        btnAgAndraInfo.setText("Ändra Information");
+        btnAgAndraInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgAndraInfoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAgAndraLosen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlValkommen, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgRegistrera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAgListor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAgSok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAgAndraInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jlValkommen)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(btnAgAndraLosen)
+                .addGap(18, 18, 18)
+                .addComponent(btnAgRegistrera)
+                .addGap(18, 18, 18)
+                .addComponent(btnAgListor)
+                .addGap(18, 18, 18)
+                .addComponent(btnAgSok)
+                .addGap(18, 18, 18)
+                .addComponent(btnAgAndraInfo)
+                .addGap(46, 46, 46))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgAndraLosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgAndraLosenActionPerformed
+new AgentÄndraLösenord().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgAndraLosenActionPerformed
+
+    private void btnAgAndraInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgAndraInfoActionPerformed
+new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgAndraInfoActionPerformed
+
+    private void btnAgRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgRegistreraActionPerformed
+new AgentRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgRegistreraActionPerformed
+
+    private void btnAgListorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgListorActionPerformed
+new AgentLista().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgListorActionPerformed
+
+    private void btnAgSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgSokActionPerformed
+new AgentSok().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgSokActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +164,11 @@ public class AgentInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAgAndraInfo;
+    private javax.swing.JButton btnAgAndraLosen;
+    private javax.swing.JButton btnAgListor;
+    private javax.swing.JButton btnAgRegistrera;
+    private javax.swing.JButton btnAgSok;
+    private javax.swing.JLabel jlValkommen;
     // End of variables declaration//GEN-END:variables
 }
