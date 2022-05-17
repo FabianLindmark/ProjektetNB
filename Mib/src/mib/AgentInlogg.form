@@ -28,18 +28,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="AgentID" min="-2" max="-2" attributes="0"/>
-                          <Component id="AgentLösenord" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlAgentID" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlAgentLösenord" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="AngivetAgentID" min="-2" max="-2" attributes="0"/>
-                          <Component id="AngivetLösenord" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfAngivetAgentID" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfAngivetLosenord" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
-                      <Component id="lblAgentInlogg" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlAgentInlogg" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
@@ -54,16 +54,16 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Component id="lblAgentInlogg" min="-2" max="-2" attributes="0"/>
+              <Component id="jlAgentInlogg" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="AgentID" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AngivetAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngivetAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="AgentLösenord" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AngivetLösenord" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgentLösenord" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngivetLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Component id="btnAgentLoggaIn" min="-2" max="-2" attributes="0"/>
@@ -73,7 +73,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="AgentID">
+    <Component class="javax.swing.JLabel" name="jlAgentID">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
@@ -81,7 +81,7 @@
         <Property name="text" type="java.lang.String" value="AgentID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="AgentL&#xf6;senord">
+    <Component class="javax.swing.JLabel" name="jlAgentL&#xf6;senord">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
@@ -89,12 +89,12 @@
         <Property name="text" type="java.lang.String" value="L&#xf6;senord:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="AngivetAgentID">
+    <Component class="javax.swing.JTextField" name="tfAngivetAgentID">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="AngivetL&#xf6;senord">
+    <Component class="javax.swing.JTextField" name="tfAngivetLosenord">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
@@ -107,7 +107,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgentLoggaInActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblAgentInlogg">
+    <Component class="javax.swing.JLabel" name="jlAgentInlogg">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="18" style="0"/>
