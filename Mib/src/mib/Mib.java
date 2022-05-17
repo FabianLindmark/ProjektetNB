@@ -31,4 +31,3 @@ public class Mib {
     new Startsida().setVisible(true);
     }
 } 
-//hej

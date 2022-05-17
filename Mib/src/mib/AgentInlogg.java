@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
 
-
 /**
  *
  * @author ellenportugues
@@ -18,6 +17,7 @@ import oru.inf.InfException;
 public class AgentInlogg extends javax.swing.JFrame {
 
     private InfDB idb;
+
     /**
      * Creates new form AgentInlogg
      */
@@ -109,36 +109,31 @@ public class AgentInlogg extends javax.swing.JFrame {
 
     private void btnAgentLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgentLoggaInActionPerformed
 
-    try {
-          idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
-          boolean btnAgentLoggaIn = false;
-          String aid = tfAngivetAgentID.getText();
-          String losen =tfAngivetLosenord.getText();
-          String fraga1 = "Select Losenord from Agent where Agent_ID" + aid;
-          String svar1 = idb.fetchSingle(fraga1);
-          String resultat1 = svar1;
-        
-         if(resultat1.equals(svar1))
-      {
+        try {
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            boolean btnAgentLoggaIn = false;
+            String aid = tfAngivetAgentID.getText();
+            String losen = tfAngivetLosenord.getText();
+            String fraga1 = "Select Losenord from Agent where Agent_ID" + aid;
+            String svar1 = idb.fetchSingle(fraga1);
+            String resultat1 = svar1;
+
+            if (resultat1.equals(svar1)) {
                 btnAgentLoggaIn = true;
                 System.out.println("Inloggad");
                 new AgentInformation().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnAgentLoggaInActionPerformed
      
-      else 
-        {
-        System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
+      else {
+                System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
+            }
+        } catch (InfException ettUndantag) {
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
-    }
-      
-    catch(InfException ettUndantag) {
-              JOptionPane.showMessageDialog(null, "Något gick fel!");
-    }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+        /**
+         * @param args the command line arguments
+         */
+     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -167,7 +162,7 @@ public class AgentInlogg extends javax.swing.JFrame {
             public void run() {
                 new AgentInlogg().setVisible(true);
             }
-        });
+            });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
