@@ -4,12 +4,17 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author ellenportugues
  */
 public class AlienInlogg extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AlienInlogg
      */
@@ -26,27 +31,27 @@ public class AlienInlogg extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblAlienInloggning = new javax.swing.JLabel();
-        AlienID = new javax.swing.JLabel();
-        Lösenord = new javax.swing.JLabel();
-        AngettAlienID = new javax.swing.JTextField();
-        AngettAlienLösenord = new javax.swing.JTextField();
+        jlAlienInloggning = new javax.swing.JLabel();
+        jlAlienID = new javax.swing.JLabel();
+        jlLosenord = new javax.swing.JLabel();
+        tfAngivetAlienID = new javax.swing.JTextField();
+        tfAngivetAlienLosenord = new javax.swing.JTextField();
         btnAlienLoggaIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblAlienInloggning.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        lblAlienInloggning.setText("Alien Inloggning");
+        jlAlienInloggning.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlAlienInloggning.setText("Alien Inloggning");
 
-        AlienID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        AlienID.setText("AlienID:");
+        jlAlienID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jlAlienID.setText("AlienID:");
 
-        Lösenord.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        Lösenord.setText("Lösenord:");
+        jlLosenord.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jlLosenord.setText("Lösenord:");
 
-        AngettAlienID.setColumns(6);
+        tfAngivetAlienID.setColumns(6);
 
-        AngettAlienLösenord.setColumns(6);
+        tfAngivetAlienLosenord.setColumns(6);
 
         btnAlienLoggaIn.setText("Logga in");
         btnAlienLoggaIn.addActionListener(new java.awt.event.ActionListener() {
@@ -64,13 +69,13 @@ public class AlienInlogg extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Lösenord)
-                            .addComponent(AlienID))
+                            .addComponent(jlLosenord)
+                            .addComponent(jlAlienID))
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AngettAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblAlienInloggning)
-                            .addComponent(AngettAlienLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(tfAngivetAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlAlienInloggning)
+                            .addComponent(tfAngivetAlienLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(143, 143, 143)
                         .addComponent(btnAlienLoggaIn)))
@@ -82,14 +87,14 @@ public class AlienInlogg extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblAlienInloggning)
+                        .addComponent(jlAlienInloggning)
                         .addGap(65, 65, 65)
-                        .addComponent(AlienID))
-                    .addComponent(AngettAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlAlienID))
+                    .addComponent(tfAngivetAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lösenord)
-                    .addComponent(AngettAlienLösenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlLosenord)
+                    .addComponent(tfAngivetAlienLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addComponent(btnAlienLoggaIn)
                 .addContainerGap(64, Short.MAX_VALUE))
@@ -101,7 +106,39 @@ public class AlienInlogg extends javax.swing.JFrame {
     private void btnAlienLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlienLoggaInActionPerformed
         // TODO add your handling code here:
         // koda till nästa sida, 
-        new AlienInformation().setVisible(rootPaneCheckingEnabled);
+        
+           try {
+          idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
+          boolean btnAlienLoggaIn = false;
+          String anid = tfAngivetAlienID.getText();
+          String losen =tfAngivetAlienLosenord.getText();
+          String fraga2 = "Select Losenord from Agent where Alien_ID" + anid;
+          String svar2 = idb.fetchSingle(fraga2);
+          String resultat1 = svar2;
+        
+         if(resultat1.equals(svar2))
+      {
+                btnAlienLoggaIn = true;
+                System.out.println("Inloggad");
+                new AlienInformation().setVisible(rootPaneCheckingEnabled);
+    }                                               
+     
+      else 
+        {
+        System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
+        }
+    }
+      
+    catch(InfException ettUndantag) {
+              JOptionPane.showMessageDialog(null, "Något gick fel!");
+              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+    }
+    
+        
+        
+        
+        
+      
     }//GEN-LAST:event_btnAlienLoggaInActionPerformed
 
     /**
@@ -140,11 +177,11 @@ public class AlienInlogg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AlienID;
-    private javax.swing.JTextField AngettAlienID;
-    private javax.swing.JTextField AngettAlienLösenord;
-    private javax.swing.JLabel Lösenord;
     private javax.swing.JButton btnAlienLoggaIn;
-    private javax.swing.JLabel lblAlienInloggning;
+    private javax.swing.JLabel jlAlienID;
+    private javax.swing.JLabel jlAlienInloggning;
+    private javax.swing.JLabel jlLosenord;
+    private javax.swing.JTextField tfAngivetAlienID;
+    private javax.swing.JTextField tfAngivetAlienLosenord;
     // End of variables declaration//GEN-END:variables
 }

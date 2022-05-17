@@ -133,6 +133,7 @@ public class AgentInlogg extends javax.swing.JFrame {
       
     catch(InfException ettUndantag) {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
+              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
     }
     
     /**
