@@ -4,8 +4,6 @@
  */
 package mib;
 
-
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
 import oru.inf.InfDB;
 
 import javax.swing.JOptionPane;
@@ -135,11 +133,8 @@ public class AgentInlogg extends javax.swing.JFrame {
       
     catch(InfException ettUndantag) {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
-              }
+    }
     
-}
-        
-        
     /**
      * @param args the command line arguments
      */
