@@ -26,20 +26,25 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jlAndraLosenord" max="32767" attributes="0"/>
-                      <Component id="jLabel1" max="32767" attributes="0"/>
+                  <Component id="jlAgUppdateraLosenord" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jlAgAndraLosenord" max="32767" attributes="0"/>
+                              <Component id="jlAgAnvandarnamn" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jlAgNuvarandeLosenord" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                          <Component id="jlAgNyttLosenord" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                          <Component id="jlAgUpprepaLosenord" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="tfAngeNuvarandeLosenord" max="32767" attributes="0"/>
+                          <Component id="tfAngeAnvandarnamn" pref="118" max="32767" attributes="0"/>
+                          <Component id="tfAngeNyttLosenord" max="32767" attributes="0"/>
+                          <Component id="tfAngeUpprepaLosenord" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="jLabel2" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jTextField2" max="32767" attributes="0"/>
-                  <Component id="jTextField1" pref="118" max="32767" attributes="0"/>
-                  <Component id="jTextField3" max="32767" attributes="0"/>
-                  <Component id="jTextField4" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="106" max="32767" attributes="0"/>
           </Group>
@@ -49,80 +54,90 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Component id="jlAndraLosenord" min="-2" max="-2" attributes="0"/>
+              <Component id="jlAgAndraLosenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="52" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgAnvandarnamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngeAnvandarnamn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgNuvarandeLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngeNuvarandeLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgNyttLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngeNyttLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgUpprepaLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngeUpprepaLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jlAgUppdateraLosenord" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jlAndraLosenord">
+    <Component class="javax.swing.JLabel" name="jlAgAndraLosenord">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra ditt l&#xf6;senord"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jlAgAnvandarnamn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anv&#xe4;ndarnamn:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jlAgNuvarandeLosenord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nuvarande l&#xf6;senord:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jlAgNyttLosenord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nytt l&#xf6;senord:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jlAgUpprepaLosenord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upprepa l&#xf6;senord:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="tfAngeAnvandarnamn">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="tfAngeNuvarandeLosenord">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="tfAngeNyttLosenord">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfAngeNyttLosenordActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField4">
+    <Component class="javax.swing.JTextField" name="tfAngeUpprepaLosenord">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jlAgUppdateraLosenord">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upptadeta L&#xf6;senord"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jlAgUppdateraLosenordActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

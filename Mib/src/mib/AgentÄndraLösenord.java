@@ -4,12 +4,17 @@
  */
 package mib;
 
+import oru.inf.InfDB;
+
 /**
  *
  * @author flind
  */
 public class AgentÄndraLösenord extends javax.swing.JFrame {
-
+    
+    private InfDB idb;
+    private Startsida vem;
+    
     /**
      * Creates new form AgentÄndraLösenord
      */
@@ -26,40 +31,48 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlAndraLosenord = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jlAgAndraLosenord = new javax.swing.JLabel();
+        jlAgAnvandarnamn = new javax.swing.JLabel();
+        jlAgNuvarandeLosenord = new javax.swing.JLabel();
+        jlAgNyttLosenord = new javax.swing.JLabel();
+        jlAgUpprepaLosenord = new javax.swing.JLabel();
+        tfAngeAnvandarnamn = new javax.swing.JTextField();
+        tfAngeNuvarandeLosenord = new javax.swing.JTextField();
+        tfAngeNyttLosenord = new javax.swing.JTextField();
+        tfAngeUpprepaLosenord = new javax.swing.JTextField();
+        jlAgUppdateraLosenord = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlAndraLosenord.setText("Ändra ditt lösenord");
+        jlAgAndraLosenord.setText("Ändra ditt lösenord");
 
-        jLabel1.setText("Användarnamn:");
+        jlAgAnvandarnamn.setText("Användarnamn:");
 
-        jLabel2.setText("Nuvarande lösenord:");
+        jlAgNuvarandeLosenord.setText("Nuvarande lösenord:");
 
-        jLabel3.setText("Nytt lösenord:");
+        jlAgNyttLosenord.setText("Nytt lösenord:");
 
-        jLabel4.setText("Upprepa lösenord:");
+        jlAgUpprepaLosenord.setText("Upprepa lösenord:");
 
-        jTextField1.setColumns(6);
+        tfAngeAnvandarnamn.setColumns(6);
 
-        jTextField2.setColumns(6);
+        tfAngeNuvarandeLosenord.setColumns(6);
 
-        jTextField3.setColumns(6);
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        tfAngeNyttLosenord.setColumns(6);
+        tfAngeNyttLosenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                tfAngeNyttLosenordActionPerformed(evt);
             }
         });
 
-        jTextField4.setColumns(6);
+        tfAngeUpprepaLosenord.setColumns(6);
+
+        jlAgUppdateraLosenord.setText("Upptadeta Lösenord");
+        jlAgUppdateraLosenord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlAgUppdateraLosenordActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,50 +81,71 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jlAndraLosenord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField4))
+                    .addComponent(jlAgUppdateraLosenord)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jlAgAndraLosenord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jlAgAnvandarnamn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jlAgNuvarandeLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlAgNyttLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlAgUpprepaLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfAngeNuvarandeLosenord)
+                            .addComponent(tfAngeAnvandarnamn, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                            .addComponent(tfAngeNyttLosenord)
+                            .addComponent(tfAngeUpprepaLosenord))))
                 .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jlAndraLosenord)
+                .addComponent(jlAgAndraLosenord)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlAgAnvandarnamn)
+                    .addComponent(tfAngeAnvandarnamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlAgNuvarandeLosenord)
+                    .addComponent(tfAngeNuvarandeLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlAgNyttLosenord)
+                    .addComponent(tfAngeNyttLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67))
+                    .addComponent(jlAgUpprepaLosenord)
+                    .addComponent(tfAngeUpprepaLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jlAgUppdateraLosenord)
+                .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void tfAngeNyttLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAngeNyttLosenordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_tfAngeNyttLosenordActionPerformed
+
+    private void jlAgUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAgUppdateraLosenordActionPerformed
+    try{
+        idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+        
+        String anvandarnamn = tfAngeAnvandarnamn.getText();
+        String nuLosen = tfAngeNuvarandeLosenord.getText();
+        String nyttLosen = tfAngeNyttLosenord.getText();
+        String upprepaLosen = tfAngeUpprepaLosenord.getText();
+        String question = "select Losenord from Agent where Agent_ID=" + anvandarnamn;
+        String answer = idb.fetchSingle(question);
+    }
+      catch(Exception e){
+      
+      System.out.println();}          // TODO add your handling code here:
+    }//GEN-LAST:event_jlAgUppdateraLosenordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,14 +183,15 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JLabel jlAndraLosenord;
+    private javax.swing.JLabel jlAgAndraLosenord;
+    private javax.swing.JLabel jlAgAnvandarnamn;
+    private javax.swing.JLabel jlAgNuvarandeLosenord;
+    private javax.swing.JLabel jlAgNyttLosenord;
+    private javax.swing.JButton jlAgUppdateraLosenord;
+    private javax.swing.JLabel jlAgUpprepaLosenord;
+    private javax.swing.JTextField tfAngeAnvandarnamn;
+    private javax.swing.JTextField tfAngeNuvarandeLosenord;
+    private javax.swing.JTextField tfAngeNyttLosenord;
+    private javax.swing.JTextField tfAngeUpprepaLosenord;
     // End of variables declaration//GEN-END:variables
 }
