@@ -28,17 +28,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="ljValkommen" min="-2" max="-2" attributes="0"/>
                   <Component id="btnTaBortUtrustning" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnAndraLosenord" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnRegistrera" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnListor" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSok" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSokAgentInformation" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnTaBortAlien" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
@@ -46,13 +42,12 @@
                           <Component id="btnNyregistreraAgent" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraAdminstatus" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraAgentInformation" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSokAgentInformation" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraInformationOmradeschef" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraInfromationKontorschef" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="7" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,7 +73,7 @@
               </Group>
               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnSok" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSokAgentInformation" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAndraInformationOmradeschef" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -89,13 +84,8 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnTaBortAgent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnSokAgentInformation" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -142,15 +132,15 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnListorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnSok">
+    <Component class="javax.swing.JButton" name="btnSokAgentInformation">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="S&#xf6;k"/>
+        <Property name="text" type="java.lang.String" value="S&#xf6;k Agent Information"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokAgentInformationActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAndraAgentInformation">
@@ -197,14 +187,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNyregistreraAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnSokAgentInformation">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="S&#xf6;k agent information"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnTaBortAgent">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -248,11 +230,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraInfromationKontorschefActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tabort?"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

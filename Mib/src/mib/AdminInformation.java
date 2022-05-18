@@ -30,17 +30,15 @@ public class AdminInformation extends javax.swing.JFrame {
         btnAndraLosenord = new javax.swing.JButton();
         btnRegistrera = new javax.swing.JButton();
         btnListor = new javax.swing.JButton();
-        btnSok = new javax.swing.JButton();
+        btnSokAgentInformation = new javax.swing.JButton();
         btnAndraAgentInformation = new javax.swing.JButton();
         btnTaBortAlien = new javax.swing.JButton();
         btnTaBortUtrustning = new javax.swing.JButton();
         btnNyregistreraAgent = new javax.swing.JButton();
-        btnSokAgentInformation = new javax.swing.JButton();
         btnTaBortAgent = new javax.swing.JButton();
         btnAndraAdminstatus = new javax.swing.JButton();
         btnAndraInformationOmradeschef = new javax.swing.JButton();
         btnAndraInfromationKontorschef = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,11 +69,11 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
-        btnSok.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        btnSok.setText("Sök");
-        btnSok.addActionListener(new java.awt.event.ActionListener() {
+        btnSokAgentInformation.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        btnSokAgentInformation.setText("Sök Agent Information");
+        btnSokAgentInformation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSokActionPerformed(evt);
+                btnSokAgentInformationActionPerformed(evt);
             }
         });
 
@@ -111,9 +109,6 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
-        btnSokAgentInformation.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        btnSokAgentInformation.setText("Sök agent information");
-
         btnTaBortAgent.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         btnTaBortAgent.setText("Ta bort agent");
         btnTaBortAgent.addActionListener(new java.awt.event.ActionListener() {
@@ -146,8 +141,6 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Tabort?");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,26 +150,22 @@ public class AdminInformation extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ljValkommen)
                     .addComponent(btnTaBortUtrustning)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnTaBortAgent)
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1))
+                    .addComponent(btnTaBortAgent)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAndraLosenord)
                             .addComponent(btnRegistrera)
                             .addComponent(btnListor)
-                            .addComponent(btnSok)
+                            .addComponent(btnSokAgentInformation)
                             .addComponent(btnTaBortAlien))
                         .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNyregistreraAgent)
                             .addComponent(btnAndraAdminstatus)
                             .addComponent(btnAndraAgentInformation)
-                            .addComponent(btnSokAgentInformation)
                             .addComponent(btnAndraInformationOmradeschef)
                             .addComponent(btnAndraInfromationKontorschef))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,7 +186,7 @@ public class AdminInformation extends javax.swing.JFrame {
                     .addComponent(btnAndraAdminstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSok)
+                    .addComponent(btnSokAgentInformation)
                     .addComponent(btnAndraInformationOmradeschef))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -206,12 +195,8 @@ public class AdminInformation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTaBortUtrustning)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTaBortAgent)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addComponent(btnSokAgentInformation)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addComponent(btnTaBortAgent)
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
@@ -229,9 +214,9 @@ public class AdminInformation extends javax.swing.JFrame {
     new AgentLista().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnListorActionPerformed
 
-    private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
+    private void btnSokAgentInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAgentInformationActionPerformed
     new AgentSok().setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_btnSokActionPerformed
+    }//GEN-LAST:event_btnSokAgentInformationActionPerformed
 
     private void btnAndraAgentInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAgentInformationActionPerformed
     new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled);
@@ -315,12 +300,10 @@ public class AdminInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnListor;
     private javax.swing.JButton btnNyregistreraAgent;
     private javax.swing.JButton btnRegistrera;
-    private javax.swing.JButton btnSok;
     private javax.swing.JButton btnSokAgentInformation;
     private javax.swing.JButton btnTaBortAgent;
     private javax.swing.JButton btnTaBortAlien;
     private javax.swing.JButton btnTaBortUtrustning;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel ljValkommen;
     // End of variables declaration//GEN-END:variables
 }
