@@ -4,7 +4,9 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
+import oru.inf.InfException;
 
 /**
  *
@@ -135,18 +137,35 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
     try{
         idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
+        Boolean jlAgUppdateraLosenord = false;
         String anvandarnamn = tfAngeAnvandarnamn.getText();
         String nuLosen = tfAngeNuvarandeLosenord.getText();
         String nyttLosen = tfAngeNyttLosenord.getText();
         String upprepaLosen = tfAngeUpprepaLosenord.getText();
         String question = "select Losenord from Agent where Agent_ID=" + anvandarnamn;
         String answer = idb.fetchSingle(question);
-    }
-      catch(Exception e){
-      
-      System.out.println();}          // TODO add your handling code here:
+        
+        String fraga = "update agent set Losenord='" + nyttLosen + "'where Agent_ID=" + anvandarnamn;
+        
+        if(nuLosen.equals(answer))
+        {
+            idb.update(fraga);
+            jlAgUppdateraLosenord = true;
+            JOptionPane.showMessageDialog(null, "Ditt lösenord är nu ändrat");
+        }
+        else
+        {
+        JOptionPane.showMessageDialog(null, "Dina uppgifter är felaktiga");
+        }
+            
+        }
+    
+      catch(InfException e){
+      JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+            
+                // TODO add your handling code here:
     }//GEN-LAST:event_jlAgUppdateraLosenordActionPerformed
-
+    }
     /**
      * @param args the command line arguments
      */
