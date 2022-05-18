@@ -26,19 +26,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnAndraInformation" min="-2" max="-2" attributes="0"/>
-                          <Component id="ljValkommen" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnTaBortUtrustning" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnTaBortAlien" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnSokAgentInformation" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAndraInformationOmradeschef" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAndraInfromationKontorschef" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Component id="ljValkommen" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTaBortUtrustning" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -46,17 +39,20 @@
                           <Component id="btnRegistrera" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnListor" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnSok" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnTaBortAlien" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="111" pref="111" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnAndraAgentInformation" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
                           <Component id="btnNyregistreraAgent" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAndraInformationAdminstatus" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAndraAdminstatus" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAndraAgentInformation" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSokAgentInformation" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAndraInformationOmradeschef" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAndraInfromationKontorschef" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,42 +64,38 @@
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnAndraLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnTaBortAgent" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnRegistrera" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAndraAgentInformation" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnListor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRegistrera" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnNyregistreraAgent" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnListor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAndraAdminstatus" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="btnAndraInformationAdminstatus" min="-2" pref="24" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnSokAgentInformation" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnSok" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnAndraInformation" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnSok" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAndraInformationOmradeschef" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnTaBortAlien" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="btnAndraInfromationKontorschef" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnTaBortAlien" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="btnAndraInformationOmradeschef" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAndraInfromationKontorschef" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnTaBortAgent" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="82" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnSokAgentInformation" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -135,6 +127,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Registrera"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistreraActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnListor">
       <Properties>
@@ -143,6 +138,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Listor"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnListorActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSok">
       <Properties>
@@ -151,14 +149,20 @@
         </Property>
         <Property name="text" type="java.lang.String" value="S&#xf6;k"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAndraInformation">
+    <Component class="javax.swing.JButton" name="btnAndraAgentInformation">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xc4;ndra information"/>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra agent information"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraAgentInformationActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnTaBortAlien">
       <Properties>
@@ -167,6 +171,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Ta bort alien"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortAlienActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnTaBortUtrustning">
       <Properties>
@@ -175,6 +182,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Ta bort utrustning"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortUtrustningActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnNyregistreraAgent">
       <Properties>
@@ -183,6 +193,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Nyregistrera agent"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNyregistreraAgentActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSokAgentInformation">
       <Properties>
@@ -192,14 +205,6 @@
         <Property name="text" type="java.lang.String" value="S&#xf6;k agent information"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAndraAgentInformation">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&#xc4;ndra agent information"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnTaBortAgent">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -207,14 +212,20 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Ta bort agent"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortAgentActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAndraInformationAdminstatus">
+    <Component class="javax.swing.JButton" name="btnAndraAdminstatus">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xc4;ndra information adminstatus"/>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra adminstatus"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraAdminstatusActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAndraInformationOmradeschef">
       <Properties>
@@ -223,6 +234,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information omr&#xe5;deschef"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraInformationOmradeschefActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAndraInfromationKontorschef">
       <Properties>
@@ -230,6 +244,14 @@
           <Font name="Helvetica Neue" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#xc4;ndra information kontorschef"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraInfromationKontorschefActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tabort?"/>
       </Properties>
     </Component>
   </SubComponents>
