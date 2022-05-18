@@ -26,21 +26,63 @@ public class AgentRegistrera extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlValReg = new javax.swing.JLabel();
+        jlAlien = new javax.swing.JButton();
+        jlUtrustning = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlValReg.setText("Vad vill du registrera?");
+
+        jlAlien.setText("Alien");
+        jlAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlAlienActionPerformed(evt);
+            }
+        });
+
+        jlUtrustning.setText("Utrustning");
+        jlUtrustning.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlUtrustningActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlValReg)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jlAlien, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlUtrustning, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(260, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jlValReg)
+                .addGap(38, 38, 38)
+                .addComponent(jlAlien)
+                .addGap(37, 37, 37)
+                .addComponent(jlUtrustning)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jlAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAlienActionPerformed
+new AgentRegistreraAlien().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_jlAlienActionPerformed
+
+    private void jlUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlUtrustningActionPerformed
+new AgentRegistreraUtrustning().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_jlUtrustningActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +120,8 @@ public class AgentRegistrera extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jlAlien;
+    private javax.swing.JButton jlUtrustning;
+    private javax.swing.JLabel jlValReg;
     // End of variables declaration//GEN-END:variables
 }

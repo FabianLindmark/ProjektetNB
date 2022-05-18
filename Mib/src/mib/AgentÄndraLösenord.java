@@ -15,7 +15,7 @@ import oru.inf.InfException;
 public class AgentÄndraLösenord extends javax.swing.JFrame {
     
     private InfDB idb;
-    private Startsida vem;
+    
     
     /**
      * Creates new form AgentÄndraLösenord
@@ -134,18 +134,18 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
     }//GEN-LAST:event_tfAngeNyttLosenordActionPerformed
 
     private void jlAgUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAgUppdateraLosenordActionPerformed
-    try{
-        idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+         try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
-        Boolean jlAgUppdateraLosenord = false;
-        String anvandarnamn = tfAngeAnvandarnamn.getText();
-        String nuLosen = tfAngeNuvarandeLosenord.getText();
-        String nyttLosen = tfAngeNyttLosenord.getText();
-        String upprepaLosen = tfAngeUpprepaLosenord.getText();
-        String question = "select Losenord from Agent where Agent_ID=" + anvandarnamn;
-        String answer = idb.fetchSingle(question);
+            Boolean jlAgUppdateraLosenord = false;
+            String anvandarnamn = tfAngeAnvandarnamn.getText();
+            String nuLosen = tfAngeNuvarandeLosenord.getText();
+            String nyttLosen = tfAngeNyttLosenord.getText();
+            String upprepaLosen = tfAngeUpprepaLosenord.getText();
+            String question = "select Losenord from Agent where Agent_ID=" + anvandarnamn;
+            String answer = idb.fetchSingle(question);
         
-        String fraga = "update agent set Losenord='" + nyttLosen + "'where Agent_ID=" + anvandarnamn;
+            String fraga = "update agent set Losenord='" + nyttLosen + "'where Agent_ID=" + anvandarnamn;
         
         if(nuLosen.equals(answer))
         {
@@ -155,13 +155,13 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
         }
         else
         {
-        JOptionPane.showMessageDialog(null, "Dina uppgifter är felaktiga");
+            JOptionPane.showMessageDialog(null, "Dina uppgifter är felaktiga");
         }
             
         }
     
-      catch(InfException e){
-      JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        catch(InfException e){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
             
                 // TODO add your handling code here:
     }//GEN-LAST:event_jlAgUppdateraLosenordActionPerformed
