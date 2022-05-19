@@ -30,7 +30,7 @@ public class AgentInformation extends javax.swing.JFrame {
         btnAgAndraLosen = new javax.swing.JButton();
         btnAgRegistrera = new javax.swing.JButton();
         btnAgListor = new javax.swing.JButton();
-        btnAgSok = new javax.swing.JButton();
+        btnSokAgInfo = new javax.swing.JButton();
         btnAgAndraInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,10 +58,10 @@ public class AgentInformation extends javax.swing.JFrame {
             }
         });
 
-        btnAgSok.setText("Sök");
-        btnAgSok.addActionListener(new java.awt.event.ActionListener() {
+        btnSokAgInfo.setText("Sök Agent Information");
+        btnSokAgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgSokActionPerformed(evt);
+                btnSokAgInfoActionPerformed(evt);
             }
         });
 
@@ -83,9 +83,9 @@ public class AgentInformation extends javax.swing.JFrame {
                     .addComponent(jlValkommen, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAgRegistrera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAgListor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAgSok, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSokAgInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAgAndraInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +99,7 @@ public class AgentInformation extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnAgListor)
                 .addGap(18, 18, 18)
-                .addComponent(btnAgSok)
+                .addComponent(btnSokAgInfo)
                 .addGap(18, 18, 18)
                 .addComponent(btnAgAndraInfo)
                 .addGap(46, 46, 46))
@@ -124,9 +124,9 @@ new AgentRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add yo
 new AgentLista().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAgListorActionPerformed
 
-    private void btnAgSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgSokActionPerformed
+    private void btnSokAgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAgInfoActionPerformed
 new AgentSok().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgSokActionPerformed
+    }//GEN-LAST:event_btnSokAgInfoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,7 +168,7 @@ new AgentSok().setVisible(rootPaneCheckingEnabled);        // TODO add your hand
     private javax.swing.JButton btnAgAndraLosen;
     private javax.swing.JButton btnAgListor;
     private javax.swing.JButton btnAgRegistrera;
-    private javax.swing.JButton btnAgSok;
+    private javax.swing.JButton btnSokAgInfo;
     private javax.swing.JLabel jlValkommen;
     // End of variables declaration//GEN-END:variables
 }
