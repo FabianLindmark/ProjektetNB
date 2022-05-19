@@ -4,6 +4,7 @@
  */
 package mib;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -112,21 +113,10 @@ private InfDB idb;
             String namn = tfBenamning.getText();
             
             String fraga = "insert into utrustning values('"+id +"','" + namn +"')";
-            String fraga2 = "select utrustnings_id from utrustning";
-            String svar2 = idb.fetchSingle(fraga2);
-            String fraga3 = "select benamning from utrustning";
-            String svar3 = idb.fetchSingle(fraga3);
             
-            if(id.equals(svar2)){
-                JOptionPane.showMessageDialog(null, "Utrustning med detta ID finns redan!");
-            }
-            else if (namn.equals(svar3)){
-                JOptionPane.showMessageDialog(null, "Utrustning med denna benamning finns redan!");
-            }
-            else {
                 idb.insert(fraga);
             
-                JOptionPane.showMessageDialog(null, "Ny utrustning registrerad!");}
+                JOptionPane.showMessageDialog(null, "Ny utrustning registrerad!");
         }  
         
         catch(InfException e){

@@ -26,21 +26,79 @@ public class AgentLista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlVal = new javax.swing.JLabel();
+        btnPlats = new javax.swing.JButton();
+        btnRas = new javax.swing.JButton();
+        btnDatum = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlVal.setText("Gör ett val av lista!");
+
+        btnPlats.setText("Alien på specifik plats");
+        btnPlats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlatsActionPerformed(evt);
+            }
+        });
+
+        btnRas.setText("Alien av viss ras");
+        btnRas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRasActionPerformed(evt);
+            }
+        });
+
+        btnDatum.setText("Registrerade alien mellan datum");
+        btnDatum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDatumActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnPlats, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jlVal, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnDatum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jlVal)
+                .addGap(40, 40, 40)
+                .addComponent(btnPlats)
+                .addGap(35, 35, 35)
+                .addComponent(btnRas)
+                .addGap(39, 39, 39)
+                .addComponent(btnDatum)
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlatsActionPerformed
+        new AgentListaAlienPåSpecifikPlats().setVisible(rootPaneCheckingEnabled);        
+    }//GEN-LAST:event_btnPlatsActionPerformed
+
+    private void btnRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRasActionPerformed
+        new AgentListaÖverRas().setVisible(rootPaneCheckingEnabled);        
+    }//GEN-LAST:event_btnRasActionPerformed
+
+    private void btnDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDatumActionPerformed
+        new AgentRegistreradeAlienMellanDatum().setVisible(rootPaneCheckingEnabled); 
+    }//GEN-LAST:event_btnDatumActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +136,9 @@ public class AgentLista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDatum;
+    private javax.swing.JButton btnPlats;
+    private javax.swing.JButton btnRas;
+    private javax.swing.JLabel jlVal;
     // End of variables declaration//GEN-END:variables
 }
