@@ -30,10 +30,10 @@
                   <Component id="jlValkommen" min="-2" pref="77" max="-2" attributes="0"/>
                   <Component id="btnAgRegistrera" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnAgListor" max="32767" attributes="0"/>
-                  <Component id="btnAgSok" max="32767" attributes="0"/>
+                  <Component id="btnSokAgInfo" max="32767" attributes="0"/>
                   <Component id="btnAgAndraInfo" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="251" max="32767" attributes="0"/>
+              <EmptySpace pref="226" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,7 +49,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnAgListor" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnAgSok" min="-2" max="-2" attributes="0"/>
+              <Component id="btnSokAgInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnAgAndraInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
@@ -87,12 +87,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgListorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAgSok">
+    <Component class="javax.swing.JButton" name="btnSokAgInfo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="S&#xf6;k"/>
+        <Property name="text" type="java.lang.String" value="S&#xf6;k Agent Information"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgSokActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokAgInfoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAgAndraInfo">
