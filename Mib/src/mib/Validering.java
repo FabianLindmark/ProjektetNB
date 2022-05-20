@@ -46,6 +46,29 @@ public class Validering {
          return resultat;
     }
      
+     
+     
+     
+     public static boolean adminStatus (String resultat2) {
+        
+         boolean adminStatus = false;
+         
+         
+         if  (resultat2.equals("J")){
+         adminStatus = true;
+         }
+                
+         else {
+         adminStatus = false;
+         }
+             
+         
+         return adminStatus;
+     }
+     
+     
+     
+     
      /**metod för fält som ska vara String
      public static boolean 
           

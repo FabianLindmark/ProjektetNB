@@ -42,7 +42,7 @@ public class AdminInformation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ljValkommen.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        ljValkommen.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         ljValkommen.setText("Välkommen!");
 
         btnAndraLosenord.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
@@ -196,7 +196,7 @@ public class AdminInformation extends javax.swing.JFrame {
                 .addComponent(btnTaBortUtrustning)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTaBortAgent)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
