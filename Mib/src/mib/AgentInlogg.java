@@ -15,7 +15,7 @@ import oru.inf.InfException;
 public class AgentInlogg extends javax.swing.JFrame {
 
     private InfDB idb;
-
+   
     /**
      * Creates new form AgentInlogg
      */
@@ -108,45 +108,45 @@ public class AgentInlogg extends javax.swing.JFrame {
     private void btnAgentLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgentLoggaInActionPerformed
 
         try {
-            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-            boolean btnAgentLoggaIn = false;
-            boolean admin = false;
+           idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+         
             String aid = tfAngivetAgentID.getText();
             String losen = tfAngivetLosenord.getText();
-            String fraga1 = "Select Losenord from Agent where Agent_ID=" + aid;
+            String fraga1 = "Select Losenord from Agent where Agent_ID= '"+aid+"'";
             String svar1 = idb.fetchSingle(fraga1);
             String resultat1 = svar1;
+            
+            //boolean administrator = false;
+            String fraga2 = "Select Administrator from Agent where Agent_ID= '"+aid+"'";
+            String svar2 = idb.fetchSingle(fraga2);
+            String resultat2 = svar2;
           
 
-            if (resultat1.equals(svar1)) {
-                btnAgentLoggaIn = true;
-                admin = false;
+            if (Validering.adminStatus(resultat2) && losen.contains(resultat1)) {
                 System.out.println("Inloggad");
-                new AgentInformation().setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_btnAgentLoggaInActionPerformed
-     
-            else if(resultat1.equals(svar1)) {
-            btnAgentLoggaIn = true;
-            admin = true; 
-            System.out.println("Inloggad");
-            new AdminInformation().setVisible(rootPaneCheckingEnabled);
+                new AdminInformation().setVisible(rootPaneCheckingEnabled);
+                
             }
             
-            
+            else if (!Validering.adminStatus(resultat2) && losen.contains(resultat1)) {
+                 //administrator = false;
+                 System.out.println("Inloggad");
+                 new AgentInformation().setVisible(rootPaneCheckingEnabled);
+            }
             else {
-                System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
-            }   
-        } 
-        
-        catch (InfException ettUndantag) {
+                JOptionPane.showMessageDialog(null, "Kunde inte logga in, kontrollera dina upppgifter");
+                
+        }
+        }
+          catch (InfException ettUndantag) {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
         }
-
-    }
-      
- 
-  
+            
+    }//GEN-LAST:event_btnAgentLoggaInActionPerformed
+     
+         
         /**
          * @param args the command line arguments
          */

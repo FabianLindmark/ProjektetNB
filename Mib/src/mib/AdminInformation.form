@@ -85,7 +85,7 @@
               <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="82" max="32767" attributes="0"/>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,7 +94,7 @@
     <Component class="javax.swing.JLabel" name="ljValkommen">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="18" style="0"/>
+          <Font name="Helvetica Neue" size="24" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="V&#xe4;lkommen!"/>
       </Properties>
