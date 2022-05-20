@@ -63,8 +63,18 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
         });
 
         btnBoras.setText("Borås");
+        btnBoras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorasActionPerformed(evt);
+            }
+        });
 
         btnVilhelmina.setText("Vilhelmina");
+        btnVilhelmina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVilhelminaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,24 +116,43 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVasterasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVasterasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVasterasActionPerformed
-
-    private void btnOrebroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrebroActionPerformed
-        
-        taVisa.setText("ID" + "\t" + "Namn" + "\n");
-        
+        taVisa.setText("Namn" + "\n");
+        try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
-            String orebro = btnOrebro.getText();
-            String fraga1 = "select alien.alien_id, alien.namn, plats.benamning from alien join plats on alien.plats = plats.plats_id where benamning = '"+orebro+"'";
+            String vasteras = btnVasteras.getText();
+            String fraga1 = "select alien.namn, plats.benamning from alien join plats on alien.plats = plats.plats_id where benamning = '"+vasteras+"'";
             ArrayList<String> allaAliens = idb.fetchColumn(fraga1);
            
            
             
-            for(String AlienNamn : allaAliens){
-                taVisa.append(alien.get("ALIEN_ID")+"\t");
-                taVisa.append(" "+ alien.get("NAMN")+"\n");
+            for(String alienNamn : allaAliens){
+                taVisa.append(alienNamn);
+                taVisa.append("\n");
+
+        }}
+        
+        catch(InfException ettUndantag){
+        
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnVasterasActionPerformed
+
+    private void btnOrebroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrebroActionPerformed
+        
+        taVisa.setText("Namn" + "\n");
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String orebro = btnOrebro.getText();
+            String fraga1 = "select alien.namn, plats.benamning from alien join plats on alien.plats = plats.plats_id where benamning = '"+orebro+"'";
+            ArrayList<String> allaAliens = idb.fetchColumn(fraga1);
+           
+           
+            
+            for(String alienNamn : allaAliens){
+                taVisa.append(alienNamn);
+                taVisa.append("\n");
 
         }}
         
@@ -132,6 +161,52 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnOrebroActionPerformed
+
+    private void btnBorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorasActionPerformed
+        taVisa.setText("Namn" + "\n");
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String boras = btnBoras.getText();
+            String fraga1 = "select alien.namn, plats.benamning from alien join plats on alien.plats = plats.plats_id where benamning = '"+boras+"'";
+            ArrayList<String> allaAliens = idb.fetchColumn(fraga1);
+           
+           
+            
+            for(String alienNamn : allaAliens){
+                taVisa.append(alienNamn);
+                taVisa.append("\n");
+
+        }}
+        
+        catch(InfException ettUndantag){
+        
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnBorasActionPerformed
+
+    private void btnVilhelminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVilhelminaActionPerformed
+        taVisa.setText("Namn" + "\n");
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String vilhelmina = btnVilhelmina.getText();
+            String fraga1 = "select alien.namn, plats.benamning from alien join plats on alien.plats = plats.plats_id where benamning = '"+vilhelmina+"'";
+            ArrayList<String> allaAliens = idb.fetchColumn(fraga1);
+           
+           
+            
+            for(String alienNamn : allaAliens){
+                taVisa.append(alienNamn);
+                taVisa.append("\n");
+
+        }}
+        
+        catch(InfException ettUndantag){
+        
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnVilhelminaActionPerformed
 
     /**
      * @param args the command line arguments
