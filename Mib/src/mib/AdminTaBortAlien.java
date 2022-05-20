@@ -4,12 +4,16 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
- * @author ellenportugues
+ * @author FeliciaAhlman
  */
 public class AdminTaBortAlien extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form AdminTaBortAlien
      */
@@ -26,21 +30,94 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlAgentID = new javax.swing.JLabel();
+        jlAgentInlogg = new javax.swing.JLabel();
+        tfAlienID = new javax.swing.JTextField();
+        btnTaBortAlien = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlAgentID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jlAgentID.setText("AlienID:");
+
+        jlAgentInlogg.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlAgentInlogg.setText("Ta bort alien:");
+
+        tfAlienID.setColumns(6);
+        tfAlienID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAlienIDActionPerformed(evt);
+            }
+        });
+
+        btnTaBortAlien.setText("Ta bort alien");
+        btnTaBortAlien.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentRemoved(java.awt.event.ContainerEvent evt) {
+                btnTaBortAlienComponentRemoved(evt);
+            }
+        });
+        btnTaBortAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTaBortAlienActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnTaBortAlien)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(136, 136, 136)
+                            .addComponent(jlAgentInlogg))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(87, 87, 87)
+                            .addComponent(jlAgentID)
+                            .addGap(18, 18, 18)
+                            .addComponent(tfAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jlAgentInlogg)
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAgentID)
+                    .addComponent(tfAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addComponent(btnTaBortAlien)
+                .addGap(72, 72, 72))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
+         try{
+             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+             
+             String sql = "delete from Alien where Alien_ID = ?";
+             
+            JOptionPane.showMessageDialog(null, "Alien är nu raderad");
+         }
+         
+        catch(InfException e){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+         }
+    }//GEN-LAST:event_btnTaBortAlienActionPerformed
+
+    private void tfAlienIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAlienIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAlienIDActionPerformed
+
+    private void btnTaBortAlienComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_btnTaBortAlienComponentRemoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTaBortAlienComponentRemoved
 
     /**
      * @param args the command line arguments
@@ -78,5 +155,9 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnTaBortAlien;
+    private javax.swing.JLabel jlAgentID;
+    private javax.swing.JLabel jlAgentInlogg;
+    private javax.swing.JTextField tfAlienID;
     // End of variables declaration//GEN-END:variables
 }
