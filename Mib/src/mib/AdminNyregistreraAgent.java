@@ -4,12 +4,17 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author ellenportugues
  */
 public class AdminNyregistreraAgent extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AdminNyregistreraAgent
      */
@@ -36,7 +41,7 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
         jlAdminStatus = new javax.swing.JLabel();
         tfAngivenAdminStatus = new javax.swing.JTextField();
         tfAngivetRegistreringsdatum = new javax.swing.JTextField();
-        tfTAngivenTelefon = new javax.swing.JTextField();
+        tfAngivenTelefon = new javax.swing.JTextField();
         tfAngivetAgentID = new javax.swing.JTextField();
         tfAngivetLosenord = new javax.swing.JTextField();
         tfAngivetOmrade = new javax.swing.JTextField();
@@ -66,7 +71,7 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
 
         tfAngivetRegistreringsdatum.setColumns(10);
 
-        tfTAngivenTelefon.setColumns(10);
+        tfAngivenTelefon.setColumns(10);
 
         tfAngivetAgentID.setColumns(10);
 
@@ -77,6 +82,11 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
         tfAngivetNamn.setColumns(10);
 
         btnRegistrera.setText("Registrera");
+        btnRegistrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistreraActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,7 +111,7 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jlTelefon)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tfTAngivenTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfAngivenTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jlRegistreringsdatum)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
@@ -142,7 +152,7 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
                             .addComponent(tfAngivetNamn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfTAngivenTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfAngivenTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlTelefon))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -170,6 +180,29 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
+
+        try {
+            idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
+            
+         String agentID = tfAngivetAgentID.getText();
+         String namn = tfAngivetNamn.getText();
+         String telefon = tfAngivenTelefon.getText();
+         String regDatum = tfAngivetRegistreringsdatum.getText();
+         String admin = tfAngivenAdminStatus.getText();
+         String losen = tfAngivetLosenord.getText();
+         String omrade = tfAngivetOmrade.getText();
+         String fraga = "insert into Agent values('"+ agentID +"','" + namn +"','" + telefon +"','" + regDatum + "','" + admin +"','" + losen + "','" +omrade+"')";
+            
+            idb.insert(fraga);
+            
+            JOptionPane.showMessageDialog(null, "Ny agent registrerad!");
+        }
+        catch(InfException e){
+             JOptionPane.showMessageDialog(null, "Något gick fel!");
+        } 
+    }//GEN-LAST:event_btnRegistreraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,11 +250,11 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
     private javax.swing.JLabel jlRegistreringsdatum;
     private javax.swing.JLabel jlTelefon;
     private javax.swing.JTextField tfAngivenAdminStatus;
+    private javax.swing.JTextField tfAngivenTelefon;
     private javax.swing.JTextField tfAngivetAgentID;
     private javax.swing.JTextField tfAngivetLosenord;
     private javax.swing.JTextField tfAngivetNamn;
     private javax.swing.JTextField tfAngivetOmrade;
     private javax.swing.JTextField tfAngivetRegistreringsdatum;
-    private javax.swing.JTextField tfTAngivenTelefon;
     // End of variables declaration//GEN-END:variables
 }
