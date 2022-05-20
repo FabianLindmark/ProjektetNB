@@ -6,7 +6,6 @@ package mib;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -113,19 +112,16 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
     private void btnOrebroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrebroActionPerformed
         
         taVisa.setText("ID" + "\t" + "Namn" + "\n");
-        ArrayList<HashMap<String, String>> allaAliens = new ArrayList<HashMap<String, String>>();
-        try{
+        
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
             String orebro = btnOrebro.getText();
-            String fraga1 = "select alien_id, namn from alien"
-                    + "join plats on plats_id = alien.plats"
-                    + "where plats.benamning = '" + orebro + "'";
+            String fraga1 = "select alien.alien_id, alien.namn, plats.benamning from alien join plats on alien.plats = plats.plats_id where benamning = '"+orebro+"'";
+            ArrayList<String> allaAliens = idb.fetchColumn(fraga1);
            
-           System.out.println(orebro);
-            allaAliens =idb.fetchRows(fraga1);
+           
             
-            for(HashMap<String,String> alien : allaAliens){
+            for(String AlienNamn : allaAliens){
                 taVisa.append(alien.get("ALIEN_ID")+"\t");
                 taVisa.append(" "+ alien.get("NAMN")+"\n");
 

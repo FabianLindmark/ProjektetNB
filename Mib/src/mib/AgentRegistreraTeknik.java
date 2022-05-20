@@ -4,7 +4,6 @@
  */
 package mib;
 
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -13,12 +12,12 @@ import oru.inf.InfException;
  *
  * @author flind
  */
-public class AgentRegistreraUtrustning extends javax.swing.JFrame {
-private InfDB idb;
+public class AgentRegistreraTeknik extends javax.swing.JFrame {
+    private InfDB idb;
     /**
-     * Creates new form AgentRegistreraUtrustning
+     * Creates new form AgentRegistreraTeknik
      */
-    public AgentRegistreraUtrustning() {
+    public AgentRegistreraTeknik() {
         initComponents();
     }
 
@@ -31,24 +30,18 @@ private InfDB idb;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlRegUtr = new javax.swing.JLabel();
-        jlUtrID = new javax.swing.JLabel();
-        jlBenamning = new javax.swing.JLabel();
-        tfUtrID = new javax.swing.JTextField();
-        tfBenamning = new javax.swing.JTextField();
+        jlReg = new javax.swing.JLabel();
         btnRegistrera = new javax.swing.JButton();
+        jlID = new javax.swing.JLabel();
+        jlBenamning = new javax.swing.JLabel();
+        jlKraft = new javax.swing.JLabel();
+        tfID = new javax.swing.JTextField();
+        tfBenamning = new javax.swing.JTextField();
+        tfKraft = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlRegUtr.setText("Registrera utrustning");
-
-        jlUtrID.setText("UtrustningsID");
-
-        jlBenamning.setText("Benämning");
-
-        tfUtrID.setColumns(15);
-
-        tfBenamning.setColumns(15);
+        jlReg.setText("Registrera teknik");
 
         btnRegistrera.setText("Registrera");
         btnRegistrera.addActionListener(new java.awt.event.ActionListener() {
@@ -57,48 +50,64 @@ private InfDB idb;
             }
         });
 
+        jlID.setText("ID");
+
+        jlBenamning.setText("Benämning");
+
+        jlKraft.setText("Kraftkälla");
+
+        tfID.setColumns(12);
+
+        tfBenamning.setColumns(12);
+
+        tfKraft.setColumns(12);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRegistrera)
+                .addGap(30, 30, 30))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jlRegUtr))
+                        .addComponent(jlReg, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jlBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(tfBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jlUtrID, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(tfUtrID, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(90, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnRegistrera)
-                .addGap(28, 28, 28))
+                            .addComponent(jlBenamning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlID, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlKraft, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tfID, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfKraft, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlRegUtr)
-                .addGap(44, 44, 44)
+                .addComponent(jlReg)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlUtrID)
-                    .addComponent(tfUtrID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
+                    .addComponent(jlID)
+                    .addComponent(tfID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlBenamning)
                     .addComponent(tfBenamning, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlKraft)
+                    .addComponent(tfKraft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(btnRegistrera)
-                .addGap(15, 15, 15))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -107,21 +116,22 @@ private InfDB idb;
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-            
-            
-            String id = tfUtrID.getText();
+        
+            String id = tfID.getText();
             String namn = tfBenamning.getText();
+            String kraftkalla = tfKraft.getText();
             
             String fraga = "insert into utrustning values('"+id +"','" + namn +"')";
-            
+            String fraga2 = "insert into teknik values('"+id +"','" + kraftkalla +"')";
+                
                 idb.insert(fraga);
-            
-                JOptionPane.showMessageDialog(null, "Ny utrustning registrerad!");
-        }  
+                idb.insert(fraga2);
+             JOptionPane.showMessageDialog(null, "Ny teknik registrerad!");
+        }
         
         catch(InfException e){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
-        }        // TODO add your handling code here:
+        }
     }//GEN-LAST:event_btnRegistreraActionPerformed
 
     /**
@@ -141,20 +151,20 @@ private InfDB idb;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraUtrustning.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraTeknik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraUtrustning.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraTeknik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraUtrustning.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraTeknik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraUtrustning.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraTeknik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AgentRegistreraUtrustning().setVisible(true);
+                new AgentRegistreraTeknik().setVisible(true);
             }
         });
     }
@@ -162,9 +172,11 @@ private InfDB idb;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistrera;
     private javax.swing.JLabel jlBenamning;
-    private javax.swing.JLabel jlRegUtr;
-    private javax.swing.JLabel jlUtrID;
+    private javax.swing.JLabel jlID;
+    private javax.swing.JLabel jlKraft;
+    private javax.swing.JLabel jlReg;
     private javax.swing.JTextField tfBenamning;
-    private javax.swing.JTextField tfUtrID;
+    private javax.swing.JTextField tfID;
+    private javax.swing.JTextField tfKraft;
     // End of variables declaration//GEN-END:variables
 }

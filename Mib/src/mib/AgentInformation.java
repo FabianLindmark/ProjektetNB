@@ -109,23 +109,23 @@ public class AgentInformation extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgAndraLosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgAndraLosenActionPerformed
-new AgentÄndraLösenord().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentÄndraLösenord().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAgAndraLosenActionPerformed
 
     private void btnAgAndraInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgAndraInfoActionPerformed
-new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAgAndraInfoActionPerformed
 
     private void btnAgRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgRegistreraActionPerformed
-new AgentRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAgRegistreraActionPerformed
 
     private void btnAgListorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgListorActionPerformed
-new AgentLista().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentLista().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAgListorActionPerformed
 
     private void btnSokAgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAgInfoActionPerformed
-new AgentSok().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentSok().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_btnSokAgInfoActionPerformed
 
     /**

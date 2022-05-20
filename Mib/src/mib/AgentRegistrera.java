@@ -81,7 +81,7 @@ new AgentRegistreraAlien().setVisible(rootPaneCheckingEnabled);        // TODO a
     }//GEN-LAST:event_jlAlienActionPerformed
 
     private void jlUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlUtrustningActionPerformed
-new AgentRegistreraUtrustning().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+new AgentVilkenUtrustningRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_jlUtrustningActionPerformed
 
     /**
