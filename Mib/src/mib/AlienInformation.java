@@ -26,24 +26,64 @@ public class AlienInformation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlValkommen = new javax.swing.JLabel();
+        btnAndraLosenord = new javax.swing.JButton();
+        btnVisaInformationMinOmradeschef = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlValkommen.setText("Välkommen!");
+
+        btnAndraLosenord.setText("Ändra Lösenord");
+        btnAndraLosenord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAndraLosenordActionPerformed(evt);
+            }
+        });
+
+        btnVisaInformationMinOmradeschef.setText("Visa information min områdeschef");
+        btnVisaInformationMinOmradeschef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVisaInformationMinOmradeschefActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVisaInformationMinOmradeschef)
+                    .addComponent(btnAndraLosenord)
+                    .addComponent(jlValkommen, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jlValkommen)
+                .addGap(31, 31, 31)
+                .addComponent(btnAndraLosenord)
+                .addGap(32, 32, 32)
+                .addComponent(btnVisaInformationMinOmradeschef)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
+    private void btnAndraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraLosenordActionPerformed
+    new AlienÄndraLösenord().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnAndraLosenordActionPerformed
+
+    private void btnVisaInformationMinOmradeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisaInformationMinOmradeschefActionPerformed
+    new AlienVisaInformationMinOmrådeschef().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnVisaInformationMinOmradeschefActionPerformed
+
+     /* @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -78,5 +118,8 @@ public class AlienInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAndraLosenord;
+    private javax.swing.JButton btnVisaInformationMinOmradeschef;
+    private javax.swing.JLabel jlValkommen;
     // End of variables declaration//GEN-END:variables
 }

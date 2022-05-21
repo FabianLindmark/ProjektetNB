@@ -109,29 +109,28 @@ public class AlienInlogg extends javax.swing.JFrame {
         
            try {
           idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
-          boolean btnAlienLoggaIn = false;
           String anid = tfAngivetAlienID.getText();
           String losen =tfAngivetAlienLosenord.getText();
-          String fraga2 = "Select Losenord from Agent where Alien_ID=" + anid;
-          String svar2 = idb.fetchSingle(fraga2);
-          String resultat1 = svar2;
+          String fraga = "Select Losenord from Alien where Alien_ID= '"+anid+"'";
+          String svar = idb.fetchSingle(fraga);
+          String resultat = svar;
+          
         
-         if(resultat1.equals(svar2))
+         if(losen.contains(resultat))
       {
-                btnAlienLoggaIn = true;
                 System.out.println("Inloggad");
                 new AlienInformation().setVisible(rootPaneCheckingEnabled);
     }                                               
-     
+        
       else 
         {
-        System.out.println("Kunde inte logga in, kontrollera dina upppgifter");
+        JOptionPane.showMessageDialog(null, "Kunde inte logga in, kontrollera dina upppgifter");
         }
     }
       
-    catch(InfException ettUndantag) {
+    catch(InfException e) {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
-              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+              System.out.println("Internt felmeddelande" + e.getMessage());
     }
     
         
