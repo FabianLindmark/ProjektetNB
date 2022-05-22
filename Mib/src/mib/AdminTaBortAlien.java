@@ -30,23 +30,23 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlAgentID = new javax.swing.JLabel();
-        jlAgentInlogg = new javax.swing.JLabel();
-        tfAlienID = new javax.swing.JTextField();
+        jlAlienID = new javax.swing.JLabel();
+        jlTaBortAlien = new javax.swing.JLabel();
+        tfAngivetAlienID = new javax.swing.JTextField();
         btnTaBortAlien = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlAgentID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jlAgentID.setText("AlienID:");
+        jlAlienID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jlAlienID.setText("AlienID:");
 
-        jlAgentInlogg.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jlAgentInlogg.setText("Ta bort alien:");
+        jlTaBortAlien.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlTaBortAlien.setText("Ta bort alien:");
 
-        tfAlienID.setColumns(6);
-        tfAlienID.addActionListener(new java.awt.event.ActionListener() {
+        tfAngivetAlienID.setColumns(6);
+        tfAngivetAlienID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAlienIDActionPerformed(evt);
+                tfAngivetAlienIDActionPerformed(evt);
             }
         });
 
@@ -72,23 +72,23 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(136, 136, 136)
-                            .addComponent(jlAgentInlogg))
+                            .addComponent(jlTaBortAlien))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(87, 87, 87)
-                            .addComponent(jlAgentID)
+                            .addComponent(jlAlienID)
                             .addGap(18, 18, 18)
-                            .addComponent(tfAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tfAngivetAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jlAgentInlogg)
+                .addComponent(jlTaBortAlien)
                 .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlAgentID)
-                    .addComponent(tfAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlAlienID)
+                    .addComponent(tfAngivetAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(btnTaBortAlien)
                 .addGap(72, 72, 72))
@@ -106,14 +106,14 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }
          
-        catch(InfException e){
+        catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
          }
     }//GEN-LAST:event_btnTaBortAlienActionPerformed
 
-    private void tfAlienIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAlienIDActionPerformed
+    private void tfAngivetAlienIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAngivetAlienIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfAlienIDActionPerformed
+    }//GEN-LAST:event_tfAngivetAlienIDActionPerformed
 
     private void btnTaBortAlienComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_btnTaBortAlienComponentRemoved
         // TODO add your handling code here:
@@ -156,8 +156,8 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTaBortAlien;
-    private javax.swing.JLabel jlAgentID;
-    private javax.swing.JLabel jlAgentInlogg;
-    private javax.swing.JTextField tfAlienID;
+    private javax.swing.JLabel jlAlienID;
+    private javax.swing.JLabel jlTaBortAlien;
+    private javax.swing.JTextField tfAngivetAlienID;
     // End of variables declaration//GEN-END:variables
 }

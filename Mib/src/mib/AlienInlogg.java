@@ -128,9 +128,9 @@ public class AlienInlogg extends javax.swing.JFrame {
         }
     }
       
-    catch(InfException e) {
+    catch(InfException ettUndantag) {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
-              System.out.println("Internt felmeddelande" + e.getMessage());
+              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
     }
     
         

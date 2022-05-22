@@ -160,7 +160,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
             
         }
     
-        catch(InfException e){
+        catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
             
                 // TODO add your handling code here:
