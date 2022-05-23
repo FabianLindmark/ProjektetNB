@@ -32,6 +32,7 @@ public class AgentInformation extends javax.swing.JFrame {
         btnAgListor = new javax.swing.JButton();
         btnSokAgInfo = new javax.swing.JButton();
         btnAgAndraInfo = new javax.swing.JButton();
+        btnInfoOmradeschef = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,7 +59,7 @@ public class AgentInformation extends javax.swing.JFrame {
             }
         });
 
-        btnSokAgInfo.setText("Sök Agent Information");
+        btnSokAgInfo.setText("Sök info om alien");
         btnSokAgInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSokAgInfoActionPerformed(evt);
@@ -71,6 +72,8 @@ public class AgentInformation extends javax.swing.JFrame {
                 btnAgAndraInfoActionPerformed(evt);
             }
         });
+
+        btnInfoOmradeschef.setText("Sök info om områdeschef");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,7 +88,9 @@ public class AgentInformation extends javax.swing.JFrame {
                     .addComponent(btnAgListor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSokAgInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAgAndraInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addGap(61, 61, 61)
+                .addComponent(btnInfoOmradeschef)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +104,9 @@ public class AgentInformation extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnAgListor)
                 .addGap(18, 18, 18)
-                .addComponent(btnSokAgInfo)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSokAgInfo)
+                    .addComponent(btnInfoOmradeschef))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgAndraInfo)
                 .addGap(46, 46, 46))
@@ -125,7 +132,7 @@ public class AgentInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgListorActionPerformed
 
     private void btnSokAgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAgInfoActionPerformed
-        new AgentSok().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentSökInformationOmAlien().setVisible(rootPaneCheckingEnabled); // TODO add your handling code here:
     }//GEN-LAST:event_btnSokAgInfoActionPerformed
 
     /**
@@ -168,6 +175,7 @@ public class AgentInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnAgAndraLosen;
     private javax.swing.JButton btnAgListor;
     private javax.swing.JButton btnAgRegistrera;
+    private javax.swing.JToggleButton btnInfoOmradeschef;
     private javax.swing.JButton btnSokAgInfo;
     private javax.swing.JLabel jlValkommen;
     // End of variables declaration//GEN-END:variables

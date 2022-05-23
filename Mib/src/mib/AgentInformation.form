@@ -33,7 +33,9 @@
                   <Component id="btnSokAgInfo" max="32767" attributes="0"/>
                   <Component id="btnAgAndraInfo" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="226" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <Component id="btnInfoOmradeschef" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,7 +51,10 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnAgListor" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnSokAgInfo" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnSokAgInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnInfoOmradeschef" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnAgAndraInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
@@ -89,7 +94,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSokAgInfo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="S&#xf6;k Agent Information"/>
+        <Property name="text" type="java.lang.String" value="S&#xf6;k info om alien"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokAgInfoActionPerformed"/>
@@ -102,6 +107,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgAndraInfoActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="btnInfoOmradeschef">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xf6;k info om omr&#xe5;deschef"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
