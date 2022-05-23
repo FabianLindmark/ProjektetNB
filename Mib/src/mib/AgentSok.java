@@ -4,12 +4,16 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author flind
  */
 public class AgentSok extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form AgentSok
      */
@@ -26,21 +30,181 @@ public class AgentSok extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlSokInfo = new javax.swing.JLabel();
+        tfSkrivNamn = new javax.swing.JTextField();
+        jlNamn = new javax.swing.JLabel();
+        tfID = new javax.swing.JTextField();
+        jlID = new javax.swing.JLabel();
+        jlTelefonnummer = new javax.swing.JLabel();
+        jlAnstallningsdatum = new javax.swing.JLabel();
+        jlAdministrator = new javax.swing.JLabel();
+        jlOmrade = new javax.swing.JLabel();
+        tfTelefonnummer = new javax.swing.JTextField();
+        tfAnstallningsdatum = new javax.swing.JTextField();
+        tfAdmin = new javax.swing.JTextField();
+        tfOmrade = new javax.swing.JTextField();
+        btnSok = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlSokInfo.setText("Sök information om en agent!");
+
+        tfSkrivNamn.setColumns(12);
+
+        jlNamn.setText("Skriv in namn:");
+
+        tfID.setColumns(12);
+
+        jlID.setText("ID");
+
+        jlTelefonnummer.setText("Telefonnummer");
+
+        jlAnstallningsdatum.setText("Anställningsdatum");
+
+        jlAdministrator.setText("Administratör");
+
+        jlOmrade.setText("Område");
+
+        tfTelefonnummer.setColumns(12);
+
+        tfAnstallningsdatum.setColumns(12);
+        tfAnstallningsdatum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAnstallningsdatumActionPerformed(evt);
+            }
+        });
+
+        tfAdmin.setColumns(12);
+
+        tfOmrade.setColumns(12);
+        tfOmrade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfOmradeActionPerformed(evt);
+            }
+        });
+
+        btnSok.setText("Sök");
+        btnSok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSokActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlSokInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(jlNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(tfSkrivNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                                .addComponent(btnSok))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlAnstallningsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlAdministrator, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlTelefonnummer)
+                            .addComponent(jlID, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tfAdmin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(tfID, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(tfTelefonnummer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(tfAnstallningsdatum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(tfOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlSokInfo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfSkrivNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlNamn)
+                    .addComponent(btnSok))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlID))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlTelefonnummer)
+                    .addComponent(tfTelefonnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlAnstallningsdatum)
+                    .addComponent(tfAnstallningsdatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlAdministrator)
+                    .addComponent(tfAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlOmrade)
+                    .addComponent(tfOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tfAnstallningsdatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAnstallningsdatumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAnstallningsdatumActionPerformed
+
+    private void tfOmradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfOmradeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfOmradeActionPerformed
+
+    private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
+        
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            String namn = tfSkrivNamn.getText();
+            
+            String fraga1 = "select agent_id from agent where namn = '"+namn+"'";
+            String svar1 = idb.fetchSingle(fraga1);
+            
+            tfID.setText(svar1);
+        
+            String fraga2 = "select telefon from agent where namn = '"+namn+"'";
+            String svar2 = idb.fetchSingle(fraga2);
+            
+            tfTelefonnummer.setText(svar2);
+            
+            String fraga3 = "select anstallningsdatum from agent where namn = '"+namn+"'";
+            String svar3 = idb.fetchSingle(fraga3);
+            
+            tfAnstallningsdatum.setText(svar3);
+            
+            String fraga4 = "select administrator from agent where namn = '"+namn+"'";
+            String svar4 = idb.fetchSingle(fraga4);
+            
+            tfAdmin.setText(svar4);
+            
+            String fraga5 = "select omrade from agent where namn = '"+namn+"'";
+            String svar5 = idb.fetchSingle(fraga5);
+            
+            tfOmrade.setText(svar5);
+            
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
+    }//GEN-LAST:event_btnSokActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +242,19 @@ public class AgentSok extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSok;
+    private javax.swing.JLabel jlAdministrator;
+    private javax.swing.JLabel jlAnstallningsdatum;
+    private javax.swing.JLabel jlID;
+    private javax.swing.JLabel jlNamn;
+    private javax.swing.JLabel jlOmrade;
+    private javax.swing.JLabel jlSokInfo;
+    private javax.swing.JLabel jlTelefonnummer;
+    private javax.swing.JTextField tfAdmin;
+    private javax.swing.JTextField tfAnstallningsdatum;
+    private javax.swing.JTextField tfID;
+    private javax.swing.JTextField tfOmrade;
+    private javax.swing.JTextField tfSkrivNamn;
+    private javax.swing.JTextField tfTelefonnummer;
     // End of variables declaration//GEN-END:variables
 }
