@@ -45,7 +45,7 @@
                           <Group type="102" attributes="0">
                               <Component id="jlTelefon" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="tfTAngivenTelefon" min="-2" max="-2" attributes="0"/>
+                              <Component id="tfAngivenTelefon" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jlRegistreringsdatum" min="-2" max="-2" attributes="0"/>
@@ -101,7 +101,7 @@
               </Group>
               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tfTAngivenTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngivenTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jlTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -190,7 +190,7 @@
         <Property name="columns" type="int" value="10"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfTAngivenTelefon">
+    <Component class="javax.swing.JTextField" name="tfAngivenTelefon">
       <Properties>
         <Property name="columns" type="int" value="10"/>
       </Properties>
@@ -219,6 +219,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrera"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistreraActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

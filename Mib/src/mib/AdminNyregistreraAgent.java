@@ -199,7 +199,7 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(null, "Ny agent registrerad!");
         }
-        catch(InfException e){
+        catch(InfException ettUndantag){
              JOptionPane.showMessageDialog(null, "Något gick fel!");
         } 
     }//GEN-LAST:event_btnRegistreraActionPerformed

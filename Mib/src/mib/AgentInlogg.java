@@ -107,9 +107,11 @@ public class AgentInlogg extends javax.swing.JFrame {
 
     private void btnAgentLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgentLoggaInActionPerformed
 
+         if (Validering.textFaltHarVarde(tfAngivetAgentID) || Validering.textFaltHarVarde(tfAngivetLosenord)){
+            
+       
         try {
            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-            
          
             String aid = tfAngivetAgentID.getText();
             String losen = tfAngivetLosenord.getText();
@@ -125,13 +127,15 @@ public class AgentInlogg extends javax.swing.JFrame {
 
             if (Validering.adminStatus(resultat2) && losen.contains(resultat1)) {
                 System.out.println("Inloggad");
+                 //  JOptionPane.showMessageDialog(null, "Inloggad");
                 new AdminInformation().setVisible(rootPaneCheckingEnabled);
                 
             }
             
             else if (!Validering.adminStatus(resultat2) && losen.contains(resultat1)) {
                  //administrator = false;
-                 System.out.println("Inloggad");
+                System.out.println("Inloggad");
+                //  JOptionPane.showMessageDialog(null, "Inloggad");
                  new AgentInformation().setVisible(rootPaneCheckingEnabled);
             }
             else {
@@ -139,13 +143,16 @@ public class AgentInlogg extends javax.swing.JFrame {
                 
         }
         }
+        
           catch (InfException ettUndantag) {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
         }
+        
+ 
             
     }//GEN-LAST:event_btnAgentLoggaInActionPerformed
-     
+    }
          
         /**
          * @param args the command line arguments

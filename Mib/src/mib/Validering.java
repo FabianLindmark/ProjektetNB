@@ -13,6 +13,9 @@ import javax.swing.JTextField;
  */
 public class Validering {
     
+    
+    
+    
     public static boolean textFaltHarVarde(JTextField rutaAttKolla)
     {
         boolean resultat = true; 
@@ -26,8 +29,14 @@ public class Validering {
         return resultat;
         
     }
+  
+    
+    
+    
+    
     
     //metod för fält som ska vara int, 
+    //Anväbds inte någonstans ÄN :) annars ta bort
      public static boolean isHeltal (JTextField rutaAttKolla){
         
         boolean resultat = true;
@@ -49,6 +58,8 @@ public class Validering {
      
      
      
+     
+     
      public static boolean adminStatus (String resultat2) {
         
          boolean adminStatus = false;
@@ -66,25 +77,4 @@ public class Validering {
          return adminStatus;
      }
      
-     
-     
-     
-     /**metod för fält som ska vara String
-     public static boolean 
-          
-     boolean resultat = true;
-     
-     try{
-    
-        
-    
-        }
-     catch(){
-    
-    
-        }
-     
-    return resultat;
-    **/
-    
-}
+   }

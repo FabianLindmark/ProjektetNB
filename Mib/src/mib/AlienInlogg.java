@@ -107,6 +107,9 @@ public class AlienInlogg extends javax.swing.JFrame {
         // TODO add your handling code here:
         // koda till nästa sida, 
         
+        if (Validering.textFaltHarVarde(tfAngivetAlienID) || Validering.textFaltHarVarde(tfAngivetAlienLosenord)){
+            
+       
            try {
           idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
           String anid = tfAngivetAlienID.getText();
@@ -139,7 +142,7 @@ public class AlienInlogg extends javax.swing.JFrame {
         
       
     }//GEN-LAST:event_btnAlienLoggaInActionPerformed
-
+    }
     /**
      * @param args the command line arguments
      */
