@@ -30,6 +30,10 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
         btnAndraAdminstatus = new javax.swing.JButton();
         jlAgentNamn = new javax.swing.JLabel();
         tfAngivetAgentNamn = new javax.swing.JTextField();
+        jlAgentID = new javax.swing.JLabel();
+        jlAdminstatus = new javax.swing.JLabel();
+        tfAngivetAgentID = new javax.swing.JTextField();
+        tfAngivenAdminstatus = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,23 +51,35 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
 
         tfAngivetAgentNamn.setColumns(10);
 
+        jlAgentID.setText("Agent ID: ");
+
+        jlAdminstatus.setText("Adminstatus:");
+
+        tfAngivetAgentID.setColumns(10);
+
+        tfAngivenAdminstatus.setColumns(10);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
-                .addComponent(jlAgentNamn)
+                .addContainerGap(66, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlAdminstatus)
+                    .addComponent(jlAgentID)
+                    .addComponent(jlAgentNamn))
                 .addGap(33, 33, 33)
-                .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfAngivetAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfAngivenAdminstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100))
             .addGroup(layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(btnAndraAdminstatus)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addComponent(jlAndraAdminststatus)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlAndraAdminststatus)
+                    .addComponent(btnAndraAdminstatus))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -75,18 +91,40 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAgentNamn)
                     .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAgentID)
+                    .addComponent(tfAngivetAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfAngivenAdminstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlAdminstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addComponent(btnAndraAdminstatus)
-                .addGap(65, 65, 65))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAndraAdminstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAdminstatusActionPerformed
-   
-        
-        
+   /*
+        if (Validering.adminStatus()){
+            
+            try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+             
+            String namn = tfAngivetNamn.getText();
+            String aid = tfAngivetAgentID.getText();
+            String admin = tfAngivenAdminstatus.getText();
+                
+                
+            }
+        }
+            
+       
+       
+    */    
         
         
     }//GEN-LAST:event_btnAndraAdminstatusActionPerformed
@@ -153,8 +191,12 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAndraAdminstatus;
+    private javax.swing.JLabel jlAdminstatus;
+    private javax.swing.JLabel jlAgentID;
     private javax.swing.JLabel jlAgentNamn;
     private javax.swing.JLabel jlAndraAdminststatus;
+    private javax.swing.JTextField tfAngivenAdminstatus;
+    private javax.swing.JTextField tfAngivetAgentID;
     private javax.swing.JTextField tfAngivetAgentNamn;
     // End of variables declaration//GEN-END:variables
 }
