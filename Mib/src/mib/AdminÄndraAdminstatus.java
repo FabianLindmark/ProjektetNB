@@ -26,23 +26,97 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlAndraAdminststatus = new javax.swing.JLabel();
+        btnAndraAdminstatus = new javax.swing.JButton();
+        jlAgentNamn = new javax.swing.JLabel();
+        tfAngivetAgentNamn = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlAndraAdminststatus.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlAndraAdminststatus.setText("Ändra Adminstatus");
+
+        btnAndraAdminstatus.setText("Ändra Adminstatus");
+        btnAndraAdminstatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAndraAdminstatusActionPerformed(evt);
+            }
+        });
+
+        jlAgentNamn.setText("Agent Namn:");
+
+        tfAngivetAgentNamn.setColumns(10);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addComponent(jlAgentNamn)
+                .addGap(33, 33, 33)
+                .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addComponent(btnAndraAdminstatus)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(jlAndraAdminststatus)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jlAndraAdminststatus)
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAgentNamn)
+                    .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addComponent(btnAndraAdminstatus)
+                .addGap(65, 65, 65))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAndraAdminstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAdminstatusActionPerformed
+   
+        
+        
+        
+        
+    }//GEN-LAST:event_btnAndraAdminstatusActionPerformed
+/* 
+     public static boolean adminStatus (String resultat2) {
+        
+         boolean adminStatus = false;
+         
+         
+         if  (resultat2.equals("J")){
+         adminStatus = true;
+         }
+                
+         else {
+         adminStatus = false;
+         }
+             
+         
+         return adminStatus;
+     }
+    
+    
+     String fraga2 = "Select Administrator from Agent where Agent_ID= '"+aid+"'";
+            String svar2 = idb.fetchSingle(fraga2);
+            String resultat2 = svar2;
+          
+     */
+    
     /**
+     * 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -78,5 +152,9 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAndraAdminstatus;
+    private javax.swing.JLabel jlAgentNamn;
+    private javax.swing.JLabel jlAndraAdminststatus;
+    private javax.swing.JTextField tfAngivetAgentNamn;
     // End of variables declaration//GEN-END:variables
 }
