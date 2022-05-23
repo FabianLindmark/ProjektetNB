@@ -39,7 +39,7 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlTaBortAlienNamn.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jlTaBortAlienNamn.setText("Namn");
+        jlTaBortAlienNamn.setText("Namn:");
 
         jlTaBortAlien.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jlTaBortAlien.setText("Ta bort alien:");
@@ -80,7 +80,7 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
                                 .addComponent(jlTaBortAlienNamn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tfAlienNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,15 +100,21 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
+         String fraga = "SELECT * FROM alien";
         
+          ArrayList<String> allaAliens;
+                  
         try {
              idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
              
-            String fraga1 = "SELECT * FROM alien";
-            String fraga2 = "ALTER TABLE alien DROP PRIMARY KEY";
-            String fraga3 = "DELETE FROM alien" + "WHERE alien.namn = " + tfAlienNamn;
-            
-             idb.delete(fraga3);
+            allaAliens = idb.fetchColumn(fraga);
+                    
+            for(String alien : allaAliens){
+                String fraga2 = "DELETE FROM alien WHERE =" + "'"+ tfAlienNamn +"'";
+                idb.delete(fraga2);
+            }
+          
+         
              
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }

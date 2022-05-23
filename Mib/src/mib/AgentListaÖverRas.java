@@ -107,16 +107,16 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
 
     private void btnSquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSquidActionPerformed
 
-        try{
+       try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
             String Squid = btnSquid.getText();
-            String fraga1 = "select alien.namn, alien.alien_id from alien join squid where squid.alien_id = alien.alien_id";
-            ArrayList<String> allaAliens = idb.fetchColumn(fraga1);
+            String fraga ="SELECT DISTINCT Namn FROM Alien WHERE Alien_ID IN (SELECT Alien_ID FROM Squid)";
+            ArrayList<String> rasAliens = idb.fetchColumn(fraga);
            
             
-            for(String alienNamn : allaAliens){
-                taNamnLista.append(fraga1);
+            for(String alienRas : rasAliens){
+                taNamnLista.append(alienRas);
                 taNamnLista.append("\n");
 
         }}
@@ -133,12 +133,12 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
             String Boglodite = btnBoglodite.getText();
-            String fraga ="SELECT Namn FROM Alien WHERE Alien_ID IN (SELECT Alien_ID FROM Boglodite)";
-            ArrayList<String> allaAliens = idb.fetchColumn(fraga);
+            String fraga ="SELECT DISTINCT Namn FROM Alien WHERE Alien_ID IN (SELECT Alien_ID FROM Boglodite)";
+            ArrayList<String> rasAliens = idb.fetchColumn(fraga);
            
             
-            for(String alienNamn : allaAliens){
-                taNamnLista.append(alienNamn);
+            for(String alienRas : rasAliens){
+                taNamnLista.append(alienRas);
                 taNamnLista.append("\n");
 
         }}
@@ -155,12 +155,12 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
             String Worm = btnWorm.getText();
-            String fraga = "SELECT Namn FROM Alien WHERE Alien_ID IN (SELECT Alien_ID FROM Worm)";
-            ArrayList<String> allaAliens = idb.fetchColumn(fraga);
+            String fraga = "SELECT DISTINCT Namn FROM Alien WHERE Alien_ID IN (SELECT Alien_ID FROM Worm)";
+            ArrayList<String> rasAliens = idb.fetchColumn(fraga);
            
            
             
-            for(String alienNamn : allaAliens){
+            for(String alienRas : rasAliens){
                 taNamnLista.append(fraga);
                 taNamnLista.append("\n");
 

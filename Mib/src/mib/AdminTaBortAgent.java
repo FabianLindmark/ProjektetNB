@@ -4,12 +4,14 @@
  */
 package mib;
 
+import oru.inf.InfDB;
+
 /**
  *
  * @author ellenportugues
  */
 public class AdminTaBortAgent extends javax.swing.JFrame {
-
+ private InfDB idb;
     /**
      * Creates new form AdminTaBortAgent
      */
@@ -37,7 +39,7 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
         jlTaBortAgent.setText("Ta bort agent:");
 
         jlTaBortAgentNamn.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jlTaBortAgentNamn.setText("Namn");
+        jlTaBortAgentNamn.setText("Namn:");
 
         btnTaBortAgent.setText("Ta bort agent");
         btnTaBortAgent.addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -96,21 +98,8 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
 
     private void btnTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAgentActionPerformed
 
-        try {
-            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-
-            String fraga1 = "SELECT * FROM alien";
-            String fraga2 = "ALTER TABLE alien DROP PRIMARY KEY";
-            String fraga3 = "DELETE FROM alien" + "WHERE alien.namn = " + tfAlienNamn;
-            
-            id
-
-            JOptionPane.showMessageDialog(null, "Alien är nu raderad");
-        }
-
-        catch(InfException e){
-            JOptionPane.showMessageDialog(null, "Något gick fel!");
-        }
+        
+        
     }//GEN-LAST:event_btnTaBortAgentActionPerformed
 
     private void tfAlienNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAlienNamnActionPerformed

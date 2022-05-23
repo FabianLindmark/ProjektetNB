@@ -24,61 +24,69 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnTaBortKomm" min="-2" pref="138" max="-2" attributes="0"/>
-                  <Component id="btnTaBortTeknik" min="-2" pref="138" max="-2" attributes="0"/>
-                  <Component id="btntabortVapen" min="-2" pref="138" max="-2" attributes="0"/>
-                  <Component id="jlRaderaUtrustning" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jlTaBortUtrustNamn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="tfUtrustNamn" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jlTaBortUtrust" max="32767" attributes="0"/>
+                  <Component id="btnTaBortUtrust" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="218" max="32767" attributes="0"/>
+              <EmptySpace pref="156" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Component id="jlRaderaUtrustning" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btntabortVapen" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTaBortTeknik" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTaBortKomm" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace pref="98" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Component id="jlTaBortUtrust" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlTaBortUtrustNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfUtrustNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="btnTaBortUtrust" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="120" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jlRaderaUtrustning">
+    <Component class="javax.swing.JLabel" name="jlTaBortUtrust">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Vad vill du radera?"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ta bort utrustning:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btntabortVapen">
+    <Component class="javax.swing.JLabel" name="jlTaBortUtrustNamn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Vapen"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ben&#xe4;mning:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfUtrustNamn">
+      <Properties>
+        <Property name="columns" type="int" value="6"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btntabortVapenActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfUtrustNamnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnTaBortTeknik">
+    <Component class="javax.swing.JButton" name="btnTaBortUtrust">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Teknik"/>
+        <Property name="text" type="java.lang.String" value="Ta bort utrustning"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortTeknikActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnTaBortKomm">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Kommunikation"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortKommActionPerformed"/>
+        <EventHandler event="componentRemoved" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="btnTaBortUtrustComponentRemoved"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortUtrustActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
