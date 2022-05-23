@@ -119,7 +119,7 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }
          
-        catch(InfException e){
+        catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
          }
     }//GEN-LAST:event_btnTaBortAlienActionPerformed
