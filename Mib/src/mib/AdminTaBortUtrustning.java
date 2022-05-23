@@ -26,21 +26,77 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlRaderaUtrustning = new javax.swing.JLabel();
+        btntabortVapen = new javax.swing.JButton();
+        btnTaBortTeknik = new javax.swing.JButton();
+        btnTaBortKomm = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlRaderaUtrustning.setText("Vad vill du radera?");
+
+        btntabortVapen.setText("Vapen");
+        btntabortVapen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btntabortVapenActionPerformed(evt);
+            }
+        });
+
+        btnTaBortTeknik.setText("Teknik");
+        btnTaBortTeknik.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTaBortTeknikActionPerformed(evt);
+            }
+        });
+
+        btnTaBortKomm.setText("Kommunikation");
+        btnTaBortKomm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTaBortKommActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnTaBortKomm, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTaBortTeknik, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btntabortVapen, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlRaderaUtrustning))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jlRaderaUtrustning)
+                .addGap(18, 18, 18)
+                .addComponent(btntabortVapen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnTaBortTeknik, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnTaBortKomm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btntabortVapenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntabortVapenActionPerformed
+        new AgentRegistreraVapen().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btntabortVapenActionPerformed
+
+    private void btnTaBortTeknikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortTeknikActionPerformed
+        new AgentRegistreraTeknik().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnTaBortTeknikActionPerformed
+
+    private void btnTaBortKommActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortKommActionPerformed
+        new AgentRegistreraKommunikation().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnTaBortKommActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +134,9 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnTaBortKomm;
+    private javax.swing.JButton btnTaBortTeknik;
+    private javax.swing.JButton btntabortVapen;
+    private javax.swing.JLabel jlRaderaUtrustning;
     // End of variables declaration//GEN-END:variables
 }

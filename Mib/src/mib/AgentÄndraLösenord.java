@@ -69,7 +69,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
 
         tfAngeUpprepaLosenord.setColumns(6);
 
-        jlAgUppdateraLosenord.setText("Upptadeta Lösenord");
+        jlAgUppdateraLosenord.setText("Uppdatera Lösenord");
         jlAgUppdateraLosenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jlAgUppdateraLosenordActionPerformed(evt);

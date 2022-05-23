@@ -26,21 +26,96 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlTaBortAgent = new javax.swing.JLabel();
+        jlTaBortAgentNamn = new javax.swing.JLabel();
+        btnTaBortAgent = new javax.swing.JButton();
+        tfAlienNamn = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlTaBortAgent.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlTaBortAgent.setText("Ta bort agent:");
+
+        jlTaBortAgentNamn.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jlTaBortAgentNamn.setText("Namn");
+
+        btnTaBortAgent.setText("Ta bort agent");
+        btnTaBortAgent.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentRemoved(java.awt.event.ContainerEvent evt) {
+                btnTaBortAgentComponentRemoved(evt);
+            }
+        });
+        btnTaBortAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTaBortAgentActionPerformed(evt);
+            }
+        });
+
+        tfAlienNamn.setColumns(6);
+        tfAlienNamn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAlienNamnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jlTaBortAgentNamn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfAlienNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                    .addComponent(jlTaBortAgent)
+                    .addComponent(btnTaBortAgent, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jlTaBortAgent)
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlTaBortAgentNamn)
+                    .addComponent(tfAlienNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(btnTaBortAgent)
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTaBortAgentComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_btnTaBortAgentComponentRemoved
+
+    }//GEN-LAST:event_btnTaBortAgentComponentRemoved
+
+    private void btnTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAgentActionPerformed
+
+        try {
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+
+            String fraga1 = "SELECT * FROM alien";
+            String fraga2 = "ALTER TABLE alien DROP PRIMARY KEY";
+            String fraga3 = "DELETE FROM alien" + "WHERE alien.namn = " + tfAlienNamn;
+            
+            id
+
+            JOptionPane.showMessageDialog(null, "Alien är nu raderad");
+        }
+
+        catch(InfException e){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnTaBortAgentActionPerformed
+
+    private void tfAlienNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAlienNamnActionPerformed
+
+    }//GEN-LAST:event_tfAlienNamnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +153,9 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnTaBortAgent;
+    private javax.swing.JLabel jlTaBortAgent;
+    private javax.swing.JLabel jlTaBortAgentNamn;
+    private javax.swing.JTextField tfAlienNamn;
     // End of variables declaration//GEN-END:variables
 }

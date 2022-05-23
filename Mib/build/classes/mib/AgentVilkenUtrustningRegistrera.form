@@ -24,61 +24,63 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnTaBortKomm" min="-2" pref="138" max="-2" attributes="0"/>
-                  <Component id="btnTaBortTeknik" min="-2" pref="138" max="-2" attributes="0"/>
-                  <Component id="btntabortVapen" min="-2" pref="138" max="-2" attributes="0"/>
-                  <Component id="jlRaderaUtrustning" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlVad" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="btnKomm" min="-2" pref="138" max="-2" attributes="0"/>
+                      <Component id="btnVapen" min="-2" pref="138" max="-2" attributes="0"/>
+                      <Component id="btnTeknik" alignment="1" min="-2" pref="138" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="218" max="32767" attributes="0"/>
+              <EmptySpace pref="240" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Component id="jlRaderaUtrustning" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <Component id="jlVad" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <Component id="btnVapen" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btntabortVapen" min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="btnTeknik" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTaBortTeknik" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnTaBortKomm" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace pref="98" max="32767" attributes="0"/>
+              <Component id="btnKomm" min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace pref="68" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jlRaderaUtrustning">
+    <Component class="javax.swing.JLabel" name="jlVad">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Vad vill du radera?"/>
+        <Property name="text" type="java.lang.String" value="Vad vill du registrera?"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btntabortVapen">
+    <Component class="javax.swing.JButton" name="btnVapen">
       <Properties>
         <Property name="text" type="java.lang.String" value="Vapen"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btntabortVapenActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVapenActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnTaBortTeknik">
+    <Component class="javax.swing.JButton" name="btnTeknik">
       <Properties>
         <Property name="text" type="java.lang.String" value="Teknik"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortTeknikActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTeknikActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnTaBortKomm">
+    <Component class="javax.swing.JButton" name="btnKomm">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kommunikation"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortKommActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKommActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
