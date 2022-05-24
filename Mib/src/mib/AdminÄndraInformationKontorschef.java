@@ -123,9 +123,9 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
             String chefnu = tfchefnu.getText();
             String nychef = tfnychef.getText();
             
-            String question1 = "select kontorsbecteckning from kontorschef where kontorsbecteckning=" + kontor;
+            String question1 = "select kontorsbecteckning from kontorschef where kontorsbecteckning= '"+kontor+"'";
             String answer1 = idb.fetchSingle(question1);
-            String question2 = "select agent_id from kontorschef (select agent_id from agent where namn=)" + chefnu;
+            String question2 = "select agent_id from kontorschef (select agent_id from agent where namn=) '" +chefnu+"'";
             String answer2 = idb.fetchSingle(question2);
      
         
@@ -133,8 +133,8 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
         {
            
             btnbytomrchef = true;
-            String fraga1 = "select agent_id from agent where namn = " + nychef;
-            String fraga2 = "update kontorschef set agent_id=" + nychef + "where agent_id=" + chefnu;
+            String fraga1 = "select agent_id from agent where namn = '"+nychef+"'";
+            String fraga2 = "update kontorschef set agent_id= '"+nychef+"'" + "where agent_id= '"+chefnu+"'";
             idb.update(fraga2);
             JOptionPane.showMessageDialog(null, "Chef är nu ändrad");
         }
