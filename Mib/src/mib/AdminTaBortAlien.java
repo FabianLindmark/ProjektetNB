@@ -110,11 +110,11 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
             allaAliens = idb.fetchColumn(fraga);
                     
             for(String alien : allaAliens){
-                String fraga2 = "DELETE FROM alien WHERE =" + "'"+ tfAlienNamn +"'";
+                String fraga2 = "DELETE FROM alien WHERE = '"+ tfAlienNamn +"'";
                 idb.delete(fraga2);
             }
           
-         
+       
              
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }
