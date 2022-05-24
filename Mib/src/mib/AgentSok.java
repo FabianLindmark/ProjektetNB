@@ -171,8 +171,12 @@ public class AgentSok extends javax.swing.JFrame {
     private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
         
         try{
+            
+            
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             String namn = tfSkrivNamn.getText();
+            
+            
             
             String fraga1 = "select agent_id from agent where namn = '"+namn+"'";
             String svar1 = idb.fetchSingle(fraga1);

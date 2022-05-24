@@ -4,12 +4,16 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author flind
  */
 public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form AgentVisaInformationOmOmrådeschef
      */
@@ -30,22 +34,19 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
         btnSvealand = new javax.swing.JButton();
         btnGötaland = new javax.swing.JButton();
         btnNorrland = new javax.swing.JButton();
-        jlID = new javax.swing.JLabel();
         jlNamn = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        tfNamn = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlVisaInfo.setText("Visa information om områdeschef!");
 
         btnSvealand.setText("Svealand");
+        btnSvealand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSvealandActionPerformed(evt);
+            }
+        });
 
         btnGötaland.setText("Götaland");
         btnGötaland.addActionListener(new java.awt.event.ActionListener() {
@@ -55,31 +56,15 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
         });
 
         btnNorrland.setText("Norrland");
-
-        jlID.setText("Agent ID");
-
-        jlNamn.setText("Namn");
-
-        jLabel3.setText("Telefon");
-
-        jLabel4.setText("Anställningsdatum");
-
-        jLabel5.setText("Administratör");
-
-        jTextField1.setColumns(12);
-
-        jTextField2.setColumns(12);
-
-        jTextField3.setColumns(12);
-
-        jTextField4.setColumns(12);
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        btnNorrland.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                btnNorrlandActionPerformed(evt);
             }
         });
 
-        jTextField5.setColumns(12);
+        jlNamn.setText("Namn:");
+
+        tfNamn.setColumns(12);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,24 +85,11 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
                         .addComponent(btnNorrland)
                         .addGap(31, 31, 31))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlID)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))))))
+                        .addGap(68, 68, 68)
+                        .addComponent(jlNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tfNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,39 +101,91 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
                     .addComponent(btnSvealand)
                     .addComponent(btnGötaland)
                     .addComponent(btnNorrland))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlID)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlNamn)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                    .addComponent(tfNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGötalandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGötalandActionPerformed
-        // TODO add your handling code here:
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            String omrade = btnGötaland.getText();
+            
+            String iDpaOmrade = "select omrades_id from omrade where benamning = '"+omrade+"'";
+            String svarID = idb.fetchSingle(iDpaOmrade);
+             
+            String vilkenAgent = "select agent_id from omradeschef where omrade = '"+svarID+"'";
+            String svarVilkenAgent = idb.fetchSingle(vilkenAgent);
+                    
+            String vilketNamn = "select namn from agent where agent_id = '"+svarVilkenAgent+"'";
+            String svarVilketNamn = idb.fetchSingle(vilketNamn);
+            
+            tfNamn.setText(svarVilketNamn);
+            
+            
+            
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
     }//GEN-LAST:event_btnGötalandActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    private void btnSvealandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSvealandActionPerformed
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            String omrade = btnSvealand.getText();
+            
+            String iDpaOmrade = "select omrades_id from omrade where benamning = '"+omrade+"'";
+            String svarID = idb.fetchSingle(iDpaOmrade);
+             
+            String vilkenAgent = "select agent_id from omradeschef where omrade = '"+svarID+"'";
+            String svarVilkenAgent = idb.fetchSingle(vilkenAgent);
+                    
+            String vilketNamn = "select namn from agent where agent_id = '"+svarVilkenAgent+"'";
+            String svarVilketNamn = idb.fetchSingle(vilketNamn);
+            
+            tfNamn.setText(svarVilketNamn);
+            
+            
+            
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
+
+    }//GEN-LAST:event_btnSvealandActionPerformed
+
+    private void btnNorrlandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNorrlandActionPerformed
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            String omrade = btnNorrland.getText();
+            
+            String iDpaOmrade = "select omrades_id from omrade where benamning = '"+omrade+"'";
+            String svarID = idb.fetchSingle(iDpaOmrade);
+             
+            String vilkenAgent = "select agent_id from omradeschef where omrade = '"+svarID+"'";
+            String svarVilkenAgent = idb.fetchSingle(vilkenAgent);
+                    
+            String vilketNamn = "select namn from agent where agent_id = '"+svarVilkenAgent+"'";
+            String svarVilketNamn = idb.fetchSingle(vilketNamn);
+            
+            tfNamn.setText(svarVilketNamn);
+            
+            
+            
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
+    }//GEN-LAST:event_btnNorrlandActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,16 +226,8 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
     private javax.swing.JButton btnGötaland;
     private javax.swing.JButton btnNorrland;
     private javax.swing.JButton btnSvealand;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JLabel jlID;
     private javax.swing.JLabel jlNamn;
     private javax.swing.JLabel jlVisaInfo;
+    private javax.swing.JTextField tfNamn;
     // End of variables declaration//GEN-END:variables
 }
