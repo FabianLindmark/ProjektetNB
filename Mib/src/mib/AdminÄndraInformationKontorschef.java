@@ -4,12 +4,15 @@
  */
 package mib;
 
+import oru.inf.InfDB;
+import javax.swing.JOptionPane;
+import oru.inf.InfException;
 /**
  *
  * @author ellenportugues
  */
 public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
-
+     private InfDB idb;
     /**
      * Creates new form AdminÄndraInformationKontorschef
      */
@@ -26,22 +29,128 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jländrakontorschef = new javax.swing.JLabel();
+        jlkontor = new javax.swing.JLabel();
+        jlchefnu = new javax.swing.JLabel();
+        jlnychef = new javax.swing.JLabel();
+        btnbytomrchef = new javax.swing.JButton();
+        tfkontor = new javax.swing.JTextField();
+        tfchefnu = new javax.swing.JTextField();
+        tfnychef = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jländrakontorschef.setText("Ändra aktuell kontorschef:");
+
+        jlkontor.setText("Vilket kontor:");
+
+        jlchefnu.setText("Nuvarande kontorschef:");
+
+        jlnychef.setText("Nya kontorschefen:");
+
+        btnbytomrchef.setText("Byt chef");
+        btnbytomrchef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbytomrchefActionPerformed(evt);
+            }
+        });
+
+        tfkontor.setColumns(12);
+
+        tfchefnu.setColumns(12);
+
+        tfnychef.setColumns(12);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnbytomrchef)
+                            .addComponent(jländrakontorschef))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlchefnu)
+                            .addComponent(jlkontor)
+                            .addComponent(jlnychef))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(tfkontor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tfchefnu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tfnychef, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(108, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jländrakontorschef)
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlkontor)
+                    .addComponent(tfkontor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlchefnu)
+                    .addComponent(tfchefnu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlnychef)
+                    .addComponent(tfnychef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnbytomrchef)
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnbytomrchefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbytomrchefActionPerformed
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+        
+            Boolean btnbytomrchef = false;
+            String kontor = tfkontor.getText();
+            String chefnu = tfchefnu.getText();
+            String nychef = tfnychef.getText();
+            
+            String question1 = "select kontorsbecteckning from kontorschef where kontorsbecteckning=" + kontor;
+            String answer1 = idb.fetchSingle(question1);
+            String question2 = "select agent_id from kontorschef (select agent_id from agent where namn=)" + chefnu;
+            String answer2 = idb.fetchSingle(question2);
+     
+        
+        if(kontor.equals(answer1) && chefnu.equals(answer2))
+        {
+           
+            btnbytomrchef = true;
+            String fraga1 = "select agent_id from agent where namn = " + nychef;
+            String fraga2 = "update kontorschef set agent_id=" + nychef + "where agent_id=" + chefnu;
+            idb.update(fraga2);
+            JOptionPane.showMessageDialog(null, "Chef är nu ändrad");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Dina uppgifter är felaktiga");
+        }
+            
+        }
+    
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
+    }//GEN-LAST:event_btnbytomrchefActionPerformed
+
+        
     /**
      * @param args the command line arguments
      */
@@ -59,13 +168,13 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminÄndraInformationKontorschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienÄndraLösenord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminÄndraInformationKontorschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienÄndraLösenord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminÄndraInformationKontorschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienÄndraLösenord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminÄndraInformationKontorschef.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlienÄndraLösenord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -78,5 +187,13 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnbytomrchef;
+    private javax.swing.JLabel jlchefnu;
+    private javax.swing.JLabel jlkontor;
+    private javax.swing.JLabel jlnychef;
+    private javax.swing.JLabel jländrakontorschef;
+    private javax.swing.JTextField tfchefnu;
+    private javax.swing.JTextField tfkontor;
+    private javax.swing.JTextField tfnychef;
     // End of variables declaration//GEN-END:variables
 }
