@@ -60,12 +60,12 @@ public class Validering {
      
      
      
-     public static boolean adminStatus (String resultat2) {
+     public static boolean adminStatus (String aktuelladmin) {
         
          boolean adminStatus = false;
          
          
-         if  (resultat2.equals("J")){
+         if  (aktuelladmin.equals("J")){
          adminStatus = true;
          }
                 

@@ -28,11 +28,9 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jlAdminstatus" min="-2" max="-2" attributes="0"/>
                   <Component id="jlAgentID" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlAgentNamn" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="tfAngivetAgentNamn" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivetAgentID" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivenAdminstatus" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -53,12 +51,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Component id="jlAndraAdminststatus" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlAgentNamn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfAngivetAgentNamn" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivetAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -91,16 +84,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraAdminstatusActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jlAgentNamn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Agent Namn:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfAngivetAgentNamn">
-      <Properties>
-        <Property name="columns" type="int" value="10"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlAgentID">
       <Properties>

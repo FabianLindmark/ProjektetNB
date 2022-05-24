@@ -4,12 +4,18 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author ellenportugues
  */
 public class AdminÄndraAdminstatus extends javax.swing.JFrame {
-
+        
+    private InfDB idb;
+    
     /**
      * Creates new form AdminÄndraAdminstatus
      */
@@ -28,8 +34,6 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
 
         jlAndraAdminststatus = new javax.swing.JLabel();
         btnAndraAdminstatus = new javax.swing.JButton();
-        jlAgentNamn = new javax.swing.JLabel();
-        tfAngivetAgentNamn = new javax.swing.JTextField();
         jlAgentID = new javax.swing.JLabel();
         jlAdminstatus = new javax.swing.JLabel();
         tfAngivetAgentID = new javax.swing.JTextField();
@@ -47,10 +51,6 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
             }
         });
 
-        jlAgentNamn.setText("Agent Namn:");
-
-        tfAngivetAgentNamn.setColumns(10);
-
         jlAgentID.setText("Agent ID: ");
 
         jlAdminstatus.setText("Adminstatus:");
@@ -67,11 +67,9 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
                 .addContainerGap(66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jlAdminstatus)
-                    .addComponent(jlAgentID)
-                    .addComponent(jlAgentNamn))
+                    .addComponent(jlAgentID))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfAngivetAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfAngivenAdminstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(100, 100, 100))
@@ -87,11 +85,7 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jlAndraAdminststatus)
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlAgentNamn)
-                    .addComponent(tfAngivetAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addGap(94, 94, 94)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAgentID)
                     .addComponent(tfAngivetAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -108,50 +102,38 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAndraAdminstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAdminstatusActionPerformed
-   /*
-        if (Validering.adminStatus()){
-            
-            try{
+  
+              if (Validering.textFaltHarVarde(tfAngivetAgentID) && Validering.textFaltHarVarde(tfAngivenAdminstatus)){
+        
+             try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-             
-            String namn = tfAngivetNamn.getText();
+          
             String aid = tfAngivetAgentID.getText();
             String admin = tfAngivenAdminstatus.getText();
-                
-                
-            }
-        }
+            String fraga = "Select administrator from Agent where Agent_ID= '" +aid+"'";
+            String svar = idb.fetchSingle(fraga);
+            String resultat = svar;
             
-       
-       
-    */    
-        
-        
+            String fraga1 = "Update Agent set administrator= '" + admin + "'" + "' where Alien_ID= '" +aid+ "'";
+            
+                    
+                 if (Validering.adminStatus(resultat) == true || false){
+                        idb.update(fraga1);
+                    }
+                    
+                   else {
+                    JOptionPane.showMessageDialog(null, "Kontrollera dina uppgifter");
+                    }
+             }
+                    catch(InfException ettUndantag){
+                       JOptionPane.showMessageDialog(null, "Något gick fel!");
+                       System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+            }     
+            }   
+         
+         
     }//GEN-LAST:event_btnAndraAdminstatusActionPerformed
-/* 
-     public static boolean adminStatus (String resultat2) {
-        
-         boolean adminStatus = false;
-         
-         
-         if  (resultat2.equals("J")){
-         adminStatus = true;
-         }
-                
-         else {
-         adminStatus = false;
-         }
-             
-         
-         return adminStatus;
-     }
-    
-    
-     String fraga2 = "Select Administrator from Agent where Agent_ID= '"+aid+"'";
-            String svar2 = idb.fetchSingle(fraga2);
-            String resultat2 = svar2;
-          
-     */
+
     
     /**
      * 
@@ -188,15 +170,15 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
             }
         });
     }
-
+        
+       
+      
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAndraAdminstatus;
     private javax.swing.JLabel jlAdminstatus;
     private javax.swing.JLabel jlAgentID;
-    private javax.swing.JLabel jlAgentNamn;
     private javax.swing.JLabel jlAndraAdminststatus;
     private javax.swing.JTextField tfAngivenAdminstatus;
     private javax.swing.JTextField tfAngivetAgentID;
-    private javax.swing.JTextField tfAngivetAgentNamn;
     // End of variables declaration//GEN-END:variables
-}
+        }
