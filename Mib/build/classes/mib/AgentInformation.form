@@ -112,6 +112,12 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xf6;k info om omr&#xe5;deschef"/>
       </Properties>
+<<<<<<< Updated upstream
+=======
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInfoOmradeschefActionPerformed"/>
+      </Events>
+>>>>>>> Stashed changes
     </Component>
   </SubComponents>
 </Form>

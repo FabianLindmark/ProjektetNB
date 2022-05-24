@@ -74,6 +74,11 @@ public class AgentInformation extends javax.swing.JFrame {
         });
 
         btnInfoOmradeschef.setText("Sök info om områdeschef");
+        btnInfoOmradeschef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoOmradeschefActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,6 +139,10 @@ public class AgentInformation extends javax.swing.JFrame {
     private void btnSokAgInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAgInfoActionPerformed
         new AgentSökInformationOmAlien().setVisible(rootPaneCheckingEnabled); // TODO add your handling code here:
     }//GEN-LAST:event_btnSokAgInfoActionPerformed
+
+    private void btnInfoOmradeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoOmradeschefActionPerformed
+        new AgentVisaInformationOmOmrådeschef().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnInfoOmradeschefActionPerformed
 
     /**
      * @param args the command line arguments
