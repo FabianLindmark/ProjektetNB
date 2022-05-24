@@ -14,6 +14,7 @@ import oru.inf.InfException;
  * @author FeliciaAhlman
  */
 public class AdminTaBortAlien extends javax.swing.JFrame {
+    
     private InfDB idb;
     /**
      * Creates new form AdminTaBortAlien
@@ -45,18 +46,8 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
         jlTaBortAlien.setText("Ta bort alien:");
 
         tfAlienNamn.setColumns(6);
-        tfAlienNamn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAlienNamnActionPerformed(evt);
-            }
-        });
 
         btnTaBortAlien.setText("Ta bort alien");
-        btnTaBortAlien.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentRemoved(java.awt.event.ContainerEvent evt) {
-                btnTaBortAlienComponentRemoved(evt);
-            }
-        });
         btnTaBortAlien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTaBortAlienActionPerformed(evt);
@@ -101,9 +92,6 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
 
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
          
-        
-          
-                  
         try {
             
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
@@ -123,7 +111,6 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
                 break;
             }
           
-       
              
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }
@@ -132,13 +119,6 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
          }
     }//GEN-LAST:event_btnTaBortAlienActionPerformed
-
-    private void tfAlienNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAlienNamnActionPerformed
-
-    }//GEN-LAST:event_tfAlienNamnActionPerformed
-
-    private void btnTaBortAlienComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_btnTaBortAlienComponentRemoved
-    }//GEN-LAST:event_btnTaBortAlienComponentRemoved
 
     /**
      * @param args the command line arguments

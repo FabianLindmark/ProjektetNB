@@ -11,7 +11,8 @@ import oru.inf.InfDB;
  * @author ellenportugues
  */
 public class AdminTaBortAgent extends javax.swing.JFrame {
- private InfDB idb;
+ 
+    private InfDB idb;
     /**
      * Creates new form AdminTaBortAgent
      */
@@ -42,11 +43,6 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
         jlTaBortAgentNamn.setText("Namn:");
 
         btnTaBortAgent.setText("Ta bort agent");
-        btnTaBortAgent.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentRemoved(java.awt.event.ContainerEvent evt) {
-                btnTaBortAgentComponentRemoved(evt);
-            }
-        });
         btnTaBortAgent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTaBortAgentActionPerformed(evt);
@@ -54,11 +50,6 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
         });
 
         tfAlienNamn.setColumns(6);
-        tfAlienNamn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAlienNamnActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,19 +83,11 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnTaBortAgentComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_btnTaBortAgentComponentRemoved
-
-    }//GEN-LAST:event_btnTaBortAgentComponentRemoved
-
     private void btnTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAgentActionPerformed
 
         
         
     }//GEN-LAST:event_btnTaBortAgentActionPerformed
-
-    private void tfAlienNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAlienNamnActionPerformed
-
-    }//GEN-LAST:event_tfAlienNamnActionPerformed
 
     /**
      * @param args the command line arguments
