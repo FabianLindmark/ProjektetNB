@@ -108,7 +108,7 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
             
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
-            String namn = tfAlienNamn.getText();
+             String namn = tfAlienNamn.getText();
             
              Boolean hittad = false;
              String fraga = "select namn from alien";

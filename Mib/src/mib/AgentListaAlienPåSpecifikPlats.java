@@ -117,6 +117,7 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
 
     private void btnVasterasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVasterasActionPerformed
         taVisa.setText("Namn" + "\n");
+        
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             

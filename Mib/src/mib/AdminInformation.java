@@ -39,6 +39,7 @@ public class AdminInformation extends javax.swing.JFrame {
         btnAndraAdminstatus = new javax.swing.JButton();
         btnAndraInformationOmradeschef = new javax.swing.JButton();
         btnAndraInfromationKontorschef = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,6 +142,14 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jButton1.setText("Ändra alien information");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -149,7 +158,6 @@ public class AdminInformation extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ljValkommen)
-                    .addComponent(btnTaBortUtrustning)
                     .addComponent(btnTaBortAgent)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,7 +172,9 @@ public class AdminInformation extends javax.swing.JFrame {
                             .addComponent(btnAndraAdminstatus)
                             .addComponent(btnAndraAgentInformation)
                             .addComponent(btnAndraInformationOmradeschef)
-                            .addComponent(btnAndraInfromationKontorschef))))
+                            .addComponent(btnAndraInfromationKontorschef)
+                            .addComponent(jButton1)))
+                    .addComponent(btnTaBortUtrustning))
                 .addContainerGap(7, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -193,7 +203,9 @@ public class AdminInformation extends javax.swing.JFrame {
                     .addComponent(btnTaBortAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAndraInfromationKontorschef))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnTaBortUtrustning)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnTaBortUtrustning)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTaBortAgent)
                 .addContainerGap(76, Short.MAX_VALUE))
@@ -250,6 +262,10 @@ public class AdminInformation extends javax.swing.JFrame {
     new AdminÄndraInformationKontorschef().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnAndraInfromationKontorschefActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    new AgentÄndraInformationAlien().setVisible(rootPaneCheckingEnabled); 
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     
     
     
@@ -304,6 +320,7 @@ public class AdminInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnTaBortAgent;
     private javax.swing.JButton btnTaBortAlien;
     private javax.swing.JButton btnTaBortUtrustning;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel ljValkommen;
     // End of variables declaration//GEN-END:variables
 }
