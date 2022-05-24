@@ -90,13 +90,15 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
         try {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
 
+            String AngivetID = tfAngivetUtID.getText();
             
-            String fraga = "Select * from Utrustning where Utrustnings_ID =  ' "+tfAngivetUtID+ "'";
+            
+            String fraga = "Select * from Utrustning where Utrustnings_ID =  ' "+AngivetID+ "'";
         
 
             idb.delete(fraga);
 
-            JOptionPane.showMessageDialog(null, "Alien är nu raderad");
+            JOptionPane.showMessageDialog(null, "Utrustning är nu raderad");
         }
 
         catch(InfException e){
