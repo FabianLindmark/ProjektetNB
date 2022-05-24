@@ -27,14 +27,14 @@
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jlTaBortUtrustNamn" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlUtID" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="tfUtrustNamn" max="32767" attributes="0"/>
+                      <Component id="tfAngivetUtID" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jlTaBortUtrust" max="32767" attributes="0"/>
                   <Component id="btnTaBortUtrust" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="156" max="32767" attributes="0"/>
+              <EmptySpace pref="139" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,8 +45,8 @@
               <Component id="jlTaBortUtrust" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlTaBortUtrustNamn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfUtrustNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlUtID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAngivetUtID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Component id="btnTaBortUtrust" min="-2" max="-2" attributes="0"/>
@@ -64,28 +64,24 @@
         <Property name="text" type="java.lang.String" value="Ta bort utrustning:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlTaBortUtrustNamn">
+    <Component class="javax.swing.JLabel" name="jlUtID">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Ben&#xe4;mning:"/>
+        <Property name="text" type="java.lang.String" value="Utrustnings ID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfUtrustNamn">
+    <Component class="javax.swing.JTextField" name="tfAngivetUtID">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfUtrustNamnActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnTaBortUtrust">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ta bort utrustning"/>
       </Properties>
       <Events>
-        <EventHandler event="componentRemoved" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="btnTaBortUtrustComponentRemoved"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortUtrustActionPerformed"/>
       </Events>
     </Component>
