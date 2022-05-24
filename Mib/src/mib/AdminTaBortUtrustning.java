@@ -91,7 +91,8 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
 
             
-            String fraga = "Select from Utrustning" + "WHERE Utrustnings_ID = " + tfAngivetUtID;
+            String fraga = "Select * from Utrustning where Utrustnings_ID =  ' "+tfAngivetUtID+ "'";
+        
 
             idb.delete(fraga);
 
