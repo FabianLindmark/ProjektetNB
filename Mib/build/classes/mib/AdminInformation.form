@@ -43,11 +43,7 @@
                           <Component id="btnAndraAgentInformation" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraInformationOmradeschef" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraInfromationKontorschef" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
                           <Component id="btnÄndraAlienInformation" alignment="0" min="-2" max="-2" attributes="0"/>
-=======
-                          <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
->>>>>>> 14462ee1a277239c64033c2f231ec8fa57647a56
                       </Group>
                   </Group>
                   <Component id="btnTaBortUtrustning" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -239,11 +235,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraInfromationKontorschefActionPerformed"/>
       </Events>
     </Component>
-<<<<<<< HEAD
     <Component class="javax.swing.JButton" name="btn&#xc4;ndraAlienInformation">
-=======
-    <Component class="javax.swing.JButton" name="jButton1">
->>>>>>> 14462ee1a277239c64033c2f231ec8fa57647a56
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="14" style="0"/>
