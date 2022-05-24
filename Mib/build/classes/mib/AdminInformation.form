@@ -27,10 +27,6 @@
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="ljValkommen" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-=======
-                  <Component id="btnTaBortUtrustning" alignment="0" min="-2" max="-2" attributes="0"/>
->>>>>>> 840c297db7c81eabf25b4eb3154884446ce7e208
                   <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -47,15 +43,10 @@
                           <Component id="btnAndraAgentInformation" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraInformationOmradeschef" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAndraInfromationKontorschef" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
                           <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="btnTaBortUtrustning" alignment="0" min="-2" max="-2" attributes="0"/>
-=======
-                      </Group>
-                  </Group>
->>>>>>> 840c297db7c81eabf25b4eb3154884446ce7e208
               </Group>
               <EmptySpace pref="7" max="32767" attributes="0"/>
           </Group>
@@ -92,14 +83,10 @@
                   <Component id="btnAndraInfromationKontorschef" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-<<<<<<< HEAD
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnTaBortUtrustning" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-=======
-              <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
->>>>>>> 840c297db7c81eabf25b4eb3154884446ce7e208
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="76" max="32767" attributes="0"/>
@@ -248,7 +235,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraInfromationKontorschefActionPerformed"/>
       </Events>
     </Component>
-<<<<<<< HEAD
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -260,7 +246,5 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
-=======
->>>>>>> 840c297db7c81eabf25b4eb3154884446ce7e208
   </SubComponents>
 </Form>
