@@ -42,7 +42,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
         tfAngeNuvarandeLosenord = new javax.swing.JTextField();
         tfAngeNyttLosenord = new javax.swing.JTextField();
         tfAngeUpprepaLosenord = new javax.swing.JTextField();
-        jlAgUppdateraLosenord = new javax.swing.JButton();
+        btnAgUppdateraLosenord = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,10 +69,10 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
 
         tfAngeUpprepaLosenord.setColumns(6);
 
-        jlAgUppdateraLosenord.setText("Uppdatera Lösenord");
-        jlAgUppdateraLosenord.addActionListener(new java.awt.event.ActionListener() {
+        btnAgUppdateraLosenord.setText("Uppdatera Lösenord");
+        btnAgUppdateraLosenord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jlAgUppdateraLosenordActionPerformed(evt);
+                btnAgUppdateraLosenordActionPerformed(evt);
             }
         });
 
@@ -83,7 +83,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlAgUppdateraLosenord)
+                    .addComponent(btnAgUppdateraLosenord)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -122,7 +122,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
                     .addComponent(jlAgUpprepaLosenord)
                     .addComponent(tfAngeUpprepaLosenord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jlAgUppdateraLosenord)
+                .addComponent(btnAgUppdateraLosenord)
                 .addGap(27, 27, 27))
         );
 
@@ -133,7 +133,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfAngeNyttLosenordActionPerformed
 
-    private void jlAgUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAgUppdateraLosenordActionPerformed
+    private void btnAgUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgUppdateraLosenordActionPerformed
          try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
@@ -164,7 +164,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
             
                 // TODO add your handling code here:
-    }//GEN-LAST:event_jlAgUppdateraLosenordActionPerformed
+    }//GEN-LAST:event_btnAgUppdateraLosenordActionPerformed
     }
     /**
      * @param args the command line arguments
@@ -202,11 +202,11 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAgUppdateraLosenord;
     private javax.swing.JLabel jlAgAndraLosenord;
     private javax.swing.JLabel jlAgAnvandarnamn;
     private javax.swing.JLabel jlAgNuvarandeLosenord;
     private javax.swing.JLabel jlAgNyttLosenord;
-    private javax.swing.JButton jlAgUppdateraLosenord;
     private javax.swing.JLabel jlAgUpprepaLosenord;
     private javax.swing.JTextField tfAngeAnvandarnamn;
     private javax.swing.JTextField tfAngeNuvarandeLosenord;

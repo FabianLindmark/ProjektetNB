@@ -4,12 +4,17 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author ellenportugues
  */
 public class AdminTaBortUtrustning extends javax.swing.JFrame {
 
+    private InfDB idb;
     /**
      * Creates new form AdminTaBortUtrustning
      */
@@ -27,8 +32,8 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
     private void initComponents() {
 
         jlTaBortUtrust = new javax.swing.JLabel();
-        jlTaBortUtrustNamn = new javax.swing.JLabel();
-        tfUtrustNamn = new javax.swing.JTextField();
+        jlUtID = new javax.swing.JLabel();
+        tfAngivetUtID = new javax.swing.JTextField();
         btnTaBortUtrust = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -36,22 +41,12 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
         jlTaBortUtrust.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jlTaBortUtrust.setText("Ta bort utrustning:");
 
-        jlTaBortUtrustNamn.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jlTaBortUtrustNamn.setText("Benämning:");
+        jlUtID.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jlUtID.setText("Utrustnings ID:");
 
-        tfUtrustNamn.setColumns(6);
-        tfUtrustNamn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfUtrustNamnActionPerformed(evt);
-            }
-        });
+        tfAngivetUtID.setColumns(6);
 
         btnTaBortUtrust.setText("Ta bort utrustning");
-        btnTaBortUtrust.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentRemoved(java.awt.event.ContainerEvent evt) {
-                btnTaBortUtrustComponentRemoved(evt);
-            }
-        });
         btnTaBortUtrust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTaBortUtrustActionPerformed(evt);
@@ -66,12 +61,12 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlTaBortUtrustNamn)
+                        .addComponent(jlUtID)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfUtrustNamn))
+                        .addComponent(tfAngivetUtID))
                     .addComponent(jlTaBortUtrust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnTaBortUtrust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,8 +75,8 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
                 .addComponent(jlTaBortUtrust)
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlTaBortUtrustNamn)
-                    .addComponent(tfUtrustNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlUtID)
+                    .addComponent(tfAngivetUtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(btnTaBortUtrust)
                 .addContainerGap(120, Short.MAX_VALUE))
@@ -90,26 +85,20 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfUtrustNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUtrustNamnActionPerformed
-
-    }//GEN-LAST:event_tfUtrustNamnActionPerformed
-
-    private void btnTaBortUtrustComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_btnTaBortUtrustComponentRemoved
-
-    }//GEN-LAST:event_btnTaBortUtrustComponentRemoved
-
     private void btnTaBortUtrustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortUtrustActionPerformed
 
         try {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
 
-            String fraga1 = "SELECT * FROM alien";
-            String fraga2 = "ALTER TABLE alien DROP PRIMARY KEY";
-            String fraga3 = "DELETE FROM alien" + "WHERE alien.namn = " + tfUtrustNamn;
+            String AngivetID = tfAngivetUtID.getText();
+            
+            
+            String fraga = "Select * from Utrustning where Utrustnings_ID =  ' "+AngivetID+ "'";
+        
 
-            idb.delete(fraga3);
+            idb.delete(fraga);
 
-            JOptionPane.showMessageDialog(null, "Alien är nu raderad");
+            JOptionPane.showMessageDialog(null, "Utrustning är nu raderad");
         }
 
         catch(InfException e){
@@ -155,7 +144,7 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTaBortUtrust;
     private javax.swing.JLabel jlTaBortUtrust;
-    private javax.swing.JLabel jlTaBortUtrustNamn;
-    private javax.swing.JTextField tfUtrustNamn;
+    private javax.swing.JLabel jlUtID;
+    private javax.swing.JTextField tfAngivetUtID;
     // End of variables declaration//GEN-END:variables
 }

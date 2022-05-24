@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jlAgUppdateraLosenord" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAgUppdateraLosenord" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -76,7 +76,7 @@
                   <Component id="tfAngeUpprepaLosenord" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jlAgUppdateraLosenord" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAgUppdateraLosenord" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -131,12 +131,12 @@
         <Property name="columns" type="int" value="6"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jlAgUppdateraLosenord">
+    <Component class="javax.swing.JButton" name="btnAgUppdateraLosenord">
       <Properties>
         <Property name="text" type="java.lang.String" value="Uppdatera L&#xf6;senord"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jlAgUppdateraLosenordActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgUppdateraLosenordActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

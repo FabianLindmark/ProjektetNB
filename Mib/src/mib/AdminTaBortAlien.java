@@ -100,21 +100,30 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
-         String fraga = "SELECT * FROM alien";
+         
         
-          ArrayList<String> allaAliens;
+          
                   
         try {
-             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-             
-            allaAliens = idb.fetchColumn(fraga);
+            
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String namn = tfAlienNamn.getText();
+            
+             Boolean hittad = false;
+             String fraga = "select namn from alien";
+             ArrayList<String> taBortAlien = idb.fetchColumn(fraga);
                     
-            for(String alien : allaAliens){
-                String fraga2 = "DELETE FROM alien WHERE =" + "'"+ tfAlienNamn +"'";
-                idb.delete(fraga2);
+            for(String alien : taBortAlien){
+                
+                String vilkenAlien = "delete from alien where namn = '"+alien+"'";
+                
+                idb.delete(vilkenAlien);
+                hittad = true;
+                break;
             }
           
-         
+       
              
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }
