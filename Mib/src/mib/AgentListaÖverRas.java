@@ -106,7 +106,9 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSquidActionPerformed
-
+        taNamnLista.setText("Namn" + "\n");
+                
+        
        try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
@@ -119,7 +121,8 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
                 taNamnLista.append(alienRas);
                 taNamnLista.append("\n");
 
-        }}
+        }
+        }
         
         catch(InfException e){
         
@@ -128,7 +131,8 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSquidActionPerformed
 
     private void btnBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBogloditeActionPerformed
- 
+    taNamnLista.setText("Namn" + "\n");
+    
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
@@ -150,6 +154,7 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBogloditeActionPerformed
 
     private void btnWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWormActionPerformed
+        taNamnLista.setText("Namn" + "\n");
           
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
