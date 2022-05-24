@@ -39,7 +39,7 @@ public class AdminInformation extends javax.swing.JFrame {
         btnAndraAdminstatus = new javax.swing.JButton();
         btnAndraInformationOmradeschef = new javax.swing.JButton();
         btnAndraInfromationKontorschef = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnÄndraAlienInformation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -142,11 +142,11 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jButton1.setText("Ändra alien information");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnÄndraAlienInformation.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        btnÄndraAlienInformation.setText("Ändra alien information");
+        btnÄndraAlienInformation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnÄndraAlienInformationActionPerformed(evt);
             }
         });
 
@@ -173,7 +173,7 @@ public class AdminInformation extends javax.swing.JFrame {
                             .addComponent(btnAndraAgentInformation)
                             .addComponent(btnAndraInformationOmradeschef)
                             .addComponent(btnAndraInfromationKontorschef)
-                            .addComponent(jButton1)))
+                            .addComponent(btnÄndraAlienInformation)))
                     .addComponent(btnTaBortUtrustning))
                 .addContainerGap(7, Short.MAX_VALUE))
         );
@@ -205,7 +205,7 @@ public class AdminInformation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTaBortUtrustning)
-                    .addComponent(jButton1))
+                    .addComponent(btnÄndraAlienInformation))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTaBortAgent)
                 .addContainerGap(76, Short.MAX_VALUE))
@@ -262,9 +262,9 @@ public class AdminInformation extends javax.swing.JFrame {
     new AdminÄndraInformationKontorschef().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnAndraInfromationKontorschefActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    new AgentÄndraInformationAlien().setVisible(rootPaneCheckingEnabled); 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnÄndraAlienInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnÄndraAlienInformationActionPerformed
+    new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled); 
+    }//GEN-LAST:event_btnÄndraAlienInformationActionPerformed
 
     
     
@@ -320,7 +320,7 @@ public class AdminInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnTaBortAgent;
     private javax.swing.JButton btnTaBortAlien;
     private javax.swing.JButton btnTaBortUtrustning;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnÄndraAlienInformation;
     private javax.swing.JLabel ljValkommen;
     // End of variables declaration//GEN-END:variables
 }
