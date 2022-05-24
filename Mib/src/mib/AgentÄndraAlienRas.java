@@ -26,21 +26,160 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jlÄndraRastillhörighet = new javax.swing.JLabel();
+        btnNyWorm = new javax.swing.JButton();
+        btnNySquid = new javax.swing.JButton();
+        btnNyBoglodite = new javax.swing.JButton();
+        jlAktuellRas = new javax.swing.JLabel();
+        jlAlienID = new javax.swing.JLabel();
+        tfAngivenAktuellRas = new javax.swing.JTextField();
+        tfAngivetAlienID = new javax.swing.JTextField();
+        jlNyRastillhörighet = new javax.swing.JLabel();
+        jlAntalBoogies = new javax.swing.JLabel();
+        tfAngivetAntalBoogies = new javax.swing.JTextField();
+        jlAntalArmar = new javax.swing.JLabel();
+        tfAngivetAntalArmar = new javax.swing.JTextField();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlÄndraRastillhörighet.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlÄndraRastillhörighet.setText("Ändra rastillhörighet");
+
+        btnNyWorm.setText("Worm");
+        btnNyWorm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNyWormActionPerformed(evt);
+            }
+        });
+
+        btnNySquid.setText("Squid");
+
+        btnNyBoglodite.setText("Boglodite");
+        btnNyBoglodite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNyBogloditeActionPerformed(evt);
+            }
+        });
+
+        jlAktuellRas.setText("Aktuell ras:");
+
+        jlAlienID.setText("Alien ID:");
+
+        tfAngivenAktuellRas.setColumns(9);
+
+        tfAngivetAlienID.setColumns(9);
+
+        jlNyRastillhörighet.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlNyRastillhörighet.setText("Ny Rastillhörighet:");
+
+        jlAntalBoogies.setText("Antal boogies:");
+
+        tfAngivetAntalBoogies.setColumns(8);
+
+        jlAntalArmar.setText("Antal armar:");
+
+        tfAngivetAntalArmar.setColumns(8);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlAlienID)
+                    .addComponent(btnNyWorm)
+                    .addComponent(jlAktuellRas))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfAngivetAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfAngivenAktuellRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnNySquid)
+                        .addGap(55, 55, 55)
+                        .addComponent(btnNyBoglodite)
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(jlNyRastillhörighet))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(jlAntalArmar)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlAntalBoogies)
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(tfAngivetAntalArmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tfAngivetAntalBoogies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlÄndraRastillhörighet)
+                .addGap(115, 115, 115))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jlÄndraRastillhörighet)
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAktuellRas)
+                    .addComponent(tfAngivenAktuellRas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAlienID)
+                    .addComponent(tfAngivetAlienID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addComponent(jlNyRastillhörighet)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAntalArmar)
+                    .addComponent(jlAntalBoogies))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfAngivetAntalArmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfAngivetAntalBoogies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNySquid)
+                    .addComponent(btnNyBoglodite)
+                    .addComponent(btnNyWorm))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNyBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyBogloditeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNyBogloditeActionPerformed
+
+    private void btnNyWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyWormActionPerformed
+            // TODO add your handling code here:
+    }//GEN-LAST:event_btnNyWormActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +217,19 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNyBoglodite;
+    private javax.swing.JButton btnNySquid;
+    private javax.swing.JButton btnNyWorm;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jlAktuellRas;
+    private javax.swing.JLabel jlAlienID;
+    private javax.swing.JLabel jlAntalArmar;
+    private javax.swing.JLabel jlAntalBoogies;
+    private javax.swing.JLabel jlNyRastillhörighet;
+    private javax.swing.JLabel jlÄndraRastillhörighet;
+    private javax.swing.JTextField tfAngivenAktuellRas;
+    private javax.swing.JTextField tfAngivetAlienID;
+    private javax.swing.JTextField tfAngivetAntalArmar;
+    private javax.swing.JTextField tfAngivetAntalBoogies;
     // End of variables declaration//GEN-END:variables
 }
