@@ -147,7 +147,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
         
             String fraga = "update agent set Losenord='" + nyttLosen + "'where Agent_ID=" + anvandarnamn;
         
-        if(nuLosen.equals(answer))
+        if(nuLosen.equals(answer) && nyttLosen.equals(upprepaLosen))
         {
             idb.update(fraga);
             jlAgUppdateraLosenord = true;

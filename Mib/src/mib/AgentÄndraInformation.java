@@ -4,12 +4,16 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author flind
  */
 public class AgentÄndraInformation extends javax.swing.JFrame {
-
+    private InfDB idb;
     /**
      * Creates new form AgentÄndraInformation
      */
@@ -26,31 +30,250 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jlAndraInfo = new javax.swing.JLabel();
+        jlAndraNamn = new javax.swing.JLabel();
+        jlAndraTelefon = new javax.swing.JLabel();
+        jlAndraPlats = new javax.swing.JLabel();
+        jlAndraAnsvarigAgent = new javax.swing.JLabel();
+        jlAndraRas = new javax.swing.JLabel();
+        tfAndraNamn = new javax.swing.JTextField();
+        tfAndraTelefon = new javax.swing.JTextField();
+        tfAndraPlats = new javax.swing.JTextField();
+        tfAndraAnsvarigAgent = new javax.swing.JTextField();
+        btnNamn = new javax.swing.JButton();
+        btnTelefon = new javax.swing.JButton();
+        btnPlats = new javax.swing.JButton();
+        btnAnsvarigAgent = new javax.swing.JButton();
+        jlVemAndra = new javax.swing.JLabel();
+        tfVemAndra = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Ändra information om en alien!");
+        jlAndraInfo.setText("Ändra information om en alien!");
+
+        jlAndraNamn.setText("Ändra namn");
+
+        jlAndraTelefon.setText("Ändra telefonnummer");
+
+        jlAndraPlats.setText("Ändra plats");
+
+        jlAndraAnsvarigAgent.setText("Ändra ansvarig agent");
+
+        jlAndraRas.setText("Ändra ras");
+
+        tfAndraNamn.setColumns(12);
+        tfAndraNamn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAndraNamnActionPerformed(evt);
+            }
+        });
+
+        tfAndraTelefon.setColumns(12);
+        tfAndraTelefon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAndraTelefonActionPerformed(evt);
+            }
+        });
+
+        tfAndraPlats.setColumns(12);
+        tfAndraPlats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAndraPlatsActionPerformed(evt);
+            }
+        });
+
+        tfAndraAnsvarigAgent.setColumns(12);
+
+        btnNamn.setText("Ändra");
+        btnNamn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNamnActionPerformed(evt);
+            }
+        });
+
+        btnTelefon.setText("Ändra");
+        btnTelefon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelefonActionPerformed(evt);
+            }
+        });
+
+        btnPlats.setText("Ändra");
+        btnPlats.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlatsActionPerformed(evt);
+            }
+        });
+
+        btnAnsvarigAgent.setText("Ändra");
+        btnAnsvarigAgent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnsvarigAgentActionPerformed(evt);
+            }
+        });
+
+        jlVemAndra.setText("Ange namn på alien du vill ändra:");
+
+        tfVemAndra.setColumns(12);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(jlAndraInfo))
+                    .addComponent(jlAndraRas)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jlVemAndra, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(tfVemAndra))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlAndraNamn)
+                                    .addComponent(jlAndraTelefon)
+                                    .addComponent(jlAndraPlats)
+                                    .addComponent(jlAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(59, 59, 59)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfAndraAnsvarigAgent)
+                                    .addComponent(tfAndraPlats)
+                                    .addComponent(tfAndraTelefon)
+                                    .addComponent(tfAndraNamn))))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnNamn)
+                            .addComponent(btnTelefon)
+                            .addComponent(btnPlats)
+                            .addComponent(btnAnsvarigAgent))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addComponent(jlAndraInfo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlVemAndra)
+                    .addComponent(tfVemAndra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAndraNamn)
+                    .addComponent(tfAndraNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNamn))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAndraTelefon)
+                    .addComponent(tfAndraTelefon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTelefon))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAndraPlats)
+                    .addComponent(tfAndraPlats, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlats))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlAndraAnsvarigAgent)
+                    .addComponent(tfAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAnsvarigAgent))
+                .addGap(18, 18, 18)
+                .addComponent(jlAndraRas)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tfAndraNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAndraNamnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAndraNamnActionPerformed
+
+    private void tfAndraTelefonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAndraTelefonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAndraTelefonActionPerformed
+
+    private void tfAndraPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAndraPlatsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAndraPlatsActionPerformed
+
+    private void btnNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNamnActionPerformed
+       
+        try{
+            
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String vilkenAlien = tfVemAndra.getText();
+            String nyttNamn = tfAndraNamn.getText();
+            
+            String fraga = "update alien set namn ='" + nyttNamn + "'where namn= '" + vilkenAlien+"'";
+            idb.update(fraga);
+            JOptionPane.showMessageDialog(null, "Namnet är ändrat");
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnNamnActionPerformed
+
+    private void btnTelefonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelefonActionPerformed
+        try{
+            
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String vilkenAlien = tfVemAndra.getText();
+            String nyttTelefonnummer = tfAndraTelefon.getText();
+            
+            String fraga = "update alien set telefon ='" + nyttTelefonnummer + "'where namn= '" + vilkenAlien+"'";
+            idb.update(fraga);
+            JOptionPane.showMessageDialog(null, "Telefonnumret är ändrat");
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnTelefonActionPerformed
+
+    private void btnPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlatsActionPerformed
+        try{
+            
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String vilkenAlien = tfVemAndra.getText();
+            String nyPlats = tfAndraPlats.getText();
+            
+            String fraga = "update alien set plats ='" + nyPlats + "'where namn= '" + vilkenAlien+"'";
+            idb.update(fraga);
+            JOptionPane.showMessageDialog(null, "Platsen är ändrat");
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnPlatsActionPerformed
+
+    private void btnAnsvarigAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnsvarigAgentActionPerformed
+        try{
+            
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String vilkenAlien = tfVemAndra.getText();
+            String nyAnsvarigAgent = tfAndraAnsvarigAgent.getText();
+            
+            String fraga = "update alien set ansvarig_agent ='" + nyAnsvarigAgent + "'where namn= '" + vilkenAlien+"'";
+            idb.update(fraga);
+            JOptionPane.showMessageDialog(null, "Ansvarig agent är ändrat");
+        }
+        
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+        }
+    }//GEN-LAST:event_btnAnsvarigAgentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +311,21 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnAnsvarigAgent;
+    private javax.swing.JButton btnNamn;
+    private javax.swing.JButton btnPlats;
+    private javax.swing.JButton btnTelefon;
+    private javax.swing.JLabel jlAndraAnsvarigAgent;
+    private javax.swing.JLabel jlAndraInfo;
+    private javax.swing.JLabel jlAndraNamn;
+    private javax.swing.JLabel jlAndraPlats;
+    private javax.swing.JLabel jlAndraRas;
+    private javax.swing.JLabel jlAndraTelefon;
+    private javax.swing.JLabel jlVemAndra;
+    private javax.swing.JTextField tfAndraAnsvarigAgent;
+    private javax.swing.JTextField tfAndraNamn;
+    private javax.swing.JTextField tfAndraPlats;
+    private javax.swing.JTextField tfAndraTelefon;
+    private javax.swing.JTextField tfVemAndra;
     // End of variables declaration//GEN-END:variables
 }
