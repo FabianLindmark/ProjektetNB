@@ -4,12 +4,18 @@
  */
 package mib;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author flind
  */
 public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
 
+    private InfDB idb; 
     /**
      * Creates new form AgentRegistreradeAlienMellanDatum
      */
@@ -17,6 +23,15 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
         initComponents();
     }
 
+    
+    
+    
+  
+    
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,22 +41,123 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlAlienRegistreradMellanDatum = new javax.swing.JLabel();
+        jlFran = new javax.swing.JLabel();
+        jlTill = new javax.swing.JLabel();
+        tfAngivetFranDatum = new javax.swing.JTextField();
+        tfAngivetTillDatum = new javax.swing.JTextField();
+        btnSokAlien = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        taUppsoktaAlien = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jlAlienRegistreradMellanDatum.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jlAlienRegistreradMellanDatum.setText("Alien registrerad mellan datum");
+
+        jlFran.setText("Från:");
+
+        jlTill.setText("Till:");
+
+        tfAngivetFranDatum.setColumns(8);
+
+        tfAngivetTillDatum.setColumns(8);
+
+        btnSokAlien.setText("Sök Alien  ");
+        btnSokAlien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSokAlienActionPerformed(evt);
+            }
+        });
+
+        taUppsoktaAlien.setColumns(20);
+        taUppsoktaAlien.setRows(5);
+        jScrollPane1.setViewportView(taUppsoktaAlien);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlFran)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jlTill)))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfAngivetFranDatum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfAngivetTillDatum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(btnSokAlien)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jlAlienRegistreradMellanDatum)
+                        .addGap(61, 61, 61))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jlAlienRegistreradMellanDatum)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlFran)
+                    .addComponent(tfAngivetFranDatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlTill)
+                    .addComponent(tfAngivetTillDatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSokAlien)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSokAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAlienActionPerformed
+    taUppsoktaAlien.setText("Namn" + "\n");   
+    
+    try{
+        idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
+        String startdatum = tfAngivetFranDatum.getText();
+        String slutdatum = tfAngivetTillDatum.getText();
+    
+        
+        String fraga = "SELECT Namn FROM Alien WHERE Registreringsdatum BETWEEN '" +startdatum+"' AND '"+slutdatum+"'";
+        
+        ArrayList<String> allaAliens = idb.fetchColumn(fraga);
+       
+        
+        for (String alienObjekt : allaAliens){
+            
+            taUppsoktaAlien.append(alienObjekt);
+            taUppsoktaAlien.append ("\n"); 
+            
+        } 
+    }
+      catch(InfException ettUndantag){
+          
+          JOptionPane.showMessageDialog(null, "Något gick fel!");
+      }  
+        
+        
+    }//GEN-LAST:event_btnSokAlienActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -78,5 +194,13 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSokAlien;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jlAlienRegistreradMellanDatum;
+    private javax.swing.JLabel jlFran;
+    private javax.swing.JLabel jlTill;
+    private javax.swing.JTextArea taUppsoktaAlien;
+    private javax.swing.JTextField tfAngivetFranDatum;
+    private javax.swing.JTextField tfAngivetTillDatum;
     // End of variables declaration//GEN-END:variables
 }
