@@ -198,11 +198,11 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             String squidarmar = tfAngivetAntalArmar.getText();
             String bogoliteboogies = tfAngivetAntalBoogies.getText();
             
-//            String fraga = "INSERT INTO worm VALUES('" +aid+ "')";
-//                    
-//            idb.insert(fraga);
+            String fraga = "INSERT INTO worm VALUES('" +aid+ "')";
+                    
+            idb.insert(fraga);
             
-            String fraga1 = "DELETE FROM '" +nuras+ "' WHERE Alien_ID= '" +aid+ "'";
+            String fraga1 = "SELECT * FROM '" + nuras + "' WHERE Alien_ID= '" +aid+ "'";
             
             idb.delete(fraga1);
             

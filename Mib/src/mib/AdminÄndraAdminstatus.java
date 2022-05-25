@@ -53,7 +53,7 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
 
         jlAgentID.setText("Agent ID: ");
 
-        jlNyAdminstatus.setText("Ny adminstatus:");
+        jlNyAdminstatus.setText("Ny adminstatus J/N:");
 
         tfAngivetAgentID.setColumns(10);
 
@@ -64,7 +64,7 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jlNyAdminstatus)
                     .addComponent(jlAgentID))
@@ -114,24 +114,34 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
             String svar = idb.fetchSingle(fraga);
             String resultat = svar;
             
-            String fraga1 = "Update Agent set administrator= '" + admin + "'" + "' where Alien_ID= '" +aid+ "'";
+            String fraga1 = "Update Agent set administrator= '" + admin + "' where Agent_ID= '" +aid+ "'";
             
                     
-                 if (Validering.adminStatus(resultat) == true || false){
+                 if ((Validering.adminStatus(resultat))  == true){
                         idb.update(fraga1);
+                        
+                     JOptionPane.showMessageDialog(null, "Agentens adminstatus har uppgraderats");
                     }
+                 
+                 else if(Validering.adminStatus(resultat) == false){
+                     idb. update(fraga1);
+                     
+                     JOptionPane.showMessageDialog(null, "Agentens adminstatus har uppgraderats");
+                     } 
+                 
                     
                    else {
-                    JOptionPane.showMessageDialog(null, "Kontrollera dina uppgifter");
+                    JOptionPane.showMessageDialog(null, "Agentens adminstatus kunde inte uppdateras, kontrollera dina uppgifter");
                     }
              }
+          
                     catch(InfException ettUndantag){
                        JOptionPane.showMessageDialog(null, "Något gick fel!");
                        System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
             }     
             }   
          
-         
+    
     }//GEN-LAST:event_btnAndraAdminstatusActionPerformed
 
     

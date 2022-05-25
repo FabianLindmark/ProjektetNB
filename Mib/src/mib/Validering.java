@@ -68,7 +68,11 @@ public class Validering {
          if  (aktuelladmin.equals("J")){
          adminStatus = true;
          }
-                
+            
+         else if (aktuelladmin.equals("N")){
+         adminStatus = false;    
+            
+         }
          else {
          adminStatus = false;
          }
@@ -78,3 +82,4 @@ public class Validering {
      }
      
    }
+
