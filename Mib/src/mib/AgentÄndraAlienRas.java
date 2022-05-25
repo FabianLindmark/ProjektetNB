@@ -4,12 +4,17 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author ellenportugues
  */
 public class AgentÄndraAlienRas extends javax.swing.JFrame {
-
+    private InfDb idb; 
+        
     /**
      * Creates new form AgentÄndraAlienRas
      */
@@ -67,6 +72,11 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
         });
 
         btnNySquid.setText("Squid");
+        btnNySquid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNySquidActionPerformed(evt);
+            }
+        });
 
         btnNyBoglodite.setText("Boglodite");
         btnNyBoglodite.addActionListener(new java.awt.event.ActionListener() {
@@ -174,13 +184,44 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNyBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyBogloditeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnNyBogloditeActionPerformed
 
     private void btnNyWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyWormActionPerformed
-            // TODO add your handling code here:
+       
+        
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
+            
+            String aid = tfAngivetAlienID.getText();
+            String nuras = tfAngivenAktuellRas.getText();
+            String squidarmar = tfAngivetAntalArmar.getText();
+            String bogoliteboogies = tfAngivetAntalBoogies.getText();
+            
+            String fraga = "INSERT INTO worm VALUES('" +aid+ "')";
+                    
+            idb.insert(fraga);
+            
+            String fraga1 = "DELETE FROM '" +nuras+ "' WHERE Alien_ID= '" +aid+ "'";
+            
+            idb.delete(fraga1);
+            
+        }
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+            System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        }
+        
+        
+        
     }//GEN-LAST:event_btnNyWormActionPerformed
 
+    private void btnNySquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNySquidActionPerformed
+        
+    }//GEN-LAST:event_btnNySquidActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
