@@ -49,7 +49,7 @@ public class AgentRegistreraWorm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlRegAlien.setText("Registrera alien");
+        jlRegAlien.setText("Registrera worm");
 
         jlAlienID.setText("Alien ID");
 
@@ -196,7 +196,7 @@ public class AgentRegistreraWorm extends javax.swing.JFrame {
             idb.insert(fraga);
             idb.insert(fraga1);
             
-            JOptionPane.showMessageDialog(null, "Ny alien registrerad!");
+            JOptionPane.showMessageDialog(null, "Ny worm registrerad!");
            
         }  
         

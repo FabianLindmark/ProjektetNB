@@ -77,11 +77,11 @@ public class AgentRegistrera extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jlAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAlienActionPerformed
-new AgentRegistreraAlienValAvKön().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentRegistreraAlienValAvKön().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_jlAlienActionPerformed
 
     private void jlUtrustningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlUtrustningActionPerformed
-new AgentVilkenUtrustningRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+        new AgentVilkenUtrustningRegistrera().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
     }//GEN-LAST:event_jlUtrustningActionPerformed
 
     /**

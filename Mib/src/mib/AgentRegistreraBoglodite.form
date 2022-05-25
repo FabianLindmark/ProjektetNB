@@ -34,17 +34,17 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="btnRegistrera" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jlPlats" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jlTelefon" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlPlats" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jlTelefon" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="94" pref="94" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tfTelefon" max="32767" attributes="0"/>
-                                  <Component id="tfPlats" max="32767" attributes="0"/>
+                                  <Component id="tfTelefon" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfPlats" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -56,22 +56,22 @@
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tfNamn" max="32767" attributes="0"/>
-                                  <Component id="tfLosenord" max="32767" attributes="0"/>
-                                  <Component id="tfRegDatum" max="32767" attributes="0"/>
-                                  <Component id="tfAlienID" max="32767" attributes="0"/>
+                                  <Component id="tfNamn" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfLosenord" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfRegDatum" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tfAlienID" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jlAgentID" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  <Component id="jlAntalArmar" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlAntalBoogies" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tfAgentID" min="-2" pref="134" max="-2" attributes="0"/>
-                                  <Component id="tfAntalArmar" alignment="1" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="tfAgentID" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="tfAntalBoogies" alignment="1" min="-2" pref="134" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -84,7 +84,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -129,10 +129,10 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jlAntalArmar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tfAntalArmar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlAntalBoogies" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfAntalBoogies" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -141,43 +141,20 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="tfPlats">
+    <Component class="javax.swing.JLabel" name="jlAntalBoogies">
       <Properties>
-        <Property name="columns" type="int" value="12"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jlLosenord">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfAgentID">
-      <Properties>
-        <Property name="columns" type="int" value="12"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jlNamn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Namn"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnRegistrera">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Registrera"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistreraActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jlTelefon">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Telefon"/>
+        <Property name="text" type="java.lang.String" value="Antal boogies"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlPlats">
       <Properties>
         <Property name="text" type="java.lang.String" value="Plats"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfAntalBoogies">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfAntalBoogiesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jlAgentID">
       <Properties>
@@ -202,12 +179,27 @@
         <Property name="columns" type="int" value="12"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JTextField" name="tfPlats">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JLabel" name="jlRegAlien">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrera boglodite"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JLabel" name="jlLosenord">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="L&#xf6;senord"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JTextField" name="tfNamn">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfAgentID">
       <Properties>
         <Property name="columns" type="int" value="12"/>
       </Properties>
@@ -217,25 +209,33 @@
         <Property name="text" type="java.lang.String" value="Alien ID"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JLabel" name="jlNamn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Namn"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JTextField" name="tfTelefon">
       <Properties>
         <Property name="columns" type="int" value="12"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRegistrera">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrera"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistreraActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jlRegDatum">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registreringsdatum"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jlAntalArmar">
+    <Component class="javax.swing.JLabel" name="jlTelefon">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Antal boogies"/>
+        <Property name="text" type="java.lang.String" value="Telefon"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfAntalArmar">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfAntalArmarActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -43,8 +43,18 @@ public class AgentRegistreraAlienValAvKön extends javax.swing.JFrame {
         });
 
         btnSquid.setText("Squid");
+        btnSquid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSquidActionPerformed(evt);
+            }
+        });
 
         btnBoglodite.setText("Boglodite");
+        btnBoglodite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBogloditeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,6 +92,14 @@ public class AgentRegistreraAlienValAvKön extends javax.swing.JFrame {
     private void btnWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWormActionPerformed
         new AgentRegistreraWorm().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnWormActionPerformed
+
+    private void btnBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBogloditeActionPerformed
+        new AgentRegistreraBoglodite().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnBogloditeActionPerformed
+
+    private void btnSquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSquidActionPerformed
+        new AgentRegistreraSquid().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnSquidActionPerformed
 
     /**
      * @param args the command line arguments

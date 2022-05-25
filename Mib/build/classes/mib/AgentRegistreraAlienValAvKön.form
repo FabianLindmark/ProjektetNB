@@ -73,11 +73,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Squid"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSquidActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnBoglodite">
       <Properties>
         <Property name="text" type="java.lang.String" value="Boglodite"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBogloditeActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

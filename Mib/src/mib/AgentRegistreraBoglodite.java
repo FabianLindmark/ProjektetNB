@@ -12,12 +12,12 @@ import oru.inf.InfException;
  *
  * @author flind
  */
-public class AgentRegistreraSquid extends javax.swing.JFrame {
+public class AgentRegistreraBoglodite extends javax.swing.JFrame {
     private InfDB idb;
     /**
-     * Creates new form AgentRegistreraSquid
+     * Creates new form AgentRegistreraBol
      */
-    public AgentRegistreraSquid() {
+    public AgentRegistreraBoglodite() {
         initComponents();
     }
 
@@ -30,45 +30,36 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tfPlats = new javax.swing.JTextField();
-        jlLosenord = new javax.swing.JLabel();
-        tfAgentID = new javax.swing.JTextField();
-        jlNamn = new javax.swing.JLabel();
-        btnRegistrera = new javax.swing.JButton();
-        jlTelefon = new javax.swing.JLabel();
+        jlAntalBoogies = new javax.swing.JLabel();
         jlPlats = new javax.swing.JLabel();
+        tfAntalBoogies = new javax.swing.JTextField();
         jlAgentID = new javax.swing.JLabel();
         tfAlienID = new javax.swing.JTextField();
         tfRegDatum = new javax.swing.JTextField();
         tfLosenord = new javax.swing.JTextField();
+        tfPlats = new javax.swing.JTextField();
         jlRegAlien = new javax.swing.JLabel();
+        jlLosenord = new javax.swing.JLabel();
         tfNamn = new javax.swing.JTextField();
+        tfAgentID = new javax.swing.JTextField();
         jlAlienID = new javax.swing.JLabel();
+        jlNamn = new javax.swing.JLabel();
         tfTelefon = new javax.swing.JTextField();
+        btnRegistrera = new javax.swing.JButton();
         jlRegDatum = new javax.swing.JLabel();
-        jlAntalArmar = new javax.swing.JLabel();
-        tfAntalArmar = new javax.swing.JTextField();
+        jlTelefon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tfPlats.setColumns(12);
-
-        jlLosenord.setText("Lösenord");
-
-        tfAgentID.setColumns(12);
-
-        jlNamn.setText("Namn");
-
-        btnRegistrera.setText("Registrera");
-        btnRegistrera.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistreraActionPerformed(evt);
-            }
-        });
-
-        jlTelefon.setText("Telefon");
+        jlAntalBoogies.setText("Antal boogies");
 
         jlPlats.setText("Plats");
+
+        tfAntalBoogies.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfAntalBoogiesActionPerformed(evt);
+            }
+        });
 
         jlAgentID.setText("Ansvarig agentID");
 
@@ -83,23 +74,32 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
 
         tfLosenord.setColumns(12);
 
+        tfPlats.setColumns(12);
+
         jlRegAlien.setText("Registrera boglodite");
+
+        jlLosenord.setText("Lösenord");
 
         tfNamn.setColumns(12);
 
+        tfAgentID.setColumns(12);
+
         jlAlienID.setText("Alien ID");
+
+        jlNamn.setText("Namn");
 
         tfTelefon.setColumns(12);
 
-        jlRegDatum.setText("Registreringsdatum");
-
-        jlAntalArmar.setText("Antal boogies");
-
-        tfAntalArmar.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrera.setText("Registrera");
+        btnRegistrera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAntalArmarActionPerformed(evt);
+                btnRegistreraActionPerformed(evt);
             }
         });
+
+        jlRegDatum.setText("Registreringsdatum");
+
+        jlTelefon.setText("Telefon");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,11 +140,11 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
                                 .addGap(3, 3, 3)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jlAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlAntalArmar))
+                                    .addComponent(jlAntalBoogies))
                                 .addGap(28, 28, 28)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tfAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfAntalArmar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(tfAntalBoogies, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 99, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -187,14 +187,22 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
                             .addComponent(tfAgentID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlAntalArmar)
-                            .addComponent(tfAntalArmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 4, Short.MAX_VALUE)))
+                            .addComponent(jlAntalBoogies)
+                            .addComponent(tfAntalBoogies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tfAntalBoogiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAntalBoogiesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfAntalBoogiesActionPerformed
+
+    private void tfRegDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfRegDatumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfRegDatumActionPerformed
 
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
         try{
@@ -207,15 +215,15 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
             String plats = tfPlats.getText();
             String datum = tfRegDatum.getText();
             String telefon = tfTelefon.getText();
-            String antalArmar = tfAntalArmar.getText();
+            String antalBoogies = tfAntalBoogies.getText();
 
             String fraga = "insert into alien values('"+alien +"','" + datum +"','" + losenord +"','" + namn + "','" + telefon +"','" + plats + "','" +ansvarAgent+"')";
-            String fraga1 = "insert into squid values('"+alien+"','" + antalArmar +"')";
+            String fraga1 = "insert into boglodite values('"+alien+"','" + antalBoogies +"')";
 
             idb.insert(fraga);
             idb.insert(fraga1);
 
-            JOptionPane.showMessageDialog(null, "Ny squid registrerad!");
+            JOptionPane.showMessageDialog(null, "Ny boglodite registrerad!");
 
         }
 
@@ -223,14 +231,6 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnRegistreraActionPerformed
-
-    private void tfRegDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfRegDatumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfRegDatumActionPerformed
-
-    private void tfAntalArmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAntalArmarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfAntalArmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,20 +249,21 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraSquid.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraBoglodite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraSquid.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraBoglodite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraSquid.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraBoglodite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgentRegistreraSquid.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentRegistreraBoglodite.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AgentRegistreraSquid().setVisible(true);
+                new AgentRegistreraBoglodite().setVisible(true);
             }
         });
     }
@@ -271,7 +272,7 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistrera;
     private javax.swing.JLabel jlAgentID;
     private javax.swing.JLabel jlAlienID;
-    private javax.swing.JLabel jlAntalArmar;
+    private javax.swing.JLabel jlAntalBoogies;
     private javax.swing.JLabel jlLosenord;
     private javax.swing.JLabel jlNamn;
     private javax.swing.JLabel jlPlats;
@@ -280,7 +281,7 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
     private javax.swing.JLabel jlTelefon;
     private javax.swing.JTextField tfAgentID;
     private javax.swing.JTextField tfAlienID;
-    private javax.swing.JTextField tfAntalArmar;
+    private javax.swing.JTextField tfAntalBoogies;
     private javax.swing.JTextField tfLosenord;
     private javax.swing.JTextField tfNamn;
     private javax.swing.JTextField tfPlats;
