@@ -95,7 +95,6 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
         try {
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
-             boolean hittad = false;
              String namn = tfAlienNamn.getText();
             
              String fraga = "SELECT FROM ALIEN WHERE NAMN= '" + namn +"'";
@@ -107,13 +106,11 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
                 if (alien.contains(namn)){
                     
                     idb.delete(fraga);
-                    hittad = true;
                     break;
                     
                 }
                // String vilkenAlien = "delete from alien where namn = '"+alien+"'";
             }
-          
              
             JOptionPane.showMessageDialog(null, "Alien är nu raderad");
          }

@@ -123,13 +123,16 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
             String chefnu = tfchefnu.getText();
             String nychef = tfnychef.getText();
             
-            String question1 = "select kontorsbecteckning from kontorschef where kontorsbecteckning= '"+kontor+"'";
+            String question1 = "SELECT KONTORSBETECKNING FROM KONTROSCHEF WHERE AGENT_ID= '"+chefnu+"'";
             String answer1 = idb.fetchSingle(question1);
-            String question2 = "select agent_id from kontorschef (select agent_id from agent where namn=) '" +chefnu+"'";
-            String answer2 = idb.fetchSingle(question2);
+            
+            String fraga2 = "UPDATE KONTORSCHEF SET AGENT_ID= '" + nychef + "'";
+            String svar2 = idb.fetchSingle(fraga2);
      
         
-        if(kontor.equals(answer1) && chefnu.equals(answer2))
+        if()
+                
+                ontor.equals(answer1) && chefnu.equals(answer2))
         {
            
             btnbytomrchef = true;
