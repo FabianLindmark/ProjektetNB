@@ -4,7 +4,10 @@
  */
 package mib;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import oru.inf.InfDB;
+import oru.inf.InfException;
 
 /**
  *
@@ -32,7 +35,7 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
         jlTaBortAgent = new javax.swing.JLabel();
         jlTaBortAgentNamn = new javax.swing.JLabel();
         btnTaBortAgent = new javax.swing.JButton();
-        tfAlienNamn = new javax.swing.JTextField();
+        tfAgentNamn = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,7 +52,7 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
             }
         });
 
-        tfAlienNamn.setColumns(6);
+        tfAgentNamn.setColumns(6);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,7 +64,7 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jlTaBortAgentNamn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfAlienNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                        .addComponent(tfAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                     .addComponent(jlTaBortAgent)
                     .addComponent(btnTaBortAgent, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(202, Short.MAX_VALUE))
@@ -74,7 +77,7 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlTaBortAgentNamn)
-                    .addComponent(tfAlienNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfAgentNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(btnTaBortAgent)
                 .addContainerGap(110, Short.MAX_VALUE))
@@ -85,7 +88,33 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
 
     private void btnTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAgentActionPerformed
 
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            Boolean hittad = false;
+            String vilkenAgent = tfAgentNamn.getText();
+            String allaAgenter = "select namn from agent";
+            
+            ArrayList<String> agenterna = idb.fetchColumn(allaAgenter);
+            
+                for(String agent:agenterna){
+                    
+                    String vilkaBort = "delete from agent where namn = '"+agent+"'";
+                    
+                    idb.delete(vilkaBort);
+                    JOptionPane.showMessageDialog(null, "Agenten är nu borttagen!");
+                    hittad = true;
+                    break;
+                
+                }
+            
+            
+        }
         
+        catch(InfException ettUndantag) {
+              JOptionPane.showMessageDialog(null, "Något gick fel!");
+              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+    }
         
     }//GEN-LAST:event_btnTaBortAgentActionPerformed
 
@@ -128,6 +157,6 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
     private javax.swing.JButton btnTaBortAgent;
     private javax.swing.JLabel jlTaBortAgent;
     private javax.swing.JLabel jlTaBortAgentNamn;
-    private javax.swing.JTextField tfAlienNamn;
+    private javax.swing.JTextField tfAgentNamn;
     // End of variables declaration//GEN-END:variables
 }

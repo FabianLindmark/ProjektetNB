@@ -29,7 +29,7 @@
                   <Group type="102" attributes="0">
                       <Component id="jlTaBortAgentNamn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tfAlienNamn" pref="0" max="32767" attributes="0"/>
+                      <Component id="tfAgentNamn" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jlTaBortAgent" min="-2" max="-2" attributes="0"/>
                   <Component id="btnTaBortAgent" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -46,7 +46,7 @@
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlTaBortAgentNamn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfAlienNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAgentNamn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
@@ -80,7 +80,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTaBortAgentActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfAlienNamn">
+    <Component class="javax.swing.JTextField" name="tfAgentNamn">
       <Properties>
         <Property name="columns" type="int" value="6"/>
       </Properties>
