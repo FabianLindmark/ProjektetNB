@@ -30,12 +30,12 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jlAndraInfo = new javax.swing.JLabel();
         jlAndraNamn = new javax.swing.JLabel();
         jlAndraTelefon = new javax.swing.JLabel();
         jlAndraPlats = new javax.swing.JLabel();
         jlAndraAnsvarigAgent = new javax.swing.JLabel();
-        jlAndraRas = new javax.swing.JLabel();
         tfAndraNamn = new javax.swing.JTextField();
         tfAndraTelefon = new javax.swing.JTextField();
         tfAndraPlats = new javax.swing.JTextField();
@@ -46,6 +46,7 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
         btnAnsvarigAgent = new javax.swing.JButton();
         jlVemAndra = new javax.swing.JLabel();
         tfVemAndra = new javax.swing.JTextField();
+        btnAndraRas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,8 +59,6 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
         jlAndraPlats.setText("Ändra plats");
 
         jlAndraAnsvarigAgent.setText("Ändra ansvarig agent");
-
-        jlAndraRas.setText("Ändra ras");
 
         tfAndraNamn.setColumns(12);
         tfAndraNamn.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +115,13 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
 
         tfVemAndra.setColumns(12);
 
+        btnAndraRas.setText("Ändra ras");
+        btnAndraRas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAndraRasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,7 +131,6 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(117, 117, 117)
                         .addComponent(jlAndraInfo))
-                    .addComponent(jlAndraRas)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -150,7 +155,10 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
                             .addComponent(btnNamn)
                             .addComponent(btnTelefon)
                             .addComponent(btnPlats)
-                            .addComponent(btnAnsvarigAgent))))
+                            .addComponent(btnAnsvarigAgent)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnAndraRas)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -183,8 +191,8 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
                     .addComponent(tfAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAnsvarigAgent))
                 .addGap(18, 18, 18)
-                .addComponent(jlAndraRas)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addComponent(btnAndraRas)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
@@ -275,6 +283,10 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAnsvarigAgentActionPerformed
 
+    private void btnAndraRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraRasActionPerformed
+    new AgentÄndraAlienRas().setVisible(rootPaneCheckingEnabled);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAndraRasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -311,15 +323,16 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAndraRas;
     private javax.swing.JButton btnAnsvarigAgent;
     private javax.swing.JButton btnNamn;
     private javax.swing.JButton btnPlats;
     private javax.swing.JButton btnTelefon;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jlAndraAnsvarigAgent;
     private javax.swing.JLabel jlAndraInfo;
     private javax.swing.JLabel jlAndraNamn;
     private javax.swing.JLabel jlAndraPlats;
-    private javax.swing.JLabel jlAndraRas;
     private javax.swing.JLabel jlAndraTelefon;
     private javax.swing.JLabel jlVemAndra;
     private javax.swing.JTextField tfAndraAnsvarigAgent;
