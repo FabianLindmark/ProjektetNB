@@ -24,46 +24,76 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jlAlienID" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlRegDatum" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jlLosenord" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlNamn" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="jlTelefon" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlPlats" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="jlAgentID" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace pref="55" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="tfAgentID" pref="100" max="32767" attributes="0"/>
-                  <Component id="tfPlats" alignment="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="tfTelefon" alignment="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="tfNamn" alignment="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="tfLosenord" alignment="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="tfRegDatum" alignment="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="tfAlienID" alignment="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Component id="btnRegistrera" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
               <Component id="jlRegAlien" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="btnRegistrera" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jlAgentID" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                          <Component id="jlPlats" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jlTelefon" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jlNamn" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="jlLosenord" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tfLosenord" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="tfNamn" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="tfPlats" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="tfAgentID" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="tfTelefon" min="-2" pref="134" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jlRegDatum" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlAlienID" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="tfAlienID" min="-2" pref="131" max="-2" attributes="0"/>
+                                  <Component id="tfRegDatum" min="-2" pref="131" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="109" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnRegistrera" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
               <Component id="jlRegAlien" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAlienID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlRegDatum" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfRegDatum" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -78,7 +108,7 @@
                   <Component id="jlNamn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfNamn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -88,17 +118,12 @@
                   <Component id="jlPlats" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfPlats" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jlAgentID" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAgentID" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnRegistrera" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
