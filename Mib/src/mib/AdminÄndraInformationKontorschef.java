@@ -31,11 +31,9 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
 
         jländrakontorschef = new javax.swing.JLabel();
         jlkontor = new javax.swing.JLabel();
-        jlchefnu = new javax.swing.JLabel();
         jlnychef = new javax.swing.JLabel();
         btnbytomrchef = new javax.swing.JButton();
         tfkontor = new javax.swing.JTextField();
-        tfchefnu = new javax.swing.JTextField();
         tfnychef = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,8 +41,6 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
         jländrakontorschef.setText("Ändra aktuell kontorschef:");
 
         jlkontor.setText("Vilket kontor:");
-
-        jlchefnu.setText("Nuvarande kontorschef:");
 
         jlnychef.setText("Nya kontorschefen:");
 
@@ -57,8 +53,6 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
 
         tfkontor.setColumns(12);
 
-        tfchefnu.setColumns(12);
-
         tfnychef.setColumns(12);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -69,24 +63,22 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnbytomrchef)
-                            .addComponent(jländrakontorschef))
+                        .addComponent(btnbytomrchef)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jländrakontorschef)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlchefnu)
                             .addComponent(jlkontor)
                             .addComponent(jlnychef))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(tfkontor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfchefnu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tfnychef, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfnychef, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(108, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
@@ -98,17 +90,13 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlkontor)
                     .addComponent(tfkontor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlchefnu)
-                    .addComponent(tfchefnu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlnychef)
                     .addComponent(tfnychef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(btnbytomrchef)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,33 +106,14 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
-            Boolean btnbytomrchef = false;
+            
             String kontor = tfkontor.getText();
-            String chefnu = tfchefnu.getText();
             String nychef = tfnychef.getText();
             
-            String question1 = "SELECT KONTORSBETECKNING FROM KONTROSCHEF WHERE AGENT_ID= '"+chefnu+"'";
-            String answer1 = idb.fetchSingle(question1);
+            String fraga = "update kontorschef set agent_id = '" + nychef + "' where kontorsbeteckning = '" +kontor+"'";
             
-            String fraga2 = "UPDATE KONTORSCHEF SET AGENT_ID= '" + nychef + "'";
-            String svar2 = idb.fetchSingle(fraga2);
-     
-        
-        if()
-                
-                ontor.equals(answer1) && chefnu.equals(answer2))
-        {
-           
-            btnbytomrchef = true;
-            String fraga1 = "select agent_id from agent where namn = '"+nychef+"'";
-            String fraga2 = "update kontorschef set agent_id= '"+nychef+"'" + "where agent_id= '"+chefnu+"'";
-            idb.update(fraga2);
-            JOptionPane.showMessageDialog(null, "Chef är nu ändrad");
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null, "Dina uppgifter är felaktiga");
-        }
+            idb.update(fraga);
+            JOptionPane.showMessageDialog(null, "Kontorschef är ändrat");
             
         }
     
@@ -191,11 +160,9 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnbytomrchef;
-    private javax.swing.JLabel jlchefnu;
     private javax.swing.JLabel jlkontor;
     private javax.swing.JLabel jlnychef;
     private javax.swing.JLabel jländrakontorschef;
-    private javax.swing.JTextField tfchefnu;
     private javax.swing.JTextField tfkontor;
     private javax.swing.JTextField tfnychef;
     // End of variables declaration//GEN-END:variables

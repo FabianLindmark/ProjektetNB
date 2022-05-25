@@ -27,29 +27,26 @@
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnbytomrchef" min="-2" max="-2" attributes="0"/>
-                          <Component id="jländrakontorschef" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btnbytomrchef" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jländrakontorschef" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jlchefnu" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jlkontor" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jlnychef" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="tfkontor" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tfchefnu" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <Component id="tfnychef" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="tfnychef" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace pref="108" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -68,19 +65,14 @@
                   <Component id="jlkontor" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfkontor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlchefnu" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfchefnu" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlnychef" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfnychef" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="btnbytomrchef" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,11 +86,6 @@
     <Component class="javax.swing.JLabel" name="jlkontor">
       <Properties>
         <Property name="text" type="java.lang.String" value="Vilket kontor:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jlchefnu">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nuvarande kontorschef:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlnychef">
@@ -115,11 +102,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="tfkontor">
-      <Properties>
-        <Property name="columns" type="int" value="12"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tfchefnu">
       <Properties>
         <Property name="columns" type="int" value="12"/>
       </Properties>
