@@ -13,7 +13,7 @@ import oru.inf.InfException;
  * @author ellenportugues
  */
 public class AgentÄndraAlienRas extends javax.swing.JFrame {
-    private InfDb idb; 
+    private InfDB idb; 
         
     /**
      * Creates new form AgentÄndraAlienRas
@@ -198,9 +198,9 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             String squidarmar = tfAngivetAntalArmar.getText();
             String bogoliteboogies = tfAngivetAntalBoogies.getText();
             
-            String fraga = "INSERT INTO worm VALUES('" +aid+ "')";
-                    
-            idb.insert(fraga);
+//            String fraga = "INSERT INTO worm VALUES('" +aid+ "')";
+//                    
+//            idb.insert(fraga);
             
             String fraga1 = "DELETE FROM '" +nuras+ "' WHERE Alien_ID= '" +aid+ "'";
             
