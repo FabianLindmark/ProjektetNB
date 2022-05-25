@@ -93,22 +93,25 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
          
         try {
-            
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
+             boolean hittad = false;
              String namn = tfAlienNamn.getText();
             
-             Boolean hittad = false;
-             String fraga = "select namn from alien";
+             String fraga = "SELECT FROM ALIEN WHERE NAMN= '" + namn +"'";
+             
              ArrayList<String> taBortAlien = idb.fetchColumn(fraga);
                     
             for(String alien : taBortAlien){
                 
-                String vilkenAlien = "delete from alien where namn = '"+alien+"'";
-                
-                idb.delete(vilkenAlien);
-                hittad = true;
-                break;
+                if (alien.contains(namn)){
+                    
+                    idb.delete(fraga);
+                    hittad = true;
+                    break;
+                    
+                }
+               // String vilkenAlien = "delete from alien where namn = '"+alien+"'";
             }
           
              
