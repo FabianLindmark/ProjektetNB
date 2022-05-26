@@ -34,7 +34,6 @@ public class Validering {
     
     
     
-    
     //metod för fält som ska vara int, 
     //Anväbds inte någonstans ÄN :) annars ta bort
      public static boolean isHeltal (JTextField rutaAttKolla){

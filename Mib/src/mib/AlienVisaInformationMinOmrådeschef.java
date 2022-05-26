@@ -4,12 +4,17 @@
  */
 package mib;
 
+import javax.swing.JOptionPane;
+import oru.inf.InfDB;
+import oru.inf.InfException;
+
 /**
  *
  * @author ellenportugues
  */
 public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
-
+    private InfDB idb;
+        
     /**
      * Creates new form AlienVisaInformationMinOmrådeschef
      */
@@ -142,16 +147,44 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
 
     private void btnSokInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokInformationActionPerformed
       
-        try{
+        
+        if (Validering.textFaltHarVarde(tfAngivetMittOmrade)){
             
-        String namn = tfAngivetNamn.setText();
-        String telefon = tfAngivenTel.setText();
-        String agentID = tfAngivetAID.setText();
-        String ansdatum = tfAngivetAnsDatum.setText();
-  
-
+       
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
+            
+            String omrade = tfAngivetMittOmrade.getText();
+            
+            String fraga = "SELECT OMRADES_ID FROM OMRADE WHERE BENAMNING= '" + omrade + "'";
+            String svar = idb.fetchSingle(fraga);
+            
+            String fraga1 = "SELECT AGENT_ID FROM OMRADESCHEF WHERE OMRADE = '" + svar + "'";
+            String svar1 = idb.fetchSingle(fraga1);
+            
+            tfAngivetAID.setText(svar1);
+            
+            String fraga2 = "SELECT NAMN FROM AGENT WHERE AGENT_ID= '" + svar1 +"'";
+            String svar2 = idb.fetchSingle(fraga2);
+            
+            tfAngivetNamn.setText(svar2);
+            
+            String fraga3 = "SELECT TELEFON FROM AGENT WHERE AGENT_ID= '" + svar1 +"'";
+            String svar3 = idb.fetchSingle(fraga3);
+            
+            tfAngivenTel.setText(svar3);
+            
+            String fraga4 = "SELECT ANSTALLNINGSDATUM FROM AGENT WHERE AGENT_ID= '" + svar1 +"'";
+            String svar4 = idb.fetchSingle(fraga4);
+            
+           tfAngivetAnsDatum.setText(svar4);
+          
         }
-   
+        catch (InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+            System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        }
+        }
     }//GEN-LAST:event_btnSokInformationActionPerformed
 
     /**
