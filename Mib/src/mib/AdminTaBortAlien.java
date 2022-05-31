@@ -99,12 +99,14 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
             
              String fraga = "SELECT FROM ALIEN WHERE NAMN= '" + namn +"'";
              
+
+             
              ArrayList<String> taBortAlien = idb.fetchColumn(fraga);
                     
             for(String alien : taBortAlien){
                 
                 if (alien.contains(namn)){
-                    
+                
                     idb.delete(fraga);
                     break;
                     
@@ -117,6 +119,7 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
          
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+            System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
          }
     }//GEN-LAST:event_btnTaBortAlienActionPerformed
 
