@@ -199,6 +199,8 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             
             idb.delete(fraga1);
             
+            JOptionPane.showMessageDialog(null, "Ras har uppdaterats!");
+            
         }
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
@@ -222,6 +224,8 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             String fraga1 = "SELECT * FROM '" + nuras + "' WHERE Alien_ID= '" +aid+ "'";
             
             idb.delete(fraga1);
+            
+            JOptionPane.showMessageDialog(null, "Ras har uppdaterats!");
             
         }
         catch(InfException ettUndantag){
@@ -249,6 +253,8 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             String fraga1 = "SELECT * FROM '" + nuras + "' WHERE Alien_ID= '" +aid+ "'";
             
             idb.delete(fraga1);
+            
+            JOptionPane.showMessageDialog(null, "Ras har uppdaterats!");
             
         }
         catch(InfException ettUndantag){
