@@ -4,6 +4,7 @@
  */
 package mib;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import oru.inf.InfDB;
 import oru.inf.InfException;
@@ -87,23 +88,32 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
 
     private void btnTaBortUtrustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortUtrustActionPerformed
 
-        try {
+        try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
-
-            String AngivetID = tfAngivetUtID.getText();
             
+            Boolean hittad = false;
+            String vilkenUtrustning = tfAngivetUtID.getText();
+            String allUtrustning = "select utrustnings_id from utrustning";
             
-            String fraga = "Select * from Utrustning where Utrustnings_ID =  ' "+AngivetID+ "'";
+            ArrayList<String> utrustningen = idb.fetchColumn(allUtrustning);
+            String vilkaBort = "delete from utrustning where utrustnings_id = '"+vilkenUtrustning+"'";
+                for(String utrustning:utrustningen){
+                    
+                    
+                    
+                    idb.delete(vilkaBort);
+                    JOptionPane.showMessageDialog(null, "Utrustningen är nu borttagen!");
+                    hittad = true;
+                    break;
+                
+                }
+            
+        }
         
-
-            idb.delete(fraga);
-
-            JOptionPane.showMessageDialog(null, "Utrustning är nu raderad");
-        }
-
-        catch(InfException e){
-            JOptionPane.showMessageDialog(null, "Något gick fel!");
-        }
+        catch(InfException ettUndantag) {
+              JOptionPane.showMessageDialog(null, "Något gick fel!");
+              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+    }
     }//GEN-LAST:event_btnTaBortUtrustActionPerformed
 
     /**
