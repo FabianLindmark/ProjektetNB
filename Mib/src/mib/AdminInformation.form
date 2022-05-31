@@ -35,6 +35,7 @@
                           <Component id="btnListor" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnSokAgentInformation" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnTaBortAlien" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSokAgentInfo" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -79,17 +80,19 @@
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnTaBortAlien" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="btnAndraInfromationKontorschef" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSokAgentInfo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnTaBortUtrustning" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnÄndraAlienInformation" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTaBortAlien" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Component id="btnTaBortUtrustning" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnTaBortAgent" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="76" max="32767" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -244,6 +247,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn&#xc4;ndraAlienInformationActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSokAgentInfo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="S&#xf6;k info om alien"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokAgentInfoActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

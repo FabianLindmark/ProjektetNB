@@ -40,6 +40,7 @@ public class AdminInformation extends javax.swing.JFrame {
         btnAndraInformationOmradeschef = new javax.swing.JButton();
         btnAndraInfromationKontorschef = new javax.swing.JButton();
         btnÄndraAlienInformation = new javax.swing.JButton();
+        btnSokAgentInfo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -150,6 +151,13 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
+        btnSokAgentInfo.setText("Sök info om alien");
+        btnSokAgentInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSokAgentInfoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,7 +173,8 @@ public class AdminInformation extends javax.swing.JFrame {
                             .addComponent(btnRegistrera)
                             .addComponent(btnListor)
                             .addComponent(btnSokAgentInformation)
-                            .addComponent(btnTaBortAlien))
+                            .addComponent(btnTaBortAlien)
+                            .addComponent(btnSokAgentInfo))
                         .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNyregistreraAgent)
@@ -200,15 +209,17 @@ public class AdminInformation extends javax.swing.JFrame {
                     .addComponent(btnAndraInformationOmradeschef))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTaBortAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAndraInfromationKontorschef))
+                    .addComponent(btnAndraInfromationKontorschef)
+                    .addComponent(btnSokAgentInfo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTaBortUtrustning)
-                    .addComponent(btnÄndraAlienInformation))
+                    .addComponent(btnÄndraAlienInformation)
+                    .addComponent(btnTaBortAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addComponent(btnTaBortUtrustning)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTaBortAgent)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -231,7 +242,7 @@ public class AdminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSokAgentInformationActionPerformed
 
     private void btnAndraAgentInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAgentInformationActionPerformed
-    new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled);
+    new AgentÄndraInformationOmAgent().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_btnAndraAgentInformationActionPerformed
 
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
@@ -263,8 +274,12 @@ public class AdminInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAndraInfromationKontorschefActionPerformed
 
     private void btnÄndraAlienInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnÄndraAlienInformationActionPerformed
-    new AgentÄndraInformation().setVisible(rootPaneCheckingEnabled); 
+    new AgentÄndraInformationOmAlien().setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_btnÄndraAlienInformationActionPerformed
+
+    private void btnSokAgentInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAgentInfoActionPerformed
+        new AgentSökInformationOmAlien().setVisible(rootPaneCheckingEnabled); 
+    }//GEN-LAST:event_btnSokAgentInfoActionPerformed
 
     
     
@@ -316,6 +331,7 @@ public class AdminInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnListor;
     private javax.swing.JButton btnNyregistreraAgent;
     private javax.swing.JButton btnRegistrera;
+    private javax.swing.JButton btnSokAgentInfo;
     private javax.swing.JButton btnSokAgentInformation;
     private javax.swing.JButton btnTaBortAgent;
     private javax.swing.JButton btnTaBortAlien;

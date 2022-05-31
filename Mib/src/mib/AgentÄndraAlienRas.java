@@ -184,7 +184,26 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNyBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyBogloditeActionPerformed
-        
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
+            
+            String aid = tfAngivetAlienID.getText();
+            String nuras = tfAngivenAktuellRas.getText();
+            String bogoliteboogies = tfAngivetAntalBoogies.getText();
+            
+            String fraga = "INSERT INTO boglodite VALUES('" +aid+ "', '" +bogoliteboogies+"')";
+                    
+            idb.insert(fraga);
+            
+            String fraga1 = "SELECT * FROM '" + nuras + "' WHERE Alien_ID= '" +aid+ "'";
+            
+            idb.delete(fraga1);
+            
+        }
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+            System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        }
     }//GEN-LAST:event_btnNyBogloditeActionPerformed
 
     private void btnNyWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyWormActionPerformed
@@ -195,8 +214,6 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             
             String aid = tfAngivetAlienID.getText();
             String nuras = tfAngivenAktuellRas.getText();
-            String squidarmar = tfAngivetAntalArmar.getText();
-            String bogoliteboogies = tfAngivetAntalBoogies.getText();
             
             String fraga = "INSERT INTO worm VALUES('" +aid+ "')";
                     
@@ -217,6 +234,27 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNyWormActionPerformed
 
     private void btnNySquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNySquidActionPerformed
+        try{
+            idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
+            
+            String aid = tfAngivetAlienID.getText();
+            String nuras = tfAngivenAktuellRas.getText();
+            String squidarmar = tfAngivetAntalArmar.getText();
+           
+            
+            String fraga = "INSERT INTO squid VALUES('" +aid+ "', '" +squidarmar+"')";
+                    
+            idb.insert(fraga);
+            
+            String fraga1 = "SELECT * FROM '" + nuras + "' WHERE Alien_ID= '" +aid+ "'";
+            
+            idb.delete(fraga1);
+            
+        }
+        catch(InfException ettUndantag){
+            JOptionPane.showMessageDialog(null, "Något gick fel!");
+            System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        }
         
     }//GEN-LAST:event_btnNySquidActionPerformed
 

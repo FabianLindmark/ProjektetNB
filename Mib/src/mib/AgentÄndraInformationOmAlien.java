@@ -12,12 +12,12 @@ import oru.inf.InfException;
  *
  * @author flind
  */
-public class AgentÄndraInformation extends javax.swing.JFrame {
+public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
     private InfDB idb;
     /**
      * Creates new form AgentÄndraInformation
      */
-    public AgentÄndraInformation() {
+    public AgentÄndraInformationOmAlien() {
         initComponents();
     }
 
@@ -61,25 +61,10 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
         jlAndraAnsvarigAgent.setText("Ändra ansvarig agent");
 
         tfAndraNamn.setColumns(12);
-        tfAndraNamn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAndraNamnActionPerformed(evt);
-            }
-        });
 
         tfAndraTelefon.setColumns(12);
-        tfAndraTelefon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAndraTelefonActionPerformed(evt);
-            }
-        });
 
         tfAndraPlats.setColumns(12);
-        tfAndraPlats.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfAndraPlatsActionPerformed(evt);
-            }
-        });
 
         tfAndraAnsvarigAgent.setColumns(12);
 
@@ -132,25 +117,18 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
                         .addGap(117, 117, 117)
                         .addComponent(jlAndraInfo))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jlVemAndra, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(tfVemAndra))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlAndraNamn)
-                                    .addComponent(jlAndraTelefon)
-                                    .addComponent(jlAndraPlats)
-                                    .addComponent(jlAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(59, 59, 59)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tfAndraAnsvarigAgent)
-                                    .addComponent(tfAndraPlats)
-                                    .addComponent(tfAndraTelefon)
-                                    .addComponent(tfAndraNamn))))
-                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlAndraNamn)
+                            .addComponent(jlAndraTelefon)
+                            .addComponent(jlAndraPlats)
+                            .addComponent(jlAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfAndraAnsvarigAgent)
+                            .addComponent(tfAndraPlats)
+                            .addComponent(tfAndraTelefon)
+                            .addComponent(tfAndraNamn))
+                        .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNamn)
                             .addComponent(btnTelefon)
@@ -158,7 +136,12 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
                             .addComponent(btnAnsvarigAgent)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnAndraRas)))
+                        .addComponent(btnAndraRas))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jlVemAndra, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(tfVemAndra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -197,18 +180,6 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void tfAndraNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAndraNamnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfAndraNamnActionPerformed
-
-    private void tfAndraTelefonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAndraTelefonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfAndraTelefonActionPerformed
-
-    private void tfAndraPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfAndraPlatsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfAndraPlatsActionPerformed
 
     private void btnNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNamnActionPerformed
        
@@ -304,20 +275,21 @@ public class AgentÄndraInformation extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgentÄndraInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentÄndraInformationOmAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgentÄndraInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentÄndraInformationOmAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgentÄndraInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentÄndraInformationOmAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgentÄndraInformation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AgentÄndraInformationOmAlien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AgentÄndraInformation().setVisible(true);
+                new AgentÄndraInformationOmAlien().setVisible(true);
             }
         });
     }

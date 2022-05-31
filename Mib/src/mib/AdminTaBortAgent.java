@@ -108,7 +108,6 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
                 
                 }
             
-            
         }
         
         catch(InfException ettUndantag) {

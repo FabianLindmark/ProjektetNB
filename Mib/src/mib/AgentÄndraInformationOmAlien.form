@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                      <Component id="jlAndraInfo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jlAndraNamn" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlAndraTelefon" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlAndraPlats" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlAndraAnsvarigAgent" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="tfAndraAnsvarigAgent" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfAndraPlats" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfAndraTelefon" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tfAndraNamn" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnNamn" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnTelefon" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPlats" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAnsvarigAgent" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnAndraRas" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jlVemAndra" min="-2" pref="206" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="tfVemAndra" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jlAndraInfo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlVemAndra" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfVemAndra" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlAndraNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAndraNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnNamn" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlAndraTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAndraTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlAndraPlats" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAndraPlats" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnPlats" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jlAndraAnsvarigAgent" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfAndraAnsvarigAgent" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAnsvarigAgent" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnAndraRas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jlAndraInfo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra information om en alien!"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlAndraNamn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra namn"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlAndraTelefon">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra telefonnummer"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlAndraPlats">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra plats"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlAndraAnsvarigAgent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra ansvarig agent"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfAndraNamn">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfAndraTelefon">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfAndraPlats">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfAndraAnsvarigAgent">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnNamn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNamnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTelefon">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTelefonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPlats">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlatsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAnsvarigAgent">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnsvarigAgentActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlVemAndra">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ange namn p&#xe5; alien du vill &#xe4;ndra:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfVemAndra">
+      <Properties>
+        <Property name="columns" type="int" value="12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAndraRas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#xc4;ndra ras"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAndraRasActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
