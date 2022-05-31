@@ -92,32 +92,32 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
 
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
          
-        try {
+        try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
-             String namn = tfAlienNamn.getText();
+            Boolean hittad = false;
+            String vilkenAlien = tfAlienNamn.getText();
+            String allaAliens = "select namn from alien";
             
-             String fraga = "SELECT FROM ALIEN WHERE NAMN= '" + namn +"'";
-             
-             ArrayList<String> taBortAlien = idb.fetchColumn(fraga);
+            ArrayList<String> aliens = idb.fetchColumn(allaAliens);
+            String vilkaBort = "delete from alien where namn = '"+vilkenAlien+"'";
+                for(String alien:aliens){
                     
-            for(String alien : taBortAlien){
-                
-                if (alien.contains(namn)){
                     
-                    idb.delete(fraga);
+                    
+                    idb.delete(vilkaBort);
+                    JOptionPane.showMessageDialog(null, "Alien är nu borttagen!");
+                    hittad = true;
                     break;
-                    
+                
                 }
-               // String vilkenAlien = "delete from alien where namn = '"+alien+"'";
-            }
-             
-            JOptionPane.showMessageDialog(null, "Alien är nu raderad");
-         }
-         
-        catch(InfException ettUndantag){
-            JOptionPane.showMessageDialog(null, "Något gick fel!"); 
-         }
+            
+        }
+        
+        catch(InfException ettUndantag) {
+              JOptionPane.showMessageDialog(null, "Något gick fel!");
+              System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+    }
     }//GEN-LAST:event_btnTaBortAlienActionPerformed
 
     /**

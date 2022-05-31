@@ -96,10 +96,10 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
             String allaAgenter = "select namn from agent";
             
             ArrayList<String> agenterna = idb.fetchColumn(allaAgenter);
-            
+            String vilkaBort = "delete from agent where namn = '"+vilkenAgent+"'";
                 for(String agent:agenterna){
                     
-                    String vilkaBort = "delete from agent where namn = '"+agent+"'";
+                    
                     
                     idb.delete(vilkaBort);
                     JOptionPane.showMessageDialog(null, "Agenten är nu borttagen!");
