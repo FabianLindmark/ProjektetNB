@@ -101,7 +101,7 @@ public class AdminÄndraInformationKontorschef extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Ändra information om vem som är kontorschef på ett specifikt kontor.
     private void btnbytomrchefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbytomrchefActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

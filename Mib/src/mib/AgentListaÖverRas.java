@@ -104,7 +104,7 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att lista alla squid.
     private void btnSquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSquidActionPerformed
         taNamnLista.setText("Namn" + "\n");
                 
@@ -129,7 +129,7 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnSquidActionPerformed
-
+    //Metod för att lista alla boglodites.
     private void btnBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBogloditeActionPerformed
     taNamnLista.setText("Namn" + "\n");
     
@@ -152,7 +152,7 @@ public class AgentListaÖverRas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnBogloditeActionPerformed
-
+    //Metod för att lista alla worm.
     private void btnWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWormActionPerformed
         taNamnLista.setText("Namn" + "\n");
           

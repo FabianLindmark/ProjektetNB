@@ -85,7 +85,7 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att ta bort utrustning.
     private void btnTaBortUtrustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortUtrustActionPerformed
 
         try{

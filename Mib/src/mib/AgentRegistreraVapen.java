@@ -120,7 +120,7 @@ public class AgentRegistreraVapen extends javax.swing.JFrame {
     private void tfIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfIDActionPerformed
-
+    //Metod för att registrera utrustning av sorten vapen.
     private void btnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegActionPerformed
         
         try{

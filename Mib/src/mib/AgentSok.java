@@ -167,7 +167,7 @@ public class AgentSok extends javax.swing.JFrame {
     private void tfOmradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfOmradeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfOmradeActionPerformed
-
+    //Metod för att söka information om en agent.
     private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
         
         try{

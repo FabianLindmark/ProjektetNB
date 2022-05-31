@@ -104,7 +104,7 @@ public class AgentInlogg extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att logga in som agent.
     private void btnAgentLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgentLoggaInActionPerformed
 
          if (Validering.textFaltHarVarde(tfAngivetAgentID) || Validering.textFaltHarVarde(tfAngivetLosenord)){

@@ -102,7 +102,7 @@ public class AdminÄndraInformationOmrådeschef extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Ändra vem som är chef över ett visst område.
     private void btnbytomrchefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbytomrchefActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

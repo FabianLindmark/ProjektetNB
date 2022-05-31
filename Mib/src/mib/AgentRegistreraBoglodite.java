@@ -203,7 +203,7 @@ public class AgentRegistreraBoglodite extends javax.swing.JFrame {
     private void tfRegDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfRegDatumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfRegDatumActionPerformed
-
+    //Metod för att registrera en alien av sorten boglodite.
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

@@ -180,7 +180,8 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att registrera en ny alien.
+   
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
 
         try {

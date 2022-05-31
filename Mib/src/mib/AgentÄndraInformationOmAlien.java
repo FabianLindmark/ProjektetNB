@@ -180,7 +180,7 @@ public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att ändra namn på en alien.
     private void btnNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNamnActionPerformed
        
         try{
@@ -200,6 +200,7 @@ public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnNamnActionPerformed
 
+    //Metod för att ändra telefonnummer på en alien.
     private void btnTelefonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelefonActionPerformed
         try{
             
@@ -217,7 +218,8 @@ public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnTelefonActionPerformed
-
+    
+    //Metod för att ändra plats på en alien.
     private void btnPlatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlatsActionPerformed
         try{
             
@@ -236,6 +238,7 @@ public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnPlatsActionPerformed
 
+    //Metod för att ändra vilken agent som är ansvarig över en alien.
     private void btnAnsvarigAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnsvarigAgentActionPerformed
         try{
             

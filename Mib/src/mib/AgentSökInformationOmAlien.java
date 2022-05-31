@@ -170,7 +170,7 @@ public class AgentSökInformationOmAlien extends javax.swing.JFrame {
     private void tfSkrivNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSkrivNamnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfSkrivNamnActionPerformed
-
+    //Metod för att söka information om en alien.
     private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

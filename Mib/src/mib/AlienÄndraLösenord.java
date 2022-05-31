@@ -132,6 +132,7 @@ public class AlienÄndraLösenord extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metod för en alien att ändra sitt lösenord.
     private void jlAlUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAlUppdateraLosenordActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

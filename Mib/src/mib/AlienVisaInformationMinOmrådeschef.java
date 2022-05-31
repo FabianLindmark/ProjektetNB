@@ -145,6 +145,7 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metod för en alien att visa information om sin områdeschef.
     private void btnSokInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokInformationActionPerformed
       
         

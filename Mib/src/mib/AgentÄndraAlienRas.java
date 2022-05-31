@@ -183,6 +183,7 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metod för att ändra rastillhörighet på en alien till boglodite.
     private void btnNyBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyBogloditeActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
@@ -207,7 +208,7 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
         }
     }//GEN-LAST:event_btnNyBogloditeActionPerformed
-
+    //Metod för att ändra rastillhörighet på en alien till worm.
     private void btnNyWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyWormActionPerformed
        
         
@@ -237,6 +238,7 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNyWormActionPerformed
 
+    //Metod för att ändra rastillhörighet på en alien till squid.
     private void btnNySquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNySquidActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 

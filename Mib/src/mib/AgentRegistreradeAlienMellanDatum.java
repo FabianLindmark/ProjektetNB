@@ -127,7 +127,7 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att se aliens registrerade mellan två olika datum.
     private void btnSokAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAlienActionPerformed
     taUppsoktaAlien.setText("Namn" + "\n");   
     

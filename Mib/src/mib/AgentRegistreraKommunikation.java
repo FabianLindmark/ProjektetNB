@@ -123,7 +123,7 @@ public class AgentRegistreraKommunikation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att registrera utrustning av sorten kommunikation.
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
          try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

@@ -110,7 +110,7 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att visa namnet på områdeschefen över Götaland.
     private void btnGötalandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGötalandActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
@@ -135,7 +135,7 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
         }
     }//GEN-LAST:event_btnGötalandActionPerformed
-
+    //Metod för att visa namnet på områdeschefen över Svealand.
     private void btnSvealandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSvealandActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
@@ -161,7 +161,7 @@ public class AgentVisaInformationOmOmrådeschef extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnSvealandActionPerformed
-
+    //Metod för att visa namnet på områdeschefen över Norrland.
     private void btnNorrlandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNorrlandActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

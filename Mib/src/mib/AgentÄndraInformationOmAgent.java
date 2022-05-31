@@ -33,7 +33,6 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
 
         tfVemAndra = new javax.swing.JTextField();
         jlAndraAnsvarigAgent = new javax.swing.JLabel();
-        btnAndraRas = new javax.swing.JButton();
         tfAndraNamn = new javax.swing.JTextField();
         tfAndraTelefon = new javax.swing.JTextField();
         tfAndraOmrade = new javax.swing.JTextField();
@@ -51,13 +50,6 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
         tfVemAndra.setColumns(12);
 
         jlAndraAnsvarigAgent.setText("Ändra område");
-
-        btnAndraRas.setText("Ändra ras");
-        btnAndraRas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAndraRasActionPerformed(evt);
-            }
-        });
 
         tfAndraNamn.setColumns(12);
 
@@ -119,10 +111,7 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlAndraNamn)
                             .addComponent(jlAndraTelefon)
-                            .addComponent(jlAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnAndraRas)))
+                            .addComponent(jlAndraAnsvarigAgent, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(59, 59, 59)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -169,19 +158,14 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
                     .addComponent(tfAndraOmrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAndraOmrade))
                 .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAndraRas)
-                    .addComponent(jButton1))
+                .addComponent(jButton1)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAndraRasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraRasActionPerformed
-        new AgentÄndraAlienRas().setVisible(rootPaneCheckingEnabled);        
-    }//GEN-LAST:event_btnAndraRasActionPerformed
-
+    //Metod för att andra namn på en agent.
     private void btnNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNamnActionPerformed
 
         try{
@@ -200,7 +184,7 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnNamnActionPerformed
-
+    //Metod för att andra telefonnummer på en agent.
     private void btnTelefonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelefonActionPerformed
         try{
 
@@ -218,7 +202,7 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnTelefonActionPerformed
-
+    //Metod för att andra område på en agent.
     private void btnAndraOmradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraOmradeActionPerformed
         try{
 
@@ -279,7 +263,6 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAndraOmrade;
-    private javax.swing.JButton btnAndraRas;
     private javax.swing.JButton btnNamn;
     private javax.swing.JButton btnTelefon;
     private javax.swing.JButton jButton1;

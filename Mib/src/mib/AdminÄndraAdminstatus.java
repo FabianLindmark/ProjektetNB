@@ -100,7 +100,7 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att ändra status på en agent till eller från administratör.
     private void btnAndraAdminstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAdminstatusActionPerformed
   
               if (Validering.textFaltHarVarde(tfAngivetAgentID) && Validering.textFaltHarVarde(tfAngivenAdminstatus)){

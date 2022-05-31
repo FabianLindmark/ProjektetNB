@@ -103,9 +103,9 @@ public class AlienInlogg extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metod för att logga in som en alien.
     private void btnAlienLoggaInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlienLoggaInActionPerformed
-        // TODO add your handling code here:
-        // koda till nästa sida, 
+         
         
         if (Validering.textFaltHarVarde(tfAngivetAlienID) || Validering.textFaltHarVarde(tfAngivetAlienLosenord)){
             

@@ -133,6 +133,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfAngeNyttLosenordActionPerformed
 
+    //Metod för en agent att ändra sitt lösenord.
     private void btnAgUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgUppdateraLosenordActionPerformed
          try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

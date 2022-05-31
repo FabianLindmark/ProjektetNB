@@ -176,7 +176,7 @@ public class AgentRegistreraWorm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att registrera en alien av sorten worm.
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

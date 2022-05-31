@@ -114,7 +114,7 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Metod för att visa alla aliens i Västerås.
     private void btnVasterasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVasterasActionPerformed
         taVisa.setText("Namn" + "\n");
         
@@ -138,7 +138,7 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnVasterasActionPerformed
-
+    //Metod för att visa alla aliens i örebro.
     private void btnOrebroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrebroActionPerformed
         
         taVisa.setText("Namn" + "\n");
@@ -162,7 +162,7 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnOrebroActionPerformed
-
+    //Metod för att visa alla aliens i Borås.
     private void btnBorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorasActionPerformed
         taVisa.setText("Namn" + "\n");
         try{
@@ -185,7 +185,7 @@ public class AgentListaAlienPåSpecifikPlats extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
     }//GEN-LAST:event_btnBorasActionPerformed
-
+    //Metod för att visa alla aliens i Vilhelmina.
     private void btnVilhelminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVilhelminaActionPerformed
         taVisa.setText("Namn" + "\n");
         try{
