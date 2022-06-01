@@ -183,7 +183,7 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
     //Metod för att registrera en ny alien.
    
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
-
+   
         try {
             idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
             
@@ -196,13 +196,21 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
          String omrade = tfAngivetOmrade.getText();
          String fraga = "insert into Agent values('"+ agentID +"','" + namn +"','" + telefon +"','" + regDatum + "','" + admin +"','" + losen + "','" +omrade+"')";
             
+         if (Validering.datumKontroll(regDatum)){   
+         }
+         if (Validering.textFaltHarVarde(tfAngivetNamn)){
+         }
+          if (Validering.textFaltHarVarde(tfAngivenTelefon)){   
+         }
+          
             idb.insert(fraga);
             
             JOptionPane.showMessageDialog(null, "Ny agent registrerad!");
         }
         catch(InfException ettUndantag){
              JOptionPane.showMessageDialog(null, "Något gick fel!");
-        } 
+        }
+      
     }//GEN-LAST:event_btnRegistreraActionPerformed
 
     /**

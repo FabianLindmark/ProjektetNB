@@ -119,23 +119,19 @@ public class AgentInlogg extends javax.swing.JFrame {
             String svar1 = idb.fetchSingle(fraga1);
             String resultat1 = svar1;
             
-            //boolean administrator = false;
             String fraga2 = "Select Administrator from Agent where Agent_ID= '"+aid+"'";
             String svar2 = idb.fetchSingle(fraga2);
             String resultat2 = svar2;
           
 
             if (Validering.adminStatus(resultat2) && losen.contains(resultat1)) {
-                System.out.println("Inloggad");
-                 //  JOptionPane.showMessageDialog(null, "Inloggad");
+                JOptionPane.showMessageDialog(null, "Inloggad");
                 new AdminInformation().setVisible(rootPaneCheckingEnabled);
                 
             }
             
             else if (!Validering.adminStatus(resultat2) && losen.contains(resultat1)) {
-                 //administrator = false;
-                System.out.println("Inloggad");
-                //  JOptionPane.showMessageDialog(null, "Inloggad");
+                JOptionPane.showMessageDialog(null, "Inloggad");
                  new AgentInformation().setVisible(rootPaneCheckingEnabled);
             }
             else {

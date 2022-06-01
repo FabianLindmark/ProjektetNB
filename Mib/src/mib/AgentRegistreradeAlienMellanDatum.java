@@ -131,11 +131,14 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
     private void btnSokAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAlienActionPerformed
     taUppsoktaAlien.setText("Namn" + "\n");   
     
+     
     try{
         idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
         String startdatum = tfAngivetFranDatum.getText();
         String slutdatum = tfAngivetTillDatum.getText();
     
+         if (Validering.datumKontroll(startdatum) || Validering.datumKontroll(slutdatum)){   
+         }
         
         String fraga = "SELECT Namn FROM Alien WHERE Registreringsdatum BETWEEN '" +startdatum+"' AND '"+slutdatum+"'";
         

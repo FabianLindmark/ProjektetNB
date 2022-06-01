@@ -192,6 +192,10 @@ public class AgentRegistreraWorm extends javax.swing.JFrame {
             
             String fraga = "insert into alien values('"+alien +"','" + datum +"','" + losenord +"','" + namn + "','" + telefon +"','" + plats + "','" +ansvarAgent+"')";
             String fraga1 = "insert into worm values('"+alien+"')";
+           
+            
+            if (Validering.datumKontroll(datum)){   
+         }
             
             idb.insert(fraga);
             idb.insert(fraga1);

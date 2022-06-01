@@ -212,9 +212,12 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
             String fraga = "insert into alien values('"+alien +"','" + datum +"','" + losenord +"','" + namn + "','" + telefon +"','" + plats + "','" +ansvarAgent+"')";
             String fraga1 = "insert into squid values('"+alien+"','" + antalArmar +"')";
 
+             if (Validering.datumKontroll(datum)){   
+         }
+             
             idb.insert(fraga);
             idb.insert(fraga1);
-
+            
             JOptionPane.showMessageDialog(null, "Ny squid registrerad!");
 
         }

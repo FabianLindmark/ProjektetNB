@@ -26,33 +26,42 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jlAgAnvandarnamn" pref="129" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="jlAgAndraLosenord" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                      <Component id="jlAlUppdateraLosenord" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jlAgUpprepaLosenord" min="-2" pref="110" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="tfAngeUpprepaLosenord" min="-2" pref="114" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jlAgNuvarandeLosenord" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
                                   <Component id="jlAgNyttLosenord" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="tfAngeAnvandarnamn" pref="114" max="32767" attributes="0"/>
-                                  <Component id="tfAngeNuvarandeLosenord" alignment="0" pref="114" max="32767" attributes="0"/>
-                                  <Component id="tfAngeNyttLosenord" alignment="1" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="tfAngeNyttLosenord" min="-2" pref="114" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="tfAngeNuvarandeLosenord" min="-2" pref="114" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Component id="jlAlUppdateraLosenord" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jlAgUpprepaLosenord" min="-2" pref="110" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="tfAngeUpprepaLosenord" min="-2" pref="114" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jlAgAnvandarnamn" pref="129" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="tfAngeAnvandarnamn" min="-2" pref="114" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -117,7 +126,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jlAgAnvandarnamn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Anv&#xe4;ndarnamn:"/>
+        <Property name="text" type="java.lang.String" value="Anv&#xe4;ndarnamn (ID):"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jlAgAndraLosenord">
