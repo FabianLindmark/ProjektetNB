@@ -76,10 +76,10 @@ public class Validering {
     public static boolean datumKontroll (String datum){
        SimpleDateFormat datumformat = new SimpleDateFormat ("yyyy-mm-dd");
        datumformat.setLenient(false);
-       //Date datumAttKolla = new Date ("yyyy-mm-dd");
        
         try{
             Date datumAttKolla = datumformat.parse(datum);
+            return true;
         }
         
         catch(ParseException e) {
