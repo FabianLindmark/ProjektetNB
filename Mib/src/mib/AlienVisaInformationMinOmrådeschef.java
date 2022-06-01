@@ -179,7 +179,9 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
             String svar4 = idb.fetchSingle(fraga4);
             
            tfAngivetAnsDatum.setText(svar4);
-          
+           
+            
+            
         }
         catch (InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");

@@ -48,7 +48,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
 
         jlAgAndraLosenord.setText("Ändra ditt lösenord");
 
-        jlAgAnvandarnamn.setText("Användarnamn:");
+        jlAgAnvandarnamn.setText("Användarnamn (ID):");
 
         jlAgNuvarandeLosenord.setText("Nuvarande lösenord:");
 

@@ -23,7 +23,6 @@ public class Validering {
         if(rutaAttKolla.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Inmatningsrutan är tom");
             resultat = false;
-            
         }
         
         return resultat;

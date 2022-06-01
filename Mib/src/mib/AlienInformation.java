@@ -32,6 +32,7 @@ public class AlienInformation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jlValkommen.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jlValkommen.setText("Välkommen!");
 
         btnAndraLosenord.setText("Ändra Lösenord");
@@ -55,21 +56,21 @@ public class AlienInformation extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlValkommen, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVisaInformationMinOmradeschef)
-                    .addComponent(btnAndraLosenord)
-                    .addComponent(jlValkommen, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAndraLosenord))
                 .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(17, 17, 17)
                 .addComponent(jlValkommen)
-                .addGap(31, 31, 31)
+                .addGap(34, 34, 34)
                 .addComponent(btnAndraLosenord)
                 .addGap(32, 32, 32)
                 .addComponent(btnVisaInformationMinOmradeschef)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         pack();

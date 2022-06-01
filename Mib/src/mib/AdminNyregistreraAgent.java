@@ -200,6 +200,9 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
          }
          if (Validering.textFaltHarVarde(tfAngivetNamn)){
          }
+          if (Validering.textFaltHarVarde(tfAngivenTelefon)){   
+         }
+          
             idb.insert(fraga);
             
             JOptionPane.showMessageDialog(null, "Ny agent registrerad!");
