@@ -92,6 +92,8 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
     //Metod för att ta bort en alien.
     private void btnTaBortAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAlienActionPerformed
          
+        if(Validering.textFaltHarVarde(tfAlienNamn) ){ 
+            
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
@@ -118,6 +120,7 @@ public class AdminTaBortAlien extends javax.swing.JFrame {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
               System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
     }
+        }
     }//GEN-LAST:event_btnTaBortAlienActionPerformed
 
     /**

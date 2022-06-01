@@ -41,10 +41,10 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlTelefon" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlAnstallningsdatum" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ljNamn" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jlAgentID" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -80,22 +80,22 @@
               <Component id="btnSokInformation" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ljNamn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivetNamn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAgentID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivetAID" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlTelefon" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivenTel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlAnstallningsdatum" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfAngivetAnsDatum" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="20" max="32767" attributes="0"/>
@@ -109,12 +109,12 @@
         <Property name="text" type="java.lang.String" value="Mitt omr&#xe5;de:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="ljNamn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Namn:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jlTelefon">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefon:"/>
       </Properties>
@@ -140,12 +140,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSokInformationActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jlAnstallningsdatum">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anst&#xe4;llningsdatum:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jlAgentID">
       <Properties>
         <Property name="text" type="java.lang.String" value="Agent ID:"/>
       </Properties>

@@ -131,7 +131,8 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
     private void btnSokAlienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokAlienActionPerformed
     taUppsoktaAlien.setText("Namn" + "\n");   
     
-     
+   if (Validering.textFaltHarVarde(tfAngivetFranDatum) || Validering.textFaltHarVarde(tfAngivetTillDatum)) {
+          
     try{
         idb = new InfDB ("mibdb", "3306", "mibdba", "mibkey");
         String startdatum = tfAngivetFranDatum.getText();
@@ -156,8 +157,7 @@ public class AgentRegistreradeAlienMellanDatum extends javax.swing.JFrame {
           
           JOptionPane.showMessageDialog(null, "Något gick fel!");
       }  
-        
-        
+   }   
     }//GEN-LAST:event_btnSokAlienActionPerformed
 
     

@@ -214,6 +214,8 @@ public class AgentRegistreraSquid extends javax.swing.JFrame {
 
              if (Validering.datumKontroll(datum)){   
          }
+              if (Validering.textFaltHarVarde(tfAgentID) || Validering.textFaltHarVarde(tfAlienID) || Validering.textFaltHarVarde(tfLosenord) || Validering.textFaltHarVarde(tfNamn) || Validering.textFaltHarVarde(tfPlats) || Validering.textFaltHarVarde(tfRegDatum) || Validering.textFaltHarVarde(tfTelefon) || Validering.textFaltHarVarde(tfAntalArmar)) {
+         } 
              
             idb.insert(fraga);
             idb.insert(fraga1);

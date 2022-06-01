@@ -88,6 +88,7 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
     //Metod för att ta bort utrustning.
     private void btnTaBortUtrustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortUtrustActionPerformed
 
+        if(Validering.textFaltHarVarde(tfAngivetUtID) ){ 
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
@@ -113,6 +114,7 @@ public class AdminTaBortUtrustning extends javax.swing.JFrame {
         catch(InfException ettUndantag) {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
               System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+    }
     }
     }//GEN-LAST:event_btnTaBortUtrustActionPerformed
 

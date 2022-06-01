@@ -140,6 +140,7 @@ public class AlienÄndraLösenord extends javax.swing.JFrame {
 
     //Metod för en alien att ändra sitt lösenord.
     private void jlAlUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlAlUppdateraLosenordActionPerformed
+        if (Validering.textFaltHarVarde(tfAngeAnvandarnamn) || Validering.textFaltHarVarde(tfAngeNuvarandeLosenord) || Validering.textFaltHarVarde(tfAngeNyttLosenord) || Validering.textFaltHarVarde(tfAngeUpprepaLosenord)){
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
 
@@ -168,6 +169,7 @@ public class AlienÄndraLösenord extends javax.swing.JFrame {
     
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
         }
     }//GEN-LAST:event_jlAlUppdateraLosenordActionPerformed
 

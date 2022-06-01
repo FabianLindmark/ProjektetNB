@@ -104,6 +104,7 @@ public class AdminÄndraInformationOmrådeschef extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     //Ändra vem som är chef över ett visst område.
     private void btnbytomrchefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbytomrchefActionPerformed
+        if(Validering.textFaltHarVarde(tfOmrade) || Validering.textFaltHarVarde(tfnychef)){ 
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
 
@@ -120,6 +121,7 @@ public class AdminÄndraInformationOmrådeschef extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
+        }
         }
     }//GEN-LAST:event_btnbytomrchefActionPerformed
 

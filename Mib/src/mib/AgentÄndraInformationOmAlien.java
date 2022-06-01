@@ -175,14 +175,14 @@ public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
                     .addComponent(btnAnsvarigAgent))
                 .addGap(18, 18, 18)
                 .addComponent(btnAndraRas)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     //Metod för att ändra namn på en alien.
     private void btnNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNamnActionPerformed
-       
+       if (Validering.textFaltHarVarde(tfVemAndra)){
         try{
             
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
@@ -198,6 +198,7 @@ public class AgentÄndraInformationOmAlien extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
+       }
     }//GEN-LAST:event_btnNamnActionPerformed
 
     //Metod för att ändra telefonnummer på en alien.

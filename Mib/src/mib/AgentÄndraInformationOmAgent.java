@@ -167,7 +167,7 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
 
     //Metod för att andra namn på en agent.
     private void btnNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNamnActionPerformed
-
+if (Validering.textFaltHarVarde(tfVemAndra)){
         try{
 
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
@@ -183,6 +183,7 @@ public class AgentÄndraInformationOmAgent extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
+}   
     }//GEN-LAST:event_btnNamnActionPerformed
     //Metod för att andra telefonnummer på en agent.
     private void btnTelefonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelefonActionPerformed

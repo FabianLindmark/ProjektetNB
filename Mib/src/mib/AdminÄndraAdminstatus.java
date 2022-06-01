@@ -103,7 +103,7 @@ public class AdminÄndraAdminstatus extends javax.swing.JFrame {
     //Metod för att ändra status på en agent till eller från administratör.
     private void btnAndraAdminstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndraAdminstatusActionPerformed
   
-              if (Validering.textFaltHarVarde(tfAngivetAgentID) && Validering.textFaltHarVarde(tfAngivenAdminstatus)){
+              if (Validering.textFaltHarVarde(tfAngivetAgentID) || Validering.textFaltHarVarde(tfAngivenAdminstatus)){
         
              try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");

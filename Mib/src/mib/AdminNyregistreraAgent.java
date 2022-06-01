@@ -198,10 +198,8 @@ public class AdminNyregistreraAgent extends javax.swing.JFrame {
             
          if (Validering.datumKontroll(regDatum)){   
          }
-         if (Validering.textFaltHarVarde(tfAngivetNamn)){
-         }
-          if (Validering.textFaltHarVarde(tfAngivenTelefon)){   
-         }
+         if (Validering.textFaltHarVarde(tfAngivetAgentID) || Validering.textFaltHarVarde(tfAngivetNamn) || Validering.textFaltHarVarde(tfAngivenTelefon) || Validering.textFaltHarVarde(tfAngivetRegistreringsdatum) || Validering.textFaltHarVarde(tfAngivenAdminStatus) || Validering.textFaltHarVarde(tfAngivenAdminStatus) || Validering.textFaltHarVarde(tfAngivetLosenord) || Validering.textFaltHarVarde(tfAngivetOmrade)) {
+         } 
           
             idb.insert(fraga);
             

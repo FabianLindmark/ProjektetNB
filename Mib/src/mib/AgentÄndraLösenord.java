@@ -135,7 +135,8 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
 
     //Metod för en agent att ändra sitt lösenord.
     private void btnAgUppdateraLosenordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgUppdateraLosenordActionPerformed
-         try{
+        if (Validering.textFaltHarVarde(tfAngeAnvandarnamn) || Validering.textFaltHarVarde(tfAngeNuvarandeLosenord) || Validering.textFaltHarVarde(tfAngeNyttLosenord) || Validering.textFaltHarVarde(tfAngeUpprepaLosenord)){
+        try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
             Boolean jlAgUppdateraLosenord = false;
@@ -164,7 +165,7 @@ public class AgentÄndraLösenord extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
             
-                // TODO add your handling code here:
+    }
     }//GEN-LAST:event_btnAgUppdateraLosenordActionPerformed
     }
     /**

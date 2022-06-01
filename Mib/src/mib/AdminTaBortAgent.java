@@ -88,12 +88,15 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
     //Metod för att ta bort en agent.
     private void btnTaBortAgentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaBortAgentActionPerformed
 
+       if(Validering.textFaltHarVarde(tfAgentNamn) ){ 
+            
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             
             Boolean hittad = false;
             String vilkenAgent = tfAgentNamn.getText();
             String allaAgenter = "select namn from agent";
+            
             
             ArrayList<String> agenterna = idb.fetchColumn(allaAgenter);
             String vilkaBort = "delete from agent where namn = '"+vilkenAgent+"'";
@@ -109,12 +112,13 @@ public class AdminTaBortAgent extends javax.swing.JFrame {
                 }
             
         }
-        
+       
+    
         catch(InfException ettUndantag) {
               JOptionPane.showMessageDialog(null, "Något gick fel!");
               System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
     }
-        
+       }   
     }//GEN-LAST:event_btnTaBortAgentActionPerformed
 
     /**

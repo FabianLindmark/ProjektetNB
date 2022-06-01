@@ -29,23 +29,25 @@ public class Validering {
         
     }
   
-    //metod för fält som ska vara int, 
-    //Anväbds inte någonstans ÄN :) annars ta bort
-     public static boolean isHeltal (JTextField rutaAttKolla){
-        boolean resultat = true;
-        
-        try {
-            String inString = rutaAttKolla.getText();
-            Integer.parseInt(inString);
-            rutaAttKolla.requestFocus();
-        }
-        catch(NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Var god ange ett heltal!");
-            resultat = false;
-        }
-        
-         return resultat;
-    }
+//    //metod för fält som ska vara int, 
+//    //Anväbds inte någonstans ÄN :) annars ta bort
+//     public static boolean isHeltal (JTextField rutaAttKolla){
+//        boolean resultat = true;
+//        
+//        try {
+//            String inString = rutaAttKolla.getText();
+//            Integer.parseInt(inString);
+//            rutaAttKolla.requestFocus();
+//        }
+//        catch(NumberFormatException e) {
+//            JOptionPane.showMessageDialog(null, "Var god ange ett heltal!");
+//            resultat = false;
+//        }
+//        
+//         return resultat;
+//    }
+//     
+     
      
      
      public static boolean adminStatus (String aktuelladmin) {

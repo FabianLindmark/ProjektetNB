@@ -122,7 +122,8 @@ public class AgentRegistreraVapen extends javax.swing.JFrame {
     }//GEN-LAST:event_tfIDActionPerformed
     //Metod för att registrera utrustning av sorten vapen.
     private void btnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegActionPerformed
-        
+         if (Validering.textFaltHarVarde(tfID) || Validering.textFaltHarVarde(tfBenamning) || Validering.textFaltHarVarde(tfKaliber) ) {
+          
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
@@ -141,7 +142,7 @@ public class AgentRegistreraVapen extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         } 
-        
+    }    
     }//GEN-LAST:event_btnRegActionPerformed
 
     /**

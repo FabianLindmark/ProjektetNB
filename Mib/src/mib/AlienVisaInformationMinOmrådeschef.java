@@ -32,13 +32,13 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
     private void initComponents() {
 
         jlMittOmrade = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        ljNamn = new javax.swing.JLabel();
+        jlTelefon = new javax.swing.JLabel();
         tfAngivetMittOmrade = new javax.swing.JTextField();
         jlVisaInfoMinOmradeschef = new javax.swing.JLabel();
         btnSokInformation = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jlAnstallningsdatum = new javax.swing.JLabel();
+        jlAgentID = new javax.swing.JLabel();
         tfAngivetNamn = new javax.swing.JTextField();
         tfAngivetAID = new javax.swing.JTextField();
         tfAngivenTel = new javax.swing.JTextField();
@@ -48,9 +48,9 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
 
         jlMittOmrade.setText("Mitt område:");
 
-        jLabel2.setText("Namn:");
+        ljNamn.setText("Namn:");
 
-        jLabel3.setText("Telefon:");
+        jlTelefon.setText("Telefon:");
 
         tfAngivetMittOmrade.setColumns(10);
 
@@ -64,9 +64,9 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Anställningsdatum:");
+        jlAnstallningsdatum.setText("Anställningsdatum:");
 
-        jLabel4.setText("Agent ID:");
+        jlAgentID.setText("Agent ID:");
 
         tfAngivetNamn.setColumns(10);
 
@@ -96,10 +96,10 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4))
+                                    .addComponent(jlTelefon)
+                                    .addComponent(jlAnstallningsdatum)
+                                    .addComponent(ljNamn)
+                                    .addComponent(jlAgentID))
                                 .addGap(21, 21, 21)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(tfAngivetAID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,19 +125,19 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
                 .addComponent(btnSokInformation)
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(ljNamn)
                     .addComponent(tfAngivetNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(jlAgentID)
                     .addComponent(tfAngivetAID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(jlTelefon)
                     .addComponent(tfAngivenTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(jlAnstallningsdatum)
                     .addComponent(tfAngivetAnsDatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -227,12 +227,12 @@ public class AlienVisaInformationMinOmrådeschef extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSokInformation;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jlAgentID;
+    private javax.swing.JLabel jlAnstallningsdatum;
     private javax.swing.JLabel jlMittOmrade;
+    private javax.swing.JLabel jlTelefon;
     private javax.swing.JLabel jlVisaInfoMinOmradeschef;
+    private javax.swing.JLabel ljNamn;
     private javax.swing.JTextField tfAngivenTel;
     private javax.swing.JTextField tfAngivetAID;
     private javax.swing.JTextField tfAngivetAnsDatum;

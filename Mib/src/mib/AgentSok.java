@@ -170,8 +170,9 @@ public class AgentSok extends javax.swing.JFrame {
     //Metod för att söka information om en agent.
     private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
         
+        if (Validering.textFaltHarVarde(tfID) || Validering.textFaltHarVarde(tfSkrivNamn) || Validering.textFaltHarVarde(tfTelefonnummer) || Validering.textFaltHarVarde(tfAnstallningsdatum) || Validering.textFaltHarVarde(tfAdmin) || Validering.textFaltHarVarde(tfOmrade)){
+          
         try{
-            
             
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             String namn = tfSkrivNamn.getText();
@@ -207,6 +208,7 @@ public class AgentSok extends javax.swing.JFrame {
         
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
+        }
         }
     }//GEN-LAST:event_btnSokActionPerformed
 

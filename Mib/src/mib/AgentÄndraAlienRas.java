@@ -185,6 +185,7 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
 
     //Metod för att ändra rastillhörighet på en alien till boglodite.
     private void btnNyBogloditeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyBogloditeActionPerformed
+       if (Validering.textFaltHarVarde(tfAngivetAlienID) || Validering.textFaltHarVarde(tfAngivenAktuellRas) || Validering.textFaltHarVarde(tfAngivetAntalBoogies)){
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
             
@@ -207,11 +208,12 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
         }
+       }
     }//GEN-LAST:event_btnNyBogloditeActionPerformed
     //Metod för att ändra rastillhörighet på en alien till worm.
     private void btnNyWormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNyWormActionPerformed
        
-        
+        if (Validering.textFaltHarVarde(tfAngivetAlienID) || Validering.textFaltHarVarde(tfAngivenAktuellRas)){
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
             
@@ -233,6 +235,7 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Något gick fel!");
             System.out.println("Internt felmeddelande" + ettUndantag.getMessage());
         }
+        }
         
         
         
@@ -240,6 +243,8 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
 
     //Metod för att ändra rastillhörighet på en alien till squid.
     private void btnNySquidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNySquidActionPerformed
+        
+        if (Validering.textFaltHarVarde(tfAngivetAlienID) || Validering.textFaltHarVarde(tfAngivenAktuellRas) || Validering.textFaltHarVarde(tfAngivetAntalArmar)){
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey"); 
             
@@ -266,7 +271,7 @@ public class AgentÄndraAlienRas extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnNySquidActionPerformed
 
-    
+    }
     
     /**
      * @param args the command line arguments

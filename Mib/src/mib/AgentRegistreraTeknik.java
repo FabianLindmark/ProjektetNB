@@ -114,6 +114,8 @@ public class AgentRegistreraTeknik extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     //Metod för att registrera utrustning av sorten teknik.
     private void btnRegistreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistreraActionPerformed
+       if (Validering.textFaltHarVarde(tfID) || Validering.textFaltHarVarde(tfBenamning) || Validering.textFaltHarVarde(tfKraft)) {
+          
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
         
@@ -132,6 +134,7 @@ public class AgentRegistreraTeknik extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!");
         }
+       }
     }//GEN-LAST:event_btnRegistreraActionPerformed
 
     /**

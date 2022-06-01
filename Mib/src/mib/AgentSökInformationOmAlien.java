@@ -172,11 +172,12 @@ public class AgentSökInformationOmAlien extends javax.swing.JFrame {
     }//GEN-LAST:event_tfSkrivNamnActionPerformed
     //Metod för att söka information om en alien.
     private void btnSokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSokActionPerformed
+       
+        if (Validering.textFaltHarVarde(tfSkrivNamn)){
+        
         try{
             idb = new InfDB("mibdb", "3306", "mibdba", "mibkey");
             String namn = tfSkrivNamn.getText();
-            
-            
             
             
                 String fraga1 = "select alien_id from alien where namn = '"+namn+"'";
@@ -210,6 +211,7 @@ public class AgentSökInformationOmAlien extends javax.swing.JFrame {
         catch(InfException ettUndantag){
             JOptionPane.showMessageDialog(null, "Något gick fel!"); 
         }
+    }
     }//GEN-LAST:event_btnSokActionPerformed
 
     /**
