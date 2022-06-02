@@ -41,6 +41,7 @@ public class AdminInformation extends javax.swing.JFrame {
         btnAndraInfromationKontorschef = new javax.swing.JButton();
         btnÄndraAlienInformation = new javax.swing.JButton();
         btnSokAgentInfo = new javax.swing.JButton();
+        btnInfoOmradeschef = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,6 +159,14 @@ public class AdminInformation extends javax.swing.JFrame {
             }
         });
 
+        btnInfoOmradeschef.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        btnInfoOmradeschef.setText("Sök info om områdeschef");
+        btnInfoOmradeschef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoOmradeschefActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -166,7 +175,6 @@ public class AdminInformation extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ljValkommen)
-                    .addComponent(btnTaBortAgent)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAndraLosenord)
@@ -174,7 +182,9 @@ public class AdminInformation extends javax.swing.JFrame {
                             .addComponent(btnListor)
                             .addComponent(btnSokAgentInformation)
                             .addComponent(btnTaBortAlien)
-                            .addComponent(btnSokAgentInfo))
+                            .addComponent(btnSokAgentInfo)
+                            .addComponent(btnTaBortUtrustning)
+                            .addComponent(btnTaBortAgent))
                         .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnNyregistreraAgent)
@@ -182,8 +192,8 @@ public class AdminInformation extends javax.swing.JFrame {
                             .addComponent(btnAndraAgentInformation)
                             .addComponent(btnAndraInformationOmradeschef)
                             .addComponent(btnAndraInfromationKontorschef)
-                            .addComponent(btnÄndraAlienInformation)))
-                    .addComponent(btnTaBortUtrustning))
+                            .addComponent(btnÄndraAlienInformation)
+                            .addComponent(btnInfoOmradeschef))))
                 .addContainerGap(7, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -191,7 +201,9 @@ public class AdminInformation extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(ljValkommen)
-                .addGap(35, 35, 35)
+                .addGap(12, 12, 12)
+                .addComponent(btnInfoOmradeschef)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAndraLosenord)
                     .addComponent(btnAndraAgentInformation))
@@ -217,9 +229,9 @@ public class AdminInformation extends javax.swing.JFrame {
                     .addComponent(btnTaBortAlien, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addComponent(btnTaBortUtrustning)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnTaBortAgent)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();
@@ -281,6 +293,10 @@ public class AdminInformation extends javax.swing.JFrame {
         new AgentSökInformationOmAlien().setVisible(rootPaneCheckingEnabled); 
     }//GEN-LAST:event_btnSokAgentInfoActionPerformed
 
+    private void btnInfoOmradeschefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoOmradeschefActionPerformed
+        new AgentVisaInformationOmOmrådeschef().setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnInfoOmradeschefActionPerformed
+
     
     
     
@@ -328,6 +344,7 @@ public class AdminInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnAndraInformationOmradeschef;
     private javax.swing.JButton btnAndraInfromationKontorschef;
     private javax.swing.JButton btnAndraLosenord;
+    private javax.swing.JToggleButton btnInfoOmradeschef;
     private javax.swing.JButton btnListor;
     private javax.swing.JButton btnNyregistreraAgent;
     private javax.swing.JButton btnRegistrera;

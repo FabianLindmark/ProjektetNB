@@ -16,6 +16,7 @@ import javax.swing.JTextField;
  */
 public class Validering {
     
+    
     public static boolean textFaltHarVarde(JTextField rutaAttKolla)
     {
         boolean resultat = true; 
